@@ -10,7 +10,7 @@ Welcome to the Anesthesiology Critical Care Medicine Fellowship at Northwestern 
 
 **Program Coordinator.** Vi Vos. vi.tran@nm.org. The call schedule, vacation requests, rotation changes, and all scheduling questions go to Vi first.
 
-For urgent clinical matters, contact the attending on service directly. For concerns about the learning environment, supervision, or wellbeing that you would prefer not to raise with the program directly, the Graduate Medical Education office is available to you. [NMH protocol, insert: GME contact and confidential reporting route]
+For urgent clinical matters, contact the attending on service directly. For concerns about the learning environment, supervision, or wellbeing that you would prefer not to raise with the program directly, the Graduate Medical Education office is available to you at gme@northwestern.edu.
 
 ## The year at a glance
 
@@ -77,7 +77,7 @@ All scheduled educational activities are protected time. You are released from c
 
 **The Case Library on this site.** Self-paced, problem-based cases from the cardiothoracic and general ICU, designed to be completed in spare moments on a clinical day and then discussed with your attending. You are expected to work through the library over the course of the year and to bring at least one case to discussion each week. See the final section of this page.
 
-**Journal club.** [NMH protocol, insert: cadence, format, and how articles are selected and distributed.]
+**Journal club.** Held once a month and attended by the critical care and anesthesia critical care faculty and all fellows. One fellow presents each month. The presenting fellow may select an article from the program's repository of landmark critical care literature or may choose a recent publication of their own interest. The chosen article is submitted to Vi Vos two weeks before the session, and one week before the session it is distributed to all fellows and faculty for reading. Come having read it. The value of journal club lies in the discussion, and the discussion depends on everyone having done the work.
 
 ## Quality improvement project
 
@@ -85,7 +85,11 @@ Every fellow completes a quality improvement project during the year. The projec
 
 A good project is small, specific, and measurable. A single process on a single unit, with a baseline, an intervention, and a remeasurement, teaches more than an ambitious proposal that never reaches implementation. The associate program director can help you narrow an idea and connect you with the relevant stakeholders in nursing, pharmacy, perfusion, or informatics.
 
-Presentation at a regional or national meeting is encouraged and the program will support it. [NMH protocol, insert: deadline for mentor and topic selection, date and venue of the final presentation, and the process for requesting conference funding.]
+Presentation at a regional or national meeting is encouraged and the program will support it. See the section on conferences below.
+
+## Conferences
+
+Northwestern funds attendance at one national conference during the fellowship year. Funding for a second conference may be available if you are presenting at it. Meetings our fellows have attended in recent years include the American Society of Anesthesiologists annual meeting, the Society of Cardiovascular Anesthesiologists, the Society of Critical Care Anesthesiologists, and the Society of Critical Care Medicine Critical Care Congress. Choose the meeting that fits your interests and your career direction, and plan the dates with your co-fellows early, since conference travel interacts with the call schedule and with vacation. Submit abstracts well before the deadline. The quality improvement project is often a natural source of a presentation. [NMH protocol, insert: how to request conference funding and the approval process.]
 
 ## Time away
 
@@ -95,7 +99,7 @@ You receive twenty days away from training per year, consistent with American Bo
 2. At least one fellow must be available to fill the call role at all times, so coordinate with one another before submitting a request.
 3. Notify Vi Vos in advance.
 
-Sick leave, family leave, and extended absence are governed by institutional and ABA policy. Speak with the program director early if you anticipate needing any of them, since the ABA's training requirements may affect how the time is counted. [NMH protocol, insert: link to leave policy]
+Sick leave, family leave, and extended absence are governed by institutional and ABA policy. Speak with the program director early if you anticipate needing any of them, since the ABA's training requirements may affect how the time is counted.
 
 ## Administrative requirements
 
@@ -117,7 +121,7 @@ Use the free-text section of the request to ask for specific feedback. If you wa
 
 ## Professionalism and wellbeing
 
-Fatigue, illness, and personal circumstances that affect your work are to be communicated rather than concealed. The program would far rather adjust a schedule than discover a problem after the fact. Resources for physician wellbeing are available through the institution and the GME office, and using them carries no penalty and no stigma. [NMH protocol, insert: employee assistance program, wellness resources, peer support contact.]
+Fatigue, illness, and personal circumstances that affect your work are to be communicated rather than concealed. The program would far rather adjust a schedule than discover a problem after the fact. Resources for physician wellbeing are available through the institution and the GME office, and using them carries no penalty and no stigma.
 
 ## Before you start
 
@@ -138,8 +142,6 @@ Fatigue, illness, and personal circumstances that affect your work are to be com
 
 - New Innovations (duty hours, vacation, evaluations).
 - MyTIPreport (requesting attending evaluations).
-
-[NMH protocol, insert: any additional onboarding items such as required modules, fit testing, parking, scrubs and locker assignment.]
 
 ## How to use this site
 
