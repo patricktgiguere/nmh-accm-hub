@@ -40,22 +40,23 @@ GitHub is now the place you edit content. Cloudflare will watch it and republish
 
 ## Step 4. Turn on Cloudflare Access
 
-1. Left menu: "Zero Trust". First time, it asks you to choose a team name. This becomes your login address, for example `nmh-accm.cloudflareaccess.com`. Choose the **Free** plan.
-2. Zero Trust menu: "Access", "Applications", "Add an application", "Self-hosted".
-3. Application name: `ACCM Hub`. Session duration: 24 hours.
-4. Application domain: add your custom domain (for example `accm-hub.org`). Then click "Add domain" again and also add the `workers.dev` address from Step 2. **Both must be listed**, otherwise the workers.dev address is an unprotected back door.
-5. Identity providers: leave "One-time PIN" checked. Uncheck anything else.
-6. Next, create a policy. Name: `Allowed users`. Action: Allow. Include rule: selector "Emails", then paste the email addresses of yourself, the PD, and each fellow, one per line.
-7. Save the application.
-8. Open the application you just saved. On the Overview tab find **Application Audience (AUD) Tag**. Copy it. You need it in the next step.
+Done on 2026-10-26. Recorded here so it can be repeated or audited.
+
+1. Left menu: "Zero Trust" (Cloudflare One). The team name was auto-assigned: `wandering-scene-8ab6`. It appears only in the login page address. It can be renamed under Settings if desired, in which case `ACCESS_TEAM_DOMAIN` in `wrangler.toml` and the dashboard must be updated to match.
+2. Login method: "Integrations", "Identity providers". **One-time PIN** is the only provider. (Cloudflare auto-adds a "Cloudflare" provider on new accounts, which would ask fellows for Cloudflare accounts. It was deleted.)
+3. "Access controls", "Applications", "Create new application", "Self-hosted and private".
+4. Under Public hostnames click "Switch to custom input" and enter the `workers.dev` address. When a custom domain is added later, add it as a second public hostname on the same application. **Both must be listed**, otherwise the workers.dev address is an unprotected back door.
+5. Policy: "Create new policy". Rule: Include, selector "Emails", one address per entry. Name `Allowed users`, action Allow. Save.
+6. Name the application `ACCM Hub`, session duration 24 hours, Create.
+7. Open the application, "Additional settings" tab, copy the **Application Audience (AUD) Tag**.
+
+**Adding or removing a fellow** is step 5's email list: Zero Trust, Access controls, Policies, "Allowed users", edit, save.
 
 ## Step 5. Tell the site about Access
 
-1. Workers & Pages, your Worker, "Settings", "Variables and Secrets".
-2. Add variable `ACCESS_TEAM_DOMAIN` with value `yourteam.cloudflareaccess.com` (the team name from Step 4, with `.cloudflareaccess.com`).
-3. Add variable `ACCESS_AUD` with the AUD tag you copied.
-4. Variables take effect immediately on a Worker. If anything looks stale, open "Deployments" and retry the latest build.
-5. Visit your site. You should be sent to a Cloudflare login page asking for your email. Enter it, get the code by email, enter the code. The Home page appears.
+Done on 2026-10-26. `ACCESS_TEAM_DOMAIN` and `ACCESS_AUD` are set both in the Worker's Variables and Secrets and in `wrangler.toml` under `[vars]`, so they survive redeploys. If the Access application is ever recreated, update the AUD tag in both places.
+
+1. Visit your site. You should be sent to a Cloudflare login page asking for your email. Enter it, get the code by email, enter the code. The Home page appears.
 
 Test the back door: open the `workers.dev` address in a private window. You should see the same login page, not the site.
 
