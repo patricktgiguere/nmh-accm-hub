@@ -79,9 +79,13 @@ All scheduled educational activities are protected time. You are released from c
 
 **Journal club.** [NMH protocol, insert: cadence, format, and how articles are selected and distributed.]
 
-## Scholarly activity
+## Quality improvement project
 
-[NMH protocol, insert: expectation for a quality improvement project or scholarly product, timeline for mentor identification, support for conference travel and presentation. If there is no formal requirement, state that scholarship is encouraged and describe how fellows obtain mentorship and funding.]
+Every fellow completes a quality improvement project during the year. The project should address a real problem in the care of critically ill patients at Northwestern, be scoped so that it can produce a measurable result within the fellowship year, and be presented to the division on completion. Identify a faculty mentor and a topic early. Projects started in the spring rarely finish.
+
+A good project is small, specific, and measurable. A single process on a single unit, with a baseline, an intervention, and a remeasurement, teaches more than an ambitious proposal that never reaches implementation. The associate program director can help you narrow an idea and connect you with the relevant stakeholders in nursing, pharmacy, perfusion, or informatics.
+
+Presentation at a regional or national meeting is encouraged and the program will support it. [NMH protocol, insert: deadline for mentor and topic selection, date and venue of the final presentation, and the process for requesting conference funding.]
 
 ## Time away
 
@@ -107,7 +111,9 @@ Duty-hour logging is reviewed and must be kept current. Reconstructing months of
 
 Use the free-text section of the request to ask for specific feedback. If you want an attending's assessment of a particular procedure, of how you ran rounds, or of your teaching, say so. A pointed question produces far more useful feedback than a blank request.
 
-**Formal review.** You will meet with the program director for a semi-annual review that draws on your evaluations, your duty-hour and attendance record, and your own assessment of your progress. [NMH protocol, insert: Clinical Competency Committee process and timing, if you wish to describe it.]
+**Semi-annual review.** You will meet with the program director twice during the year for a formal review of your progress. The meeting draws on your attending evaluations, your procedure log, your duty-hour and attendance record, your quality improvement project, and your own assessment of where you stand. Come prepared to say what is going well, what is not, and what you want from the second half of the year.
+
+**Clinical Competency Committee.** As required by the ACGME, a committee of core faculty meets semi-annually to review each fellow's performance against the Anesthesiology Critical Care Medicine Milestones. The committee's assessment is based on the full body of evaluations, direct observation, and faculty input, and it informs both your semi-annual review and the program's reporting to the ACGME. Milestone assessments describe a trajectory rather than a grade. A fellow early in the year is not expected to be at the level of a fellow near graduation, and the committee's purpose is to identify where additional support or experience would help you reach independent practice.
 
 ## Professionalism and wellbeing
 
