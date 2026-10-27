@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Orientation · ACCM Curriculum Hub</title>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">ACCM Curriculum Hub <small>Anesthesia Critical Care Medicine Fellowship, Northwestern Memorial Hospital</small></a>
+    <nav class="primary" aria-label="Main">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/orientation.html">Orientation</a></li>
+        <li><a href="/cases.html">Case Library</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <article id="orientation-body">
+    <p class="muted">Loading…</p>
+  </article>
+
+  <section aria-labelledby="docs-h">
+    <h2 id="docs-h">Orientation documents</h2>
+    <p class="small muted">Files listed here come from <code>content/resources/manifest.json</code> entries tagged <code>orientation</code>. See the README for how to add one.</p>
+    <div id="orientation-files"></div>
+  </section>
+</main>
+
+<footer class="site">
+  <p>Anesthesia Critical Care Medicine Fellowship, Northwestern Memorial Hospital. For enrolled fellows and faculty only.</p>
+</footer>
+
+<script src="/assets/js/app.js"></script>
+<script>
+(async function () {
+  var body = document.getElementById('orientation-body');
+  try {
+    var text = await Hub.getText('/content/orientation.md');
+    body.innerHTML = Hub.md(text, 1);
+  } catch (e) {
+    body.innerHTML = '<p class="notice flag">Could not load orientation content.</p>';
+  }
+  try {
+    var man = await Hub.getJSON('/content/resources/manifest.json');
+    var files = man.resources.filter(function (r) { return (r.tags || []).indexOf('orientation') >= 0; });
+    var box = document.getElementById('orientation-files');
+    if (!files.length) { box.innerHTML = '<p class="muted">No orientation documents uploaded yet.</p>'; return; }
+    var ul = document.createElement('ul');
+    files.forEach(function (f) {
+      var li = document.createElement('li');
+      li.innerHTML = '<a href="' + Hub.escapeHtml(f.path) + '">' + Hub.escapeHtml(f.title) + '</a>' +
+        (f.description ? ' <span class="muted">' + Hub.escapeHtml(f.description) + '</span>' : '') +
+        (f.updated ? ' <span class="small muted">(updated ' + Hub.escapeHtml(f.updated) + ')</span>' : '');
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

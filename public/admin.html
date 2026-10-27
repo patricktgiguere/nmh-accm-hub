@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Admin · ACCM Curriculum Hub</title>
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  .admin textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .9rem; min-height: 18rem; }
+  .admin .row { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+  .admin table td:last-child { white-space: nowrap; }
+  .status { min-height: 1.4em; }
+  .status.ok { color: var(--ok-ink); }
+  .status.err { color: var(--flag-ink); }
+</style>
+</head>
+<body class="admin">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">ACCM Curriculum Hub <small>Admin</small></a>
+    <nav class="primary" aria-label="Main">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/orientation.html">Orientation</a></li>
+        <li><a href="/cases.html">Case Library</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <h1>Site administration</h1>
+  <p id="who" class="muted">Checking who you are…</p>
+  <div id="gate" hidden>
+
+  <p class="notice">Every save here becomes a change to the site's source and republishes it. Allow about a minute for changes to appear. Keep this page open only on a device you trust.</p>
+
+  <section class="card" aria-labelledby="h-orient">
+    <h2 id="h-orient">Orientation page</h2>
+    <p class="small muted">Plain text with simple formatting: <code>#</code> for headings, <code>-</code> for bullets, <code>**bold**</code>.</p>
+    <label for="orient-text" class="sr-only">Orientation text</label>
+    <textarea id="orient-text"></textarea>
+    <div class="row"><button type="button" id="orient-save">Save orientation</button><span class="status" id="orient-status" aria-live="polite"></span></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-res">
+    <h2 id="h-res">Resources and documents</h2>
+    <table aria-label="Resources"><thead><tr><th>Title</th><th>Location</th><th>Tags</th><th></th></tr></thead><tbody id="res-body"></tbody></table>
+    <h3>Add or replace a resource</h3>
+    <form id="res-form">
+      <label for="r-title">Title</label><input type="text" id="r-title" required>
+      <label for="r-desc">Description (optional)</label><input type="text" id="r-desc">
+      <label for="r-tags">Tags, comma separated (add <code>orientation</code> to list it on the Orientation page)</label><input type="text" id="r-tags" placeholder="protocols, ECMO, orientation">
+      <label>Source</label>
+      <div class="row">
+        <label class="row" style="font-weight:400"><input type="radio" name="r-src" value="file" checked> Upload a file</label>
+        <label class="row" style="font-weight:400"><input type="radio" name="r-src" value="link"> Link to a web page</label>
+      </div>
+      <div id="r-file-wrap"><label for="r-file">File (PDF, Word, etc.)</label><input type="file" id="r-file"></div>
+      <div id="r-link-wrap" hidden><label for="r-link">Web address</label><input type="text" id="r-link" placeholder="https://"></div>
+      <div class="row"><button type="submit">Add resource</button><span class="status" id="res-status" aria-live="polite"></span></div>
+    </form>
+  </section>
+
+  <section class="card" aria-labelledby="h-cases">
+    <h2 id="h-cases">Cases</h2>
+    <p class="small muted">Status: <strong>draft</strong> shows the case with a draft badge, <strong>released</strong> shows it cleanly, <strong>hidden</strong> keeps it out of the library.</p>
+    <table aria-label="Cases"><thead><tr><th>Title</th><th>Status</th><th></th></tr></thead><tbody id="case-body"></tbody></table>
+    <div class="row"><button type="button" class="secondary" id="case-new">New case from template</button><span class="status" id="cases-status" aria-live="polite"></span></div>
+    <div id="case-editor" hidden>
+      <h3 id="case-editor-title">Edit case</h3>
+      <p class="small muted">The whole case is one structured text file. Edit any text between quotation marks. Use <code>\n</code> for a new line and <code>\"</code> for a quotation mark inside text. Click Validate before Save.</p>
+      <label for="case-json" class="sr-only">Case content</label>
+      <textarea id="case-json" style="min-height:30rem"></textarea>
+      <div class="row">
+        <button type="button" class="secondary" id="case-validate">Validate</button>
+        <button type="button" id="case-save">Save case</button>
+        <button type="button" class="secondary" id="case-close">Close without saving</button>
+        <span class="status" id="case-status" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="h-users">
+    <h2 id="h-users">Fellows and access</h2>
+    <p>Who can log in is managed in the Cloudflare dashboard, not here: Zero Trust → Access → Applications → ACCM Hub → policy "Allowed users". Add or remove email addresses and save. No deploy is needed.</p>
+  </section>
+
+  </div>
+</main>
+
+<footer class="site"><p>Admin changes are committed under your signed-in email.</p></footer>
+
+<script src="/assets/js/app.js"></script>
+<script>
+(async function () {
+  var api = '/api/admin';
+  var who = document.getElementById('who');
+  async function get(q) { var r = await fetch(api + '?' + q); var j = await r.json(); if (!r.ok) throw new Error(j.error || r.status); return j; }
+  async function post(body) { var r = await fetch(api, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }); var j = await r.json(); if (!r.ok) throw new Error(j.error || r.status); return j; }
+  function setStatus(id, msg, ok) { var e = document.getElementById(id); e.textContent = msg; e.className = 'status ' + (ok ? 'ok' : 'err'); }
+
+  var me;
+  try { me = await get('action=whoami'); } catch (e) { who.textContent = 'Could not reach the admin service.'; return; }
+  if (!me.admin) { who.innerHTML = 'Signed in as <strong>' + Hub.escapeHtml(me.email || 'unknown') + '</strong>. This account is not an administrator.'; return; }
+  who.innerHTML = 'Signed in as <strong>' + Hub.escapeHtml(me.email) + '</strong> (administrator).' + (me.configured ? '' : ' <span class="pill warn">Editing not configured: see DEPLOYMENT_GUIDE.md step 7</span>');
+  document.getElementById('gate').hidden = false;
+
+  // Orientation
+  var orient = await get('action=read&path=public/content/orientation.md');
+  document.getElementById('orient-text').value = orient.content;
+  document.getElementById('orient-save').addEventListener('click', async function () {
+    setStatus('orient-status', 'Saving…', true);
+    try { var r = await post({ action: 'write', path: 'public/content/orientation.md', content: document.getElementById('orient-text').value, sha: orient.sha, message: 'Update orientation page' }); orient.sha = r.sha; setStatus('orient-status', 'Saved. Live in about a minute.', true); }
+    catch (e) { setStatus('orient-status', e.message, false); }
+  });
+
+  // Resources
+  var manifest = await get('action=read&path=public/content/resources/manifest.json');
+  var man = JSON.parse(manifest.content);
+  async function saveManifest(msg) {
+    var r = await post({ action: 'write', path: 'public/content/resources/manifest.json', content: JSON.stringify(man, null, 2), sha: manifest.sha, message: msg });
+    manifest.sha = r.sha;
+  }
+  function renderRes() {
+    var tb = document.getElementById('res-body'); tb.innerHTML = '';
+    man.resources.forEach(function (r, i) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + Hub.escapeHtml(r.title) + (r.description ? '<br><span class="small muted">' + Hub.escapeHtml(r.description) + '</span>' : '') + '</td>' +
+        '<td class="small">' + Hub.escapeHtml(r.path) + '</td><td>' + (r.tags || []).map(function (t) { return '<span class="pill neutral">' + Hub.escapeHtml(t) + '</span>'; }).join('') + '</td>' +
+        '<td><button type="button" class="secondary" data-del="' + i + '">Remove</button></td>';
+      tb.appendChild(tr);
+    });
+  }
+  renderRes();
+  document.getElementById('res-body').addEventListener('click', async function (ev) {
+    var b = ev.target.closest('button[data-del]'); if (!b) return;
+    var i = +b.dataset.del, r = man.resources[i];
+    if (b.dataset.armed !== '1') { b.dataset.armed = '1'; b.textContent = 'Click again to remove'; setTimeout(function () { b.dataset.armed = ''; b.textContent = 'Remove'; }, 4000); return; }
+    setStatus('res-status', 'Removing…', true);
+    try {
+      man.resources.splice(i, 1); await saveManifest('Remove resource: ' + r.title);
+      if (r.path.indexOf('/files/') === 0) { try { await post({ action: 'delete', path: 'public' + r.path }); } catch (e) {} }
+      renderRes(); setStatus('res-status', 'Removed.', true);
+    } catch (e) { setStatus('res-status', e.message, false); }
+  });
+  document.querySelectorAll('input[name="r-src"]').forEach(function (radio) {
+    radio.addEventListener('change', function () { var f = this.value === 'file'; document.getElementById('r-file-wrap').hidden = !f; document.getElementById('r-link-wrap').hidden = f; });
+  });
+  document.getElementById('res-form').addEventListener('submit', async function (ev) {
+    ev.preventDefault();
+    var title = document.getElementById('r-title').value.trim();
+    var desc = document.getElementById('r-desc').value.trim();
+    var tags = document.getElementById('r-tags').value.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+    var useFile = document.querySelector('input[name="r-src"]:checked').value === 'file';
+    var entry = { title: title, description: desc, tags: tags, updated: new Date().toISOString().slice(0, 10) };
+    setStatus('res-status', 'Saving…', true);
+    try {
+      if (useFile) {
+        var f = document.getElementById('r-file').files[0]; if (!f) throw new Error('Choose a file first.');
+        var name = f.name.replace(/[^A-Za-z0-9._-]+/g, '-').replace(/-+/g, '-');
+        var b64 = await new Promise(function (res, rej) { var rd = new FileReader(); rd.onload = function () { res(rd.result.split(',')[1]); }; rd.onerror = rej; rd.readAsDataURL(f); });
+        await post({ action: 'upload', path: 'public/files/' + name, base64: b64, message: 'Upload ' + name });
+        entry.path = '/files/' + name; entry.type = (name.split('.').pop() || 'file').toUpperCase();
+      } else {
+        var link = document.getElementById('r-link').value.trim(); if (!/^https?:\/\//.test(link)) throw new Error('Enter a full web address starting with https://');
+        entry.path = link; entry.type = 'link';
+      }
+      var existing = man.resources.findIndex(function (r) { return r.path === entry.path; });
+      if (existing >= 0) man.resources[existing] = entry; else man.resources.push(entry);
+      await saveManifest('Add resource: ' + title);
+      renderRes(); ev.target.reset(); setStatus('res-status', 'Added. Live in about a minute.', true);
+    } catch (e) { setStatus('res-status', e.message, false); }
+  });
+
+  // Cases
+  var index = await get('action=read&path=public/content/cases/index.json');
+  var idx = JSON.parse(index.content);
+  async function saveIndex(msg) { var r = await post({ action: 'write', path: 'public/content/cases/index.json', content: JSON.stringify(idx, null, 2), sha: index.sha, message: msg }); index.sha = r.sha; }
+  function renderCases() {
+    var tb = document.getElementById('case-body'); tb.innerHTML = '';
+    idx.cases.forEach(function (c, i) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + Hub.escapeHtml(c.title) + '<br><span class="small muted">' + Hub.escapeHtml(c.id) + '</span></td>' +
+        '<td><select data-status="' + i + '" aria-label="Status">' + ['draft', 'released', 'hidden'].map(function (s) { return '<option' + (c.status === s ? ' selected' : '') + '>' + s + '</option>'; }).join('') + '</select></td>' +
+        '<td><button type="button" class="secondary" data-edit="' + Hub.escapeHtml(c.id) + '">Edit</button></td>';
+      tb.appendChild(tr);
+    });
+  }
+  renderCases();
+  document.getElementById('case-body').addEventListener('change', async function (ev) {
+    var s = ev.target.closest('select[data-status]'); if (!s) return;
+    var c = idx.cases[+s.dataset.status]; c.status = s.value;
+    setStatus('cases-status', 'Saving status…', true);
+    try {
+      await saveIndex('Set ' + c.id + ' to ' + c.status);
+      try { var f = await get('action=read&path=public/content/cases/' + c.id + '.json'); var obj = JSON.parse(f.content); obj.status = c.status; await post({ action: 'write', path: f.path, content: JSON.stringify(obj, null, 2), sha: f.sha, message: 'Set ' + c.id + ' status' }); } catch (e) {}
+      setStatus('cases-status', 'Status saved.', true);
+    } catch (e) { setStatus('cases-status', e.message, false); }
+  });
+  var editing = null;
+  async function openEditor(id, content, sha) {
+    editing = { id: id, sha: sha };
+    document.getElementById('case-editor-title').textContent = 'Edit case: ' + id;
+    document.getElementById('case-json').value = content;
+    document.getElementById('case-editor').hidden = false;
+    document.getElementById('case-editor').scrollIntoView({ behavior: 'smooth' });
+    setStatus('case-status', '', true);
+  }
+  document.getElementById('case-body').addEventListener('click', async function (ev) {
+    var b = ev.target.closest('button[data-edit]'); if (!b) return;
+    try { var f = await get('action=read&path=public/content/cases/' + b.dataset.edit + '.json'); openEditor(b.dataset.edit, f.content, f.sha); }
+    catch (e) { setStatus('cases-status', 'No file for this case yet. Use "New case from template" with the id ' + b.dataset.edit + '.', false); }
+  });
+  document.getElementById('case-new').addEventListener('click', async function () {
+    var id = window.prompt ? prompt('Short id for the new case (lowercase letters, numbers, dashes). Describe the presentation, not the diagnosis.') : '';
+    if (!id) return; id = id.trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-');
+    if (idx.cases.some(function (c) { return c.id === id; })) { setStatus('cases-status', 'That id already exists.', false); return; }
+    var t = await get('action=read&path=public/content/cases/_TEMPLATE.json'); var obj = JSON.parse(t.content); delete obj._howto; obj.id = id; obj.title = id;
+    openEditor(id, JSON.stringify(obj, null, 2), null);
+  });
+  function validate() {
+    try { var obj = JSON.parse(document.getElementById('case-json').value); if (obj.id !== editing.id) throw new Error('The "id" inside the file must be "' + editing.id + '".'); if (!Array.isArray(obj.stages) || !obj.stages.length) throw new Error('At least one stage is required.'); setStatus('case-status', 'Valid.', true); return obj; }
+    catch (e) { setStatus('case-status', 'Problem: ' + e.message, false); return null; }
+  }
+  document.getElementById('case-validate').addEventListener('click', validate);
+  document.getElementById('case-close').addEventListener('click', function () { document.getElementById('case-editor').hidden = true; editing = null; });
+  document.getElementById('case-save').addEventListener('click', async function () {
+    var obj = validate(); if (!obj) return;
+    setStatus('case-status', 'Saving…', true);
+    try {
+      var r = await post({ action: 'write', path: 'public/content/cases/' + editing.id + '.json', content: JSON.stringify(obj, null, 2), sha: editing.sha, message: 'Edit case ' + editing.id });
+      editing.sha = r.sha;
+      var entry = idx.cases.find(function (c) { return c.id === editing.id; });
+      var meta = { id: obj.id, title: obj.title, subtitle: obj.subtitle || '', status: obj.status || 'draft', estimatedMinutes: obj.estimatedMinutes, difficulty: obj.difficulty, tags: obj.tags || [], objectives: obj.objectives || [] };
+      if (entry) Object.assign(entry, meta); else idx.cases.push(meta);
+      await saveIndex('Update index for ' + editing.id);
+      renderCases(); setStatus('case-status', 'Saved. Live in about a minute.', true);
+    } catch (e) { setStatus('case-status', e.message, false); }
+  });
+})();
+</script>
+</body>
+</html>

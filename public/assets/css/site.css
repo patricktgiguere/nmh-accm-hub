@@ -1,0 +1,196 @@
+/* NMH Anesthesia Critical Care Fellowship curriculum hub
+   Restrained clinical palette. All colours meet WCAG AA on their backgrounds. */
+
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --ink: #1b2430;
+  --ink-soft: #4a5565;
+  --line: #d8dde5;
+  --accent: #4e2a84;        /* Northwestern purple */
+  --accent-ink: #ffffff;
+  --accent-soft: #ece7f5;
+  --warn-bg: #fff4e5;
+  --warn-ink: #7a3e00;
+  --ok-bg: #e6f4ea;
+  --ok-ink: #1e5631;
+  --flag-bg: #fde8e8;
+  --flag-ink: #8a1c1c;
+  --radius: 8px;
+  --maxw: 60rem;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121519;
+    --surface: #1c2027;
+    --ink: #e8ebf0;
+    --ink-soft: #aab2c0;
+    --line: #333a46;
+    --accent: #b79ae0;
+    --accent-ink: #121519;
+    --accent-soft: #2a2238;
+    --warn-bg: #3a2a10;
+    --warn-ink: #f5c98a;
+    --ok-bg: #163322;
+    --ok-ink: #9ad6ad;
+    --flag-bg: #3d1a1a;
+    --flag-ink: #f3a3a3;
+  }
+}
+
+* { box-sizing: border-box; }
+html { font-size: 100%; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--accent); color: var(--accent-ink);
+  padding: .5rem 1rem; z-index: 100;
+}
+.skip-link:focus { left: .5rem; top: .5rem; }
+
+header.site {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+header.site .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+  padding: .75rem 1rem;
+}
+.brand { font-weight: 700; text-decoration: none; color: var(--ink); letter-spacing: .01em; }
+.brand small { display: block; font-weight: 400; color: var(--ink-soft); font-size: .8rem; }
+nav.primary ul { list-style: none; margin: 0; padding: 0; display: flex; gap: .25rem; flex-wrap: wrap; }
+nav.primary a {
+  display: inline-block; padding: .45rem .7rem; border-radius: var(--radius);
+  text-decoration: none; color: var(--ink); font-weight: 500;
+}
+nav.primary a[aria-current="page"], nav.primary a:hover { background: var(--accent-soft); color: var(--accent); }
+
+main { max-width: var(--maxw); margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+footer.site { max-width: var(--maxw); margin: 0 auto; padding: 1rem; color: var(--ink-soft); font-size: .85rem; border-top: 1px solid var(--line); }
+
+h1 { font-size: 1.75rem; line-height: 1.25; margin: .5rem 0 .75rem; }
+h2 { font-size: 1.3rem; margin: 1.75rem 0 .5rem; }
+h3 { font-size: 1.1rem; margin: 1.25rem 0 .4rem; }
+p, ul, ol { margin: 0 0 .9rem; }
+.lead { font-size: 1.1rem; color: var(--ink-soft); }
+.muted { color: var(--ink-soft); }
+.small { font-size: .9rem; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1rem 1.1rem; margin: 0 0 1rem;
+}
+.card h2, .card h3 { margin-top: 0; }
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); }
+.card.link { text-decoration: none; color: inherit; display: block; }
+.card.link:hover { border-color: var(--accent); }
+
+.pill {
+  display: inline-block; font-size: .78rem; padding: .1rem .55rem; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent); margin: 0 .25rem .25rem 0; font-weight: 600;
+}
+.pill.ok { background: var(--ok-bg); color: var(--ok-ink); }
+.pill.warn { background: var(--warn-bg); color: var(--warn-ink); }
+.pill.neutral { background: var(--bg); color: var(--ink-soft); border: 1px solid var(--line); }
+
+.notice { border-left: 4px solid var(--accent); background: var(--accent-soft); padding: .75rem 1rem; border-radius: 0 var(--radius) var(--radius) 0; margin: 0 0 1rem; }
+.notice.warn { border-color: #d98a00; background: var(--warn-bg); color: var(--warn-ink); }
+.notice.flag { border-color: #c0392b; background: var(--flag-bg); color: var(--flag-ink); }
+
+/* Flags for unverified content inside case text */
+mark.verify, mark.nmh, mark.review {
+  padding: .05em .35em; border-radius: 4px; font-weight: 600; font-size: .92em;
+}
+mark.verify { background: var(--flag-bg); color: var(--flag-ink); }
+mark.nmh { background: var(--warn-bg); color: var(--warn-ink); }
+mark.review { background: var(--accent-soft); color: var(--accent); }
+
+button, .btn {
+  font: inherit; cursor: pointer;
+  background: var(--accent); color: var(--accent-ink);
+  border: 1px solid var(--accent); border-radius: var(--radius);
+  padding: .55rem 1rem; font-weight: 600; text-decoration: none; display: inline-block;
+}
+button.secondary, .btn.secondary { background: var(--surface); color: var(--accent); }
+button:disabled { opacity: .5; cursor: not-allowed; }
+.btn-row { display: flex; gap: .5rem; flex-wrap: wrap; margin: .75rem 0; }
+
+label { display: block; font-weight: 600; margin: .75rem 0 .25rem; }
+input[type="text"], input[type="search"], input[type="email"], textarea, select {
+  font: inherit; width: 100%; padding: .6rem .7rem;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); color: var(--ink);
+}
+textarea { min-height: 7rem; resize: vertical; }
+.hp { position: absolute; left: -9999px; }
+
+/* Case page */
+.case-meta { display: flex; gap: 1rem; flex-wrap: wrap; color: var(--ink-soft); font-size: .92rem; margin-bottom: 1rem; }
+.stage { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); margin: 0 0 1.25rem; }
+.stage > .stage-head { padding: .75rem 1.1rem; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.stage > .stage-head h2 { margin: 0; font-size: 1.15rem; }
+.stage > .stage-body { padding: 1rem 1.1rem; }
+.stage.locked > .stage-body { display: none; }
+.stage.locked > .stage-head { opacity: .6; }
+.question { border-top: 1px dashed var(--line); padding-top: .9rem; margin-top: 1rem; }
+.question .prompt { font-weight: 600; }
+.answer-reveal { margin-top: .6rem; }
+.model-answer { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: .8rem 1rem; margin-top: .6rem; }
+
+
+
+
+
+.commit { margin: .5rem 0; }
+.commit textarea { min-height: 5rem; }
+
+details { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); margin: 0 0 1rem; }
+details > summary { padding: .75rem 1.1rem; cursor: pointer; font-weight: 600; list-style: revert; }
+details > .body { padding: 0 1.1rem 1rem; }
+
+.progress-bar { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; margin: 1rem 0; }
+.progress-bar .state { font-weight: 600; }
+
+table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: 0 0 1rem; }
+th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--bg); }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Print view: show everything, hide controls */
+@media print {
+  header.site, footer.site, .no-print, .btn-row, button, nav { display: none !important; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  main { max-width: none; padding: 0; }
+  .stage.locked > .stage-body, .model-answer, .rationale { display: block !important; }
+  .stage.locked > .stage-head { opacity: 1; }
+  details { border: none; }
+  details > .body { display: block !important; padding: 0; }
+  details:not([open]) > .body { display: block; }
+  details > summary { padding: 0; font-size: 1.1rem; }
+  textarea { border: 1px solid #999; min-height: 3rem; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .85em; color: #555; }
+}
+body.print-view .stage.locked > .stage-body,
+body.print-view .model-answer,
+body.print-view .rationale { display: block !important; }
+body.print-view .stage.locked > .stage-head { opacity: 1; }
+textarea[readonly] { background: var(--bg); color: var(--ink-soft); }
+.model-answer:focus { outline: 3px solid var(--accent); }

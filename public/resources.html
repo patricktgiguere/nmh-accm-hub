@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Resources · ACCM Curriculum Hub</title>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">ACCM Curriculum Hub <small>Anesthesia Critical Care Medicine Fellowship, Northwestern Memorial Hospital</small></a>
+    <nav class="primary" aria-label="Main">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/orientation.html">Orientation</a></li>
+        <li><a href="/cases.html">Case Library</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <h1>Resources</h1>
+  <p class="lead">Protocols, references, and reading. Items are listed from <code>content/resources/manifest.json</code>. Institutional protocols may be linked to the NM intranet rather than hosted here.</p>
+
+  <div class="card">
+    <label for="q">Search</label>
+    <input type="search" id="q" placeholder="Title, description, or tag">
+    <label for="tag">Topic</label>
+    <select id="tag"><option value="">All topics</option></select>
+  </div>
+
+  <p id="count" class="muted small" aria-live="polite"></p>
+  <table id="table" aria-label="Resources">
+    <thead><tr><th>Resource</th><th>Topics</th><th>Type</th><th>Updated</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</main>
+
+<footer class="site">
+  <p>Anesthesia Critical Care Medicine Fellowship, Northwestern Memorial Hospital. For enrolled fellows and faculty only.</p>
+</footer>
+
+<script src="/assets/js/app.js"></script>
+<script>
+(async function () {
+  var tbody = document.querySelector('#table tbody'), q = document.getElementById('q'), tagSel = document.getElementById('tag'), count = document.getElementById('count');
+  var man;
+  try { man = await Hub.getJSON('/content/resources/manifest.json'); }
+  catch (e) { tbody.innerHTML = '<tr><td colspan="4" class="notice flag">Could not load the resource manifest.</td></tr>'; return; }
+  var items = man.resources || [];
+  var tags = {}; items.forEach(function (r) { (r.tags || []).forEach(function (t) { tags[t] = true; }); });
+  Object.keys(tags).sort().forEach(function (t) { var o = document.createElement('option'); o.value = t; o.textContent = t; tagSel.appendChild(o); });
+
+  function render() {
+    var term = q.value.trim().toLowerCase(), tag = tagSel.value;
+    var shown = items.filter(function (r) {
+      if (tag && (r.tags || []).indexOf(tag) < 0) return false;
+      if (term && [r.title, r.description, (r.tags || []).join(' ')].join(' ').toLowerCase().indexOf(term) < 0) return false;
+      return true;
+    });
+    tbody.innerHTML = '';
+    shown.forEach(function (r) {
+      var tr = document.createElement('tr');
+      var external = /^https?:\/\//.test(r.path);
+      tr.innerHTML = '<td><a href="' + Hub.escapeHtml(r.path) + '"' + (external ? ' rel="noopener" target="_blank"' : '') + '>' + Hub.escapeHtml(r.title) + '</a>' +
+        (r.description ? '<br><span class="small muted">' + Hub.escapeHtml(r.description) + '</span>' : '') + '</td>' +
+        '<td>' + (r.tags || []).map(function (t) { return '<span class="pill neutral">' + Hub.escapeHtml(t) + '</span>'; }).join('') + '</td>' +
+        '<td>' + Hub.escapeHtml(r.type || (external ? 'link' : 'file')) + '</td>' +
+        '<td>' + Hub.escapeHtml(r.updated || '') + '</td>';
+      tbody.appendChild(tr);
+    });
+    count.textContent = shown.length + ' of ' + items.length + ' resources shown';
+  }
+  q.addEventListener('input', render); tagSel.addEventListener('change', render); render();
+})();
+</script>
+</body>
+</html>

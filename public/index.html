@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>ACCM Fellowship Curriculum Hub</title>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">ACCM Curriculum Hub <small>Anesthesia Critical Care Medicine Fellowship, Northwestern Memorial Hospital</small></a>
+    <nav class="primary" aria-label="Main">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/orientation.html">Orientation</a></li>
+        <li><a href="/cases.html">Case Library</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <h1>Welcome</h1>
+  <p class="lead">A private curriculum hub for fellows in the Anesthesia Critical Care Medicine Fellowship. Work through a case on your own when you have fifteen minutes, then bring your reasoning to your attending.</p>
+
+  <div class="grid">
+    <a class="card link" href="/cases.html">
+      <h2>Case Library</h2>
+      <p>Staged, self-paced cases in cardiothoracic and general critical care. Commit to a plan before you see the next step. Your notes and progress stay on this device only.</p>
+    </a>
+    <a class="card link" href="/orientation.html">
+      <h2>Orientation</h2>
+      <p>Program overview, expectations, schedule, key contacts, and onboarding documents for incoming fellows.</p>
+    </a>
+    <a class="card link" href="/resources.html">
+      <h2>Resources</h2>
+      <p>Searchable index of protocols, references, and reading, tagged by topic.</p>
+    </a>
+    <a class="card link" href="/contact.html">
+      <h2>Contact</h2>
+      <p>Send a question about a case or the curriculum to the Associate Program Director.</p>
+    </a>
+  </div>
+
+  <section class="card" aria-labelledby="recent-h">
+    <h2 id="recent-h">Your progress</h2>
+    <p id="progress-summary" class="muted">Loading your local progress…</p>
+  </section>
+
+  <p class="small muted">All cases on this site use fully synthetic patients. Never enter patient identifiers or real protected health information anywhere on this site, including your notes.</p>
+</main>
+
+<footer class="site">
+  <p>Anesthesia Critical Care Medicine Fellowship, Northwestern Memorial Hospital. For enrolled fellows and faculty only. No analytics, no trackers, no learner data collected. <a href="/admin.html">Faculty admin</a></p>
+</footer>
+
+<script src="/assets/js/app.js"></script>
+<script>
+(async function () {
+  var target = document.getElementById('progress-summary');
+  try {
+    var idx = await Hub.getJSON('/content/cases/index.json');
+    var prog = Hub.storage.allProgress();
+    var visible = idx.cases.filter(function (c) { return c.status !== 'hidden'; });
+    var total = visible.length, done = 0, started = 0;
+    visible.forEach(function (c) {
+      var p = prog[c.id];
+      if (p && p.completed) done++;
+      else if (p && (p.stage > 0 || (p.notes && p.notes.trim()))) started++;
+    });
+    target.textContent = done + ' of ' + total + ' cases completed on this device' + (started ? ', ' + started + ' in progress.' : '.');
+  } catch (e) {
+    target.textContent = 'Case index not available.';
+  }
+})();
+</script>
+</body>
+</html>

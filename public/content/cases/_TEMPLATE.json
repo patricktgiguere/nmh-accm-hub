@@ -1,0 +1,67 @@
+{
+  "_howto": "Copy this file to <case-id>.json, fill it in, then add the case to index.json. Text fields accept simple Markdown: '#' headings, '-' bullets, **bold**, *italic*, [link text](https://...). Flags you can type anywhere in text: [VERIFY] for an unconfirmed reference or value, [NMH protocol, insert] for institution-specific practice, [REVIEW] for a clinical claim awaiting attending sign-off. Every question is open response: the fellow types, presses Enter, and the modelAnswer appears. Nothing is auto-graded. Delete this _howto line in real cases. Set status to 'released' when faculty review is complete, 'draft' before, or 'hidden' to keep it out of the library.",
+  "id": "short-lowercase-id-with-dashes",
+  "title": "Presentation-based title (do not name the diagnosis)",
+  "subtitle": "One line describing the patient and the problem as the fellow would meet it",
+  "version": "0.1",
+  "status": "draft",
+  "estimatedMinutes": 20,
+  "difficulty": "Intermediate",
+  "tags": [
+    "ECMO",
+    "Cardiothoracic"
+  ],
+  "objectives": [
+    "Objective one, written as something the fellow will be able to do."
+  ],
+  "stages": [
+    {
+      "title": "Presentation",
+      "narrative": "Synthetic vignette. Keep patients, labs, and imaging fully invented.",
+      "questions": [
+        {
+          "type": "free",
+          "prompt": "What is your plan?",
+          "modelAnswer": "Model answer with rationale. Mark anything unsourced with [REVIEW]."
+        },
+        {
+          "type": "free",
+          "prompt": "A second question, for example one with a single best answer.",
+          "modelAnswer": "**Best answer: X.** Why. Then walk through the alternatives and why each falls short."
+        }
+      ]
+    },
+    {
+      "title": "New data",
+      "narrative": "...",
+      "questions": []
+    },
+    {
+      "title": "Decision point",
+      "narrative": "...",
+      "questions": []
+    }
+  ],
+  "teachingPoints": "- Point one\n- Point two",
+  "pitfalls": "- Pitfall one",
+  "controversies": "Where reasonable experts disagree, stated honestly.",
+  "discussWithAttending": [
+    "Prompt one that pushes beyond recall into judgment and tradeoffs."
+  ],
+  "references": [
+    {
+      "citation": "Author A, et al. Title. Journal. Year;Vol:pages. doi:...",
+      "status": "verified",
+      "note": ""
+    },
+    {
+      "citation": "Author B, et al. Title. Journal. Year.",
+      "status": "VERIFY",
+      "note": "Citation from memory, confirm before release."
+    }
+  ],
+  "reviewChecklist": [
+    "Every claim the clinician must confirm before setting status to released."
+  ],
+  "topic": "The diagnosis or teaching topic. Shown only in the wrap-up after the last stage."
+}

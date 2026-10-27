@@ -1,0 +1,133 @@
+{
+  "id": "device-alarms-0310",
+  "title": "Suction alarms at 03:10",
+  "subtitle": "A 64-year-old woman after primary PCI with a percutaneous LV support device in place, now with recurrent alarms, falling flow, and dark urine.",
+  "version": "0.2",
+  "status": "draft",
+  "estimatedMinutes": 20,
+  "difficulty": "Intermediate",
+  "tags": [
+    "Mechanical circulatory support",
+    "Cardiogenic shock",
+    "Echocardiography"
+  ],
+  "objectives": [
+    "Describe the three things the Impella console displays about position (placement signal, motor current, flow) and state what each can and cannot distinguish.",
+    "Perform a structured echocardiographic assessment of Impella position and name the measurements and views that matter.",
+    "Build a differential for suction alarms that separates device position from patient physiology, and state the order in which to work through it.",
+    "Recognize hemolysis as a positioning problem until proven otherwise, and outline the response.",
+    "Explain why unmasked RV failure after LV unloading is a predictable complication and how it changes the support strategy."
+  ],
+  "stages": [
+    {
+      "title": "Presentation",
+      "narrative": "A 64-year-old woman with an anterior STEMI complicated by cardiogenic shock (SCAI stage C on arrival) underwent primary PCI of the proximal LAD. An Impella CP was placed via the right femoral artery in the cath lab before the intervention because of hypotension and rising lactate. She arrives in the CTICU intubated, on a low-dose vasopressor, with the device running at a mid-range performance level. [REVIEW]\n\nHandoff from the cath lab: fluoroscopic position looked good, flows were adequate, no alarms during transport. The sheath is sutured, the limb is warm, and the dressing is clean. A left radial arterial line is in place. [REVIEW]\n\nThe console shows a pulsatile placement signal with a clearly aortic-appearing waveform and a pulsatile motor current. [REVIEW]",
+      "questions": [
+        {
+          "type": "free",
+          "prompt": "This is your admission assessment. What do you verify about the device in the first 30 minutes, and what are you relying on the console for versus the echo for? Commit before revealing.",
+          "modelAnswer": "The admission assessment has three parts: confirm position, confirm function, and establish the baseline you will compare against at 3 a.m.\n\n**What the console gives you.** The Impella CP displays a placement signal (a pressure waveform from the sensor on the cannula, which should look aortic when the sensor sits in the aorta), a motor current waveform (which is pulsatile when the inlet and outlet sit in different pressure chambers, LV and aorta, and flattens when they sit in the same chamber), and a calculated flow. The console's position algorithm uses the relationship between these to flag 'position wrong' or 'position unknown' alarms. The manufacturer's instructions for use define the expected patterns and the interpretation of each alarm, and those should be the reference the fellow reads, not a secondhand summary. [VERIFY] [REVIEW]\n\nThe console can tell you that the device is probably across the valve and running. It cannot tell you whether the inlet is sitting against the mitral apparatus, pointing into the septum, too deep toward the apex, or whether the pigtail is tangled in chordae. Those are echo questions.\n\n**What the echo gives you.** The structured assessment (parasternal long axis on TTE, or mid-esophageal long axis and deep transgastric views on TEE):\n\n- Distance from the aortic valve annulus to the inlet area. The manufacturer specifies a target distance below the annulus for each device. That number should be taken from the current IFU for the CP and written into this case by faculty. [VERIFY] [NMH protocol, insert]\n- Orientation of the cannula: it should sit in the LV cavity, directed toward the apex, free of the mitral subvalvular apparatus and not abutting the septum or free wall.\n- The pigtail should be free in the cavity, not entangled in chordae.\n- Aortic regurgitation across the device (expected to be mild) and whether the device is interfering with the mitral valve.\n- LV size and function, RV size and function, pericardial effusion, and LVOT or aortic valve pathology that would make the device unsafe. These are the baseline you will need later.\n\nCrowley and colleagues describe a TEE-guided approach to placement and surveillance that is a reasonable template. [VERIFY]\n\n**Baseline for later.** Record the performance level, the flow, the placement signal appearance, LDH and plasma free hemoglobin, the limb exam, and the anticoagulation plan. Device purge anticoagulation and systemic anticoagulation targets are institution-specific. [NMH protocol, insert]"
+        },
+        {
+          "type": "free",
+          "prompt": "Describe the console pattern (placement signal and motor current) you would expect if the device had migrated entirely into the LV, and contrast it with the pattern for a device that has pulled back into the aorta and with the normal pattern.",
+          "modelAnswer": "**Best answer: Ventricular placement signal, flat (non-pulsatile) motor current.** If the pressure sensor is in the LV the placement signal looks ventricular, and if inlet and outlet are both in the LV there is no pressure difference across the motor, so the current flattens. This pattern is described in the IFU as consistent with the device being too deep. [VERIFY]\n\nWhy the alternatives fall short:\n\n- **Aortic placement signal, pulsatile motor current.** This is the expected normal pattern: sensor in the aorta, inlet and outlet across a pressure gradient.\n- **Aortic placement signal, flat motor current.** A flat current with an aortic signal suggests inlet and outlet are both in the aorta, that is, the device has pulled back out of the ventricle. [VERIFY]\n- **Ventricular placement signal, pulsatile motor current.** This combination is not a standard positioning pattern and should prompt an immediate echo rather than inference. Some sensor configurations can produce a ventricular-appearing signal with the inlet still across the valve, which is one reason the console is a screening tool and not a diagnostic one. [REVIEW]\n\nEverything in this question is an application of the manufacturer's instructions for use. Faculty should check the current IFU for the specific devices NMH uses (CP, 5.5) because the sensor configuration and therefore the displayed waveforms differ between models, and the optical-sensor versions behave differently from the older pressure-lumen versions. [VERIFY] [NMH protocol, insert]"
+        }
+      ]
+    },
+    {
+      "title": "New data",
+      "narrative": "At 03:10 the nurse calls. Suction alarms have been recurring for 40 minutes. The displayed flow has fallen below what it was on admission. The patient is more tachycardic. MAP has fallen modestly. The placement signal now looks less clearly aortic and the motor current pulsatility has diminished. [REVIEW]\n\nLabs sent an hour earlier: LDH roughly doubled from admission, plasma free hemoglobin elevated, hemoglobin down by about one gram. Urine in the bag is darker than at admission. [REVIEW]\n\nThe overnight resident has already given a fluid bolus and reduced the performance level by one step, with partial improvement in the alarms. [REVIEW]",
+      "questions": [
+        {
+          "type": "free",
+          "prompt": "Give your differential for suction alarms with rising hemolysis, in the order you would work through it at the bedside, and say what you do before anyone touches the device. Commit before revealing.",
+          "modelAnswer": "Suction alarms mean the pump is trying to draw more blood than the inlet can access. The differential divides into position problems (the inlet is against something) and physiology problems (there is not enough blood in the LV to draw). Hemolysis points toward the inlet, because shear from a partially obstructed inlet or from the cannula sitting against the mitral apparatus is the classic cause. But the two interact: a dry LV also lets the free wall or mitral leaflets collapse onto the inlet.\n\nOrder of working through it:\n\n1. **Look at the patient and the console together.** Heart rate, MAP, filling pressure if you have a CVP or PA catheter, performance level, flow, placement signal, motor current. The resident's fluid bolus and performance step-down were reasonable first moves and are what the IFU suggests for suction. Their partial effect tells you the problem is not purely volume. [VERIFY]\n2. **Echo now, before any repositioning.** This is the single most important step. Assess: inlet-to-annulus distance (has it migrated deeper or pulled back), cannula orientation (toward the apex or toward the free wall or septum), relationship to the mitral valve and chordae, LV cavity size (is it obliterated, which would explain suction), RV size and function (an RV that has dilated and a septum that has shifted left is a different problem entirely), new or worsened pericardial effusion, and new aortic regurgitation.\n3. **Rule out the non-device causes of a small LV.** Hypovolemia, bleeding at the access site or retroperitoneally (hemoglobin fell, and not all of that is hemolysis), tamponade, and RV failure. Each of these can produce suction with a perfectly positioned device.\n4. **Then decide about repositioning.** Repositioning is done under echo or fluoroscopic guidance by someone credentialed to do it, with the performance level reduced during manipulation, with the sheath and sterile sleeve intact. Who performs it, whether it is done in the ICU or the lab, and when the structural heart or surgical team is called are institution-specific. [NMH protocol, insert]\n\nBefore anyone touches the device: make sure you are not about to reposition a device whose real problem is an empty ventricle or a failing RV. Manipulating a cannula in a hypovolemic, tamponading, or RV-failing patient fixes nothing and risks losing position across the valve.\n\nHemolysis management runs in parallel: trend LDH and plasma free hemoglobin, protect the kidneys (volume status, avoid nephrotoxins), and recognize that persistent hemolysis despite repositioning is an indication to change strategy rather than to tolerate it. Specific thresholds for action are institution-specific. [NMH protocol, insert]"
+        }
+      ]
+    },
+    {
+      "title": "Decision point",
+      "narrative": "Bedside TTE: the inlet is deeper than on the admission study and the cannula is angled toward the anterolateral wall, close to the anterior mitral leaflet and chordae. The LV cavity is small but not obliterated. The RV is mildly dilated compared with admission with reduced free-wall motion. Septal position is flattened in diastole. No pericardial effusion. [REVIEW]\n\nThe interventional attending is available and can reposition in the ICU under TEE guidance within the hour. [NMH protocol, insert]",
+      "questions": [
+        {
+          "type": "free",
+          "prompt": "What is the single best next step, and why not the other three obvious moves (raise the performance level, give more fluid, convert to VA ECMO)?",
+          "modelAnswer": "**Best answer: Reposition under TEE guidance now, at a reduced performance level, with the RV findings communicated to the team as a second problem.** The echo shows a position problem (deep, angled toward the mitral apparatus) that explains the hemolysis and suction. It should be fixed under imaging. The RV change is real and is not fixed by repositioning, so it has to be named now so that the next decision (escalation) is already on the table.\n\nWhy the alternatives fall short:\n\n- **Increase the performance level to restore flow and accept the alarms until morning.** Raising performance level against a malpositioned inlet increases shear and hemolysis and may draw the mitral apparatus into the inlet. This is the one thing the data argue against.\n- **Give another fluid bolus and reassess in two hours.** Volume does not correct a cannula pointed at the mitral valve, and in a patient with an RV that is starting to fail, indiscriminate volume worsens the septal shift that is also contributing to the small LV.\n- **Remove the Impella and convert to VA ECMO.** Premature. The device has a correctable problem. ECMO may become necessary because of the RV, but that is a separate decision that should follow a reposition and a reassessment, not replace it. Escalation to ECMO is also not without cost in a patient who is still perfusing.\n\nTwo problems were found on one echo. The discipline is to solve them in order and not let the solvable one (position) distract from the harder one (RV). The RV findings are what the fellow should be talking about with the attending while the reposition is being arranged."
+        },
+        {
+          "type": "free",
+          "prompt": "The device is repositioned successfully. Suction alarms stop and hemolysis markers begin to fall. Twelve hours later, flow is adequate but the patient is more hypotensive, CVP has risen, and the LV is small on echo with a dilated, poorly contracting RV. What is happening and what are the options?",
+          "modelAnswer": "This is RV failure unmasked by LV unloading, a well-described consequence of transvalvular LV support. Mechanisms include loss of LV septal contribution to RV output as the LV empties, increased venous return to an RV that was already ischemic (anterior STEMI with proximal LAD involvement can compromise the RV via septal perforators), and the fact that LV support raises the volume the RV is asked to deliver. The LV is now small not because the Impella is too deep but because the RV cannot fill it. [REVIEW]\n\nOptions, in rough order of escalation:\n\n- **Optimize RV physiology first.** Inotropic support targeted at the RV, correct hypoxemia and acidosis, reduce pulmonary vascular resistance where possible (ventilator strategy, pulmonary vasodilators), restore sinus rhythm or AV synchrony if lost, and reduce the Impella performance level to the minimum that maintains adequate LV output so the RV is not being asked to deliver more than it can. Specific agent choices are institution-specific. [NMH protocol, insert]\n- **Add mechanical RV support.** A percutaneous RV assist device (for example, an Impella RP-type device, or a dual-lumen RA-to-PA cannula with a centrifugal pump, with or without an oxygenator) combined with the existing LV device, sometimes called BiPella when two Impellas are used. This preserves native pulmonary flow and antegrade aortic flow. The device-specific case elsewhere in this library covers the dual-lumen cannula option. [REVIEW]\n- **Convert to VA ECMO**, keeping the Impella in place as an LV vent (ECPELLA). This provides biventricular support and oxygenation but reintroduces retrograde aortic flow, with the attendant watershed considerations covered in the North-South case. [REVIEW]\n\nThe choice between a percutaneous RVAD and VA ECMO turns on whether oxygenation is also failing, on vascular access, on local expertise, and on the exit strategy (recovery, durable LVAD, transplant). The 2022 AHA scientific statement on temporary MCS escalation and the EAPCI/ACVC consensus document frame this as a staged, team-based decision rather than a protocol. [VERIFY] [NMH protocol, insert]\n\nThe anticoagulation and hemolysis plan needs to be revisited with any added device."
+        }
+      ]
+    }
+  ],
+  "teachingPoints": "- The console is a screening tool. Placement signal, motor current, and flow can tell you the device is probably across the valve. Only echo can tell you where the inlet is and what it is touching.\n- Suction alarms have two families of cause: position and physiology. Echo distinguishes them and must precede repositioning.\n- Hemolysis on an Impella is a position problem until proven otherwise. Raising performance level against a malpositioned inlet makes it worse.\n- Never reposition into an empty ventricle, a tamponade, or a failing RV without first recognizing those as the primary problem.\n- Unmasked RV failure after LV unloading is predictable, especially with proximal LAD infarcts. Reassess the RV on every echo, not only on admission.\n- Escalation (percutaneous RVAD versus VA ECMO) is a team decision shaped by oxygenation, access, and exit strategy. The guidelines frame the process, not the answer.",
+  "pitfalls": "- Trusting fluoroscopic position from the cath lab as the position on arrival. Devices move during transport and with changes in LV size.\n- Responding to suction by increasing performance level.\n- Repeated fluid boluses for suction in a patient whose real problem is RV failure and septal shift.\n- Attributing a falling hemoglobin entirely to hemolysis without checking the access site and retroperitoneum.\n- Treating a ventricular-looking placement signal as diagnostic of a deep device without looking. Sensor behavior varies by model.\n- Forgetting that the Impella is a purge-dependent device: purge pressure and purge flow alarms are a separate alarm family with their own urgency, and a purge failure can brick the motor. [VERIFY]",
+  "controversies": "**Who should get an Impella at all.** DanGer Shock (2024) showed a mortality benefit for routine microaxial flow pump use in STEMI-related cardiogenic shock, with a substantial increase in complications including bleeding, limb ischemia, and renal replacement. Its population was narrow: STEMI, excluded comatose post-arrest patients, and used a specific protocol. ECLS-SHOCK (2023) found no benefit for routine VA ECMO in infarct-related shock. How far either trial generalizes to the mixed CTICU population is contested, and reasonable intensivists read them differently. [VERIFY] [REVIEW]\n\n**Repositioning in the ICU versus the lab.** Echo-guided repositioning in the ICU is routine at some centers and prohibited at others. The determinant is operator credentialing and institutional policy, not evidence. [NMH protocol, insert]\n\n**How much hemolysis to tolerate.** There is no agreed threshold for LDH or plasma free hemoglobin that mandates device change. Centers use different triggers. Any number in this case must be NMH's own. [NMH protocol, insert]\n\n**Percutaneous RVAD versus VA ECMO for unmasked RV failure.** Registry and single-center data support both. The choice is driven by oxygenation, access, team familiarity, and exit strategy. No trial has compared them. [REVIEW]\n\n**ECPELLA.** Observational data (Schrage 2020) associate LV unloading on VA ECMO with lower mortality, but the signal is confounded and the complication burden (hemolysis, bleeding, access) is real. The decision to add an Impella to ECMO, or ECMO to an Impella, should be made explicitly rather than reflexively. [REVIEW]",
+  "discussWithAttending": [
+    "The resident reduced the performance level and gave fluid before calling you. Defend that as the right first move, then describe the patient in whom it would have been harmful.",
+    "You have an Impella CP patient with persistent hemolysis after a technically successful reposition. Walk through how you decide between tolerating it, exchanging for a different device, or escalating, and what the kidneys have to do with it.",
+    "DanGer Shock enrolled STEMI patients and excluded those comatose after arrest. Our patient fits the trial. How would your reasoning change for a 70-year-old with non-ischemic cardiomyopathy and the same hemodynamics?",
+    "RV failure appeared 12 hours after repositioning. Was it unmasked by the device, caused by the infarct, or precipitated by the overnight fluid? Does the answer change what you do next?",
+    "When is BiPella the wrong answer compared with ECPELLA, and when is it the right one? Use access, oxygenation, and exit strategy in your reasoning."
+  ],
+  "references": [
+    {
+      "citation": "Abiomed. Impella CP with SmartAssist Instructions for Use and Clinical Reference Manual. Current version as supplied with devices at NMH.",
+      "status": "VERIFY",
+      "note": "Faculty should attach the current IFU edition and confirm the placement signal and motor current interpretations, target inlet depth, and suction alarm guidance quoted in this case against it. [NMH protocol, insert]"
+    },
+    {
+      "citation": "Chieffo A, Dudek D, Hassager C, et al. Joint EAPCI/ACVC expert consensus document on percutaneous ventricular assist devices. Eur Heart J Acute Cardiovasc Care. 2021;10:570-583. doi:10.1093/ehjacc/zuab015",
+      "status": "verified",
+      "note": "Confirmed via the reference list of Rosenberg 2025."
+    },
+    {
+      "citation": "Schrage B, Becher PM, Bernhardt A, et al. Left ventricular unloading is associated with lower mortality in patients with cardiogenic shock treated with venoarterial extracorporeal membrane oxygenation. Circulation. 2020;142:2095-2106. doi:10.1161/CIRCULATIONAHA.120.048792",
+      "status": "verified",
+      "note": "Confirmed via the reference list of Rosenberg 2025."
+    },
+    {
+      "citation": "Møller JE, Engstrøm T, Jensen LO, et al. Microaxial flow pump or standard care in infarct-related cardiogenic shock (DanGer Shock). N Engl J Med. 2024;390:1382-1393.",
+      "status": "VERIFY",
+      "note": "I am confident this trial and citation exist. Confirm pages and DOI."
+    },
+    {
+      "citation": "Thiele H, Zeymer U, Akin I, et al. Extracorporeal life support in infarct-related cardiogenic shock (ECLS-SHOCK). N Engl J Med. 2023;389:1286-1297.",
+      "status": "VERIFY",
+      "note": "I am confident this trial exists. Confirm pages and DOI."
+    },
+    {
+      "citation": "Crowley J, Cronin B, Essandoh M, D'Alessandro D, Shelton K, Dalia AA. Transesophageal echocardiography for Impella placement and management. J Cardiothorac Vasc Anesth. 2019;33:2663-2668.",
+      "status": "VERIFY",
+      "note": "Citation from memory, including author order. Confirm before release."
+    },
+    {
+      "citation": "Geller BJ, Sinha SS, Kapur NK, et al. Escalating and de-escalating temporary mechanical circulatory support in cardiogenic shock: a scientific statement from the American Heart Association. Circulation. 2022;146:e50-e68.",
+      "status": "VERIFY",
+      "note": "Citation from memory. Confirm pages."
+    },
+    {
+      "citation": "Balthazar T, Vandenbriele C, Verbrugge FH, et al. Managing patients with short-term mechanical circulatory support: JACC review topic of the week. J Am Coll Cardiol. 2021;77:1243-1256.",
+      "status": "VERIFY",
+      "note": "Citation from memory. Confirm."
+    }
+  ],
+  "reviewChecklist": [
+    "All vignette values (performance level descriptions, lab trends, hemodynamics) are synthetic and intentionally non-numeric where a number would imply a threshold. Confirm you want them left qualitative or supply NMH-sourced numbers.",
+    "Stage 1 model answer and SBA: every statement about placement signal, motor current, console alarms, and target inlet depth must be checked against the current Abiomed IFU for the CP (and 5.5 if you want it included). Sensor behavior differs between device generations.",
+    "Stage 1 model answer: the Crowley 2019 TEE reference, author order, and journal details.",
+    "Stage 1 model answer: purge and systemic anticoagulation left as [NMH protocol, insert].",
+    "Stage 2 model answer: the statement that the IFU suggests volume and performance-level reduction as first responses to suction alarms. Confirm wording against the IFU.",
+    "Stage 2 and 3: who repositions, where, and when the structural or surgical team is called. All left as [NMH protocol, insert].",
+    "Stage 3 model answer: the mechanistic account of RV failure after LV unloading. This is expert reasoning drawn from reviews, not a guideline statement. Edit to your satisfaction.",
+    "Stage 3 model answer: the escalation options and the framing attributed to the 2022 AHA statement and EAPCI/ACVC consensus. Confirm those documents say what is attributed.",
+    "Pitfalls: the claim that purge failure can disable the motor. Confirm against the IFU and reword if too strong.",
+    "Controversies: the DanGer Shock and ECLS-SHOCK summaries. Confirm the inclusion criteria and the complication findings are stated accurately.",
+    "References marked VERIFY: Abiomed IFU edition, DanGer Shock, ECLS-SHOCK, Crowley 2019, Geller 2022, Balthazar 2021.",
+    "No LDH, plasma free hemoglobin, performance level, or inlet depth numbers were asserted. If you add any, source them to the IFU or NMH protocol."
+  ],
+  "topic": "Impella positioning, hemolysis, and unmasked RV failure"
+}

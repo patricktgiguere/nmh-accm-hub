@@ -1,0 +1,229 @@
+{
+  "_howto": "One entry per case. 'id' must match the JSON file name in this folder. Keep title, tags, objectives, estimatedMinutes, and difficulty in sync with the case file (this index is what the library page searches). status: 'draft' shows the case with a draft badge, 'released' shows it cleanly, 'hidden' removes it from the library without deleting the file. Planned cases that do not have a file yet should stay 'hidden'. Titles and subtitles describe the presentation, not the diagnosis. The 'topic' field inside each case file names the diagnosis and is shown only in the wrap-up.",
+  "cases": [
+    {
+      "id": "va-ecmo-day-3",
+      "title": "Day 3 on VA ECMO: a falling saturation",
+      "subtitle": "A 58-year-old man after an anterior STEMI, cannulated in the cath lab, now with discordant pulse oximetry between hand and foot.",
+      "status": "draft",
+      "estimatedMinutes": 20,
+      "difficulty": "Intermediate",
+      "tags": [
+        "ECMO",
+        "Mechanical circulatory support",
+        "Cardiogenic shock",
+        "Respiratory failure"
+      ],
+      "objectives": [
+        "Explain the two-pump physiology of peripheral femoro-femoral VA ECMO and predict where the mixing zone sits as native cardiac output changes.",
+        "Choose monitoring sites at cannulation that will detect differential hypoxemia before it causes harm, and state what each site does and does not tell you.",
+        "Build a differential for upper-body hypoxemia on VA ECMO that includes circuit failure, not only watershed physiology.",
+        "Rank the management options for differential hypoxemia by invasiveness and by what they do to LV afterload, and justify a sequence.",
+        "Recognize how LV unloading strategies (ECPELLA) and ECMO flow changes interact with the watershed."
+      ]
+    },
+    {
+      "id": "device-alarms-0310",
+      "title": "Suction alarms at 03:10",
+      "subtitle": "A 64-year-old woman after primary PCI with a percutaneous LV support device in place, now with recurrent alarms, falling flow, and dark urine.",
+      "status": "draft",
+      "estimatedMinutes": 20,
+      "difficulty": "Intermediate",
+      "tags": [
+        "Mechanical circulatory support",
+        "Cardiogenic shock",
+        "Echocardiography"
+      ],
+      "objectives": [
+        "Describe the three things the Impella console displays about position (placement signal, motor current, flow) and state what each can and cannot distinguish.",
+        "Perform a structured echocardiographic assessment of Impella position and name the measurements and views that matter.",
+        "Build a differential for suction alarms that separates device position from patient physiology, and state the order in which to work through it.",
+        "Recognize hemolysis as a positioning problem until proven otherwise, and outline the response.",
+        "Explain why unmasked RV failure after LV unloading is a predictable complication and how it changes the support strategy."
+      ]
+    },
+    {
+      "id": "breathless-awake-ecmo",
+      "title": "Breathless on awake VA ECMO",
+      "status": "draft",
+      "estimatedMinutes": 20,
+      "difficulty": "Advanced",
+      "tags": [
+        "ECMO",
+        "Mechanical circulatory support",
+        "Awake ECMO",
+        "Respiratory failure"
+      ],
+      "objectives": [
+        "Explain why a spontaneously breathing patient on peripheral VA ECMO can have a hypocapnic right radial gas while the brain is hypercapnic.",
+        "Trace the iatrogenic loop in which reducing sweep in response to a low right radial PaCO2 drives further tachypnea.",
+        "State which sampling sites answer the oxygenation question and which answer the decarboxylation question on peripheral VA ECMO, and why they differ.",
+        "Build a plan for tachypnea on awake VA ECMO that separates the respiratory-drive problem from the circuit problem.",
+        "Contrast East-West (differential hypocapnia) with North-South (differential hypoxemia) and name the single right radial finding that separates them."
+      ],
+      "subtitle": "A 41-year-old woman with fulminant myocarditis, extubated yesterday for mobilization, now tachypneic with an alkalemic radial gas."
+    },
+    {
+      "id": "rv-after-lvad-implant",
+      "title": "A right ventricle that will not cooperate",
+      "status": "draft",
+      "estimatedMinutes": 25,
+      "difficulty": "Advanced",
+      "tags": [
+        "Mechanical circulatory support",
+        "RV failure",
+        "Cardiac surgery"
+      ],
+      "objectives": [
+        "Recognize early RV failure after durable LVAD implantation from the combination of CVP, PA pulsatility, septal position, and LVAD parameters, and explain why increasing pump speed makes it worse.",
+        "Describe the RV-LVAD interaction: how LV unloading changes RV preload, septal geometry, and afterload, and why a borderline RV declares itself in the first 48 hours.",
+        "Compare a percutaneous dual-lumen RA-to-PA cannula with a centrifugal pump, a surgical temporary RVAD, and VA ECMO for RV support after LVAD, in a patient with a fresh sternotomy and a running LVAD.",
+        "Explain what adding an oxygenator to the RA-to-PA circuit does, and distinguish the same cannula's use as a single-cannula VV ECMO configuration from its use as an RVAD.",
+        "Design a weaning trial for a temporary RVAD running against a durable LVAD, name the data that permit decannulation, and describe the failure modes to watch for."
+      ],
+      "subtitle": "A 55-year-old man on postoperative day 1 after durable LVAD implantation, with rising CVP, falling pump flow, and a lactate that will not clear."
+    },
+    {
+      "id": "lvad-low-flow-alarms",
+      "title": "Low-flow alarms on a durable LVAD",
+      "status": "draft",
+      "estimatedMinutes": 20,
+      "difficulty": "Intermediate",
+      "tags": [
+        "Mechanical circulatory support",
+        "Hemodynamics",
+        "Echocardiography"
+      ],
+      "objectives": [
+        "Interpret the four displayed parameters of a continuous-flow LVAD (speed, estimated flow, pulsatility index, power) and the event log, and state what each can and cannot tell you.",
+        "Assess a pulseless LVAD patient at the bedside, including Doppler MAP, and build a differential for suction events that separates preload, rhythm, position, and speed.",
+        "Use echo to distinguish a small LV from excessive speed, hypovolemia, RV failure, and tamponade, and choose the first intervention on the basis of septal position.",
+        "Manage atrial fibrillation with rapid ventricular response on an LVAD, including the decision to cardiovert and the anticoagulation context.",
+        "Recognize late RV failure after LVAD, state its definition, and lay out the medical, mechanical, and transplant options."
+      ],
+      "subtitle": "A 61-year-old woman with a HeartMate 3, readmitted with dizziness, low-flow alarms, and a controller log full of events overnight."
+    },
+    {
+      "id": "third-shock-this-hour",
+      "title": "The third shock this hour",
+      "status": "draft",
+      "estimatedMinutes": 25,
+      "difficulty": "Advanced",
+      "tags": [
+        "Arrhythmia",
+        "Cardiogenic shock",
+        "Mechanical circulatory support"
+      ],
+      "objectives": [
+        "Define electrical storm, state why the definition matters less than the trajectory, and list the reversible drivers that must be excluded in the first hour.",
+        "Explain the sympathetic-storm model and use it to justify beta blockade, sedation, and general anesthesia as antiarrhythmic therapy rather than as supportive care.",
+        "Choose between amiodarone, lidocaine, and procainamide for recurrent ischemic VT and state honestly what the evidence does and does not show.",
+        "Decide when a storm patient needs mechanical circulatory support, choose between Impella and VA ECMO with explicit reasoning, and explain why IABP is usually the wrong device.",
+        "Plan the anesthetic and ICU management of VT ablation on mechanical support, and name the bailout options when ablation fails.",
+        "Build an exit strategy after ablation that covers support weaning, ICD reprogramming, and advanced heart failure candidacy."
+      ],
+      "subtitle": "A 67-year-old man with ischemic cardiomyopathy and an ICD, admitted to the CTICU after three appropriate shocks in an hour, now hemodynamically marginal."
+    },
+    {
+      "id": "chest-pain-wide-mediastinum",
+      "title": "Tearing chest pain and a wide mediastinum",
+      "status": "draft",
+      "estimatedMinutes": 25,
+      "difficulty": "Intermediate",
+      "tags": [
+        "Cardiac surgery",
+        "Hemodynamics",
+        "Aorta"
+      ],
+      "objectives": [
+        "Start anti-impulse therapy before the diagnosis is confirmed, sequence rate control before pressure control, and explain the physiology that justifies the order.",
+        "Perform and document the examination that changes management in suspected acute aortic syndrome: pulse deficits, focal neurology, aortic regurgitation, and tamponade.",
+        "Build the differential for hypotension in type A dissection and explain why tamponade in this setting is managed differently from tamponade of any other cause.",
+        "Receive a handoff after hemiarch replacement under hypothermic circulatory arrest and anticipate the postoperative problems: coagulopathy, neurologic injury, spinal cord and visceral malperfusion, and renal failure.",
+        "Recognize late malperfusion from the residual false lumen and know who to call and what imaging and endovascular options exist."
+      ],
+      "subtitle": "A 52-year-old man brought to the CTICU from the emergency department with hypertension, tearing chest pain radiating to the back, and a CT angiogram on its way."
+    },
+    {
+      "id": "st-changes-after-cabg",
+      "title": "ST changes six hours after CABG",
+      "status": "draft",
+      "estimatedMinutes": 25,
+      "difficulty": "Intermediate",
+      "tags": [
+        "Cardiac surgery",
+        "Hemodynamics",
+        "Echocardiography"
+      ],
+      "objectives": [
+        "Build a differential for new ST changes in the first 24 hours after CABG that separates graft-related ischemia from pericardial, metabolic, and native-vessel causes, and state what distinguishes a localized from a diffuse pattern.",
+        "Map an ECG territory to the graft that supplies it and use echo for new regional wall motion abnormality as the bedside arbiter.",
+        "Explain why a single postoperative troponin is uninterpretable after CABG, and state the Fourth Universal Definition type 5 MI, SCAI, and ARC-2 criteria and why they disagree.",
+        "Argue the choice between urgent angiography and surgical re-exploration for suspected early graft failure, and name the factors that decide it.",
+        "Recognize and manage RV failure after an RCA-territory infarct in the fresh sternotomy patient, including the tradeoffs between pharmacologic support, IABP, and short-term mechanical circulatory support."
+      ],
+      "subtitle": "A 70-year-old man six hours after three-vessel CABG with new inferior ST elevation, rising vasopressor requirement, and a nurse asking whether this is just the pericardium."
+    },
+    {
+      "id": "first-night-after-pte",
+      "title": "The first night after pulmonary thromboendarterectomy",
+      "status": "draft",
+      "estimatedMinutes": 25,
+      "difficulty": "Advanced",
+      "tags": [
+        "Cardiac surgery",
+        "RV failure",
+        "Respiratory failure"
+      ],
+      "objectives": [
+        "Take a structured handoff after pulmonary thromboendarterectomy and state which intraoperative facts (circulatory arrest periods, hemodynamics off bypass, the PVR change, the surgeon's view of the specimen) predict the first night.",
+        "Set up ventilation, fluid, hemodynamic, and neurological management for the first 24 hours after PTE and justify why routine pulmonary vasodilators are not part of it.",
+        "Recognize reperfusion lung injury, distinguish it from fluid overload, pneumonia, and airway bleeding, and state what is and is not supported in its management.",
+        "Separate residual pulmonary hypertension with RV dysfunction from reperfusion injury, select vasoactive support that protects RV coronary perfusion, and name the point at which VA ECMO becomes the right answer.",
+        "Manage airway hemorrhage after PTE, including bronchoscopic localization, lung isolation, the anticoagulation question, and ECMO as a rescue, and explain what each of these events means for the patient's long-term outcome."
+      ],
+      "subtitle": "A 48-year-old woman on postoperative day 0 after bilateral pulmonary thromboendarterectomy under deep hypothermic circulatory arrest, with a PA catheter in place and oxygenation that has started to slip."
+    },
+    {
+      "id": "young-patient-two-valves",
+      "title": "A young patient after a two-valve operation",
+      "status": "draft",
+      "estimatedMinutes": 22,
+      "difficulty": "Intermediate",
+      "tags": [
+        "Valve surgery",
+        "Cardiac surgery",
+        "Echocardiography"
+      ],
+      "objectives": [
+        "Describe the anatomy the Ross procedure leaves behind (pulmonary autograft in the aortic position, homograft in the RVOT, two reimplanted coronary buttons, two RVOT suture lines) and name the specific ways each element can fail in the first 72 hours.",
+        "Distinguish the expected early echo findings after a Ross (trivial to mild neo-aortic regurgitation, a modest homograft gradient) from the findings that demand a call to the surgeon.",
+        "Explain why systemic hypertension is a uniquely harmful insult to a fresh autograft and build a blood pressure and inotrope strategy around that fact.",
+        "Work through new ST changes with hypotension on postoperative day 1 as a coronary button problem until proven otherwise, and state the threshold for imaging and for return to the operating room.",
+        "Summarize the long-term failure modes of both valves well enough to counsel the patient on what the ICU course does and does not mean for durability."
+      ],
+      "subtitle": "A 29-year-old man admitted to the CTICU after a long operation on two valves and a conduit, with a new murmur the intensivist is not sure how to interpret."
+    },
+    {
+      "id": "hypotension-worse-with-inotropes",
+      "title": "Hypotension after mitral repair that worsens with inotropes",
+      "status": "draft",
+      "estimatedMinutes": 22,
+      "difficulty": "Intermediate",
+      "tags": [
+        "Echocardiography",
+        "Valve surgery",
+        "Hemodynamics"
+      ],
+      "objectives": [
+        "Recognize the hemodynamic signature of dynamic LVOT obstruction after cardiac surgery (hypotension that worsens with inotropes and vasodilators and improves with volume and vasoconstrictors) and act on it before the echo arrives.",
+        "List the anatomic and surgical risk factors for systolic anterior motion after mitral repair and explain the mechanism by which each displaces the coaptation point toward the septum.",
+        "Build the differential for early hypotension after mitral repair and state what each item does to the LV cavity size and the gradient.",
+        "Justify each element of medical management for SAM (stop inotropes, fill, vasoconstrict, slow, beta block, restore atrial contraction) in terms of the physiology it reverses.",
+        "State when medical management has failed, what the surgical options are, and why a repeat TEE must be done under controlled loading conditions before SAM is called fixed or failed.",
+        "Transfer the same reasoning to SAM outside mitral repair: post-AVR with septal hypertrophy, post-myectomy, sepsis with a hyperdynamic LV, and takotsubo."
+      ],
+      "subtitle": "A 63-year-old woman two hours after mitral valve repair for degenerative disease, hypotensive, with a loud new systolic murmur and a nurse asking for more epinephrine."
+    }
+  ]
+}

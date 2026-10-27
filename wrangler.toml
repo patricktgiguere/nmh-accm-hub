@@ -1,0 +1,14 @@
+# Cloudflare Pages project configuration.
+# You normally do not need to edit this. Variables and the KV binding are also
+# settable in the Cloudflare dashboard (Pages > your project > Settings), which is
+# the route the deployment guide uses.
+
+name = "nmh-accm-hub"
+pages_build_output_dir = "public"
+compatibility_date = "2026-10-01"
+
+# KV namespace used only for contact-form rate limiting. Create it in the dashboard
+# (Workers & Pages > KV > Create) and bind it as RATE_LIMIT in the Pages project settings.
+# [[kv_namespaces]]
+# binding = "RATE_LIMIT"
+# id = "paste-your-namespace-id-here"

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Case Library · ACCM Curriculum Hub</title>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">ACCM Curriculum Hub <small>Anesthesia Critical Care Medicine Fellowship, Northwestern Memorial Hospital</small></a>
+    <nav class="primary" aria-label="Main">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/orientation.html">Orientation</a></li>
+        <li><a href="/cases.html">Case Library</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <h1>Case Library</h1>
+  <p class="lead">Problem-based cases, 15 to 25 minutes each. Commit to a plan before the next stage opens, then take the discussion prompts to your attending.</p>
+
+  <div class="card no-print">
+    <label for="q">Search</label>
+    <input type="search" id="q" placeholder="Title, tag, or objective">
+    <label for="tag">Topic</label>
+    <select id="tag"><option value="">All topics</option></select>
+    <label><input type="checkbox" id="hide-done"> Hide cases I have completed</label>
+  </div>
+
+  <p id="count" class="muted small" aria-live="polite"></p>
+  <div id="list" class="grid"></div>
+
+  <section class="card no-print" aria-labelledby="notes-h">
+    <h2 id="notes-h">Your notes and progress</h2>
+    <p class="small">Progress and notes are stored only in this browser. They will not follow you to another device or survive a wiped workstation profile. Export them if you want to keep them.</p>
+    <div class="btn-row">
+      <button type="button" id="export">Export my notes (JSON)</button>
+      <button type="button" class="secondary" id="import-btn">Import notes</button>
+      <input type="file" id="import" accept="application/json" class="sr-only" aria-label="Choose a notes file to import">
+      <button type="button" class="secondary" id="clear">Clear all progress on this device</button>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <p>Anesthesia Critical Care Medicine Fellowship, Northwestern Memorial Hospital. For enrolled fellows and faculty only.</p>
+</footer>
+
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/cases.js"></script>
+</body>
+</html>
