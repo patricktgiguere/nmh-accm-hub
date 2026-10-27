@@ -10,9 +10,9 @@ Welcome to the Anesthesiology Critical Care Medicine fellowship. This page cover
 
 ## The year at a glance
 
-Your full rotation schedule was built before you started and sent to you by Vi. CTICU blocks are not consecutive. They are spread across the year.
+Your full rotation schedule was built before you started and sent to you by Vi. CTICU months are not consecutive. They are spread across the year.
 
-- **CTICU (home unit), 6 months.** Three 2-month blocks: Team 1, Team 2, Team 3
+- **CTICU (home unit), 6 months.** Six 1-month rotations, 2 months each on Team 1, Team 2, and Team 3
 - **SICU, 2 months.** One week of SICU call expected
 - **MICU, 1 month.** No call expectation beyond your CTICU call
 - **TEE, 1 month**
