@@ -2,19 +2,14 @@
   "_howto": "One entry per resource. 'path' is either a file you placed in public/files/ (write it as /files/your-file.pdf) or a full https:// link (for example to an NM intranet page). 'tags' drive the topic filter. Any entry tagged 'orientation' also appears on the Orientation page. Delete the two example entries once you add real ones.",
   "resources": [
     {
-      "title": "Example: Fellowship handbook (replace me)",
-      "path": "/files/example-handbook.pdf",
-      "description": "Placeholder entry. Upload your PDF to public/files/ and update this path.",
-      "type": "PDF",
-      "tags": ["orientation", "program"],
-      "updated": "2026-10-26"
-    },
-    {
       "title": "Example: ELSO guidelines (external link)",
       "path": "https://www.elso.org/ecmo-resources/elso-ecmo-guidelines.aspx",
       "description": "Public ELSO guideline index. External links open in a new tab.",
       "type": "link",
-      "tags": ["ECMO", "guidelines"],
+      "tags": [
+        "ECMO",
+        "guidelines"
+      ],
       "updated": "2026-10-26"
     }
   ]
