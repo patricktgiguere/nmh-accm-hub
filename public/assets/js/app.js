@@ -14,7 +14,9 @@ window.Hub = (function () {
   function inline(s) {
     s = escapeHtml(s);
     s = s.replace(/\[VERIFY\]/g, '<mark class="verify" title="Reference or value not yet verified by faculty">VERIFY</mark>');
-    s = s.replace(/\[NMH protocol, insert\]/g, '<mark class="nmh" title="Institution-specific practice to be completed by faculty">NMH protocol, insert</mark>');
+    s = s.replace(/\[NMH protocol, insert(?::\s*([^\]]+))?\]/g, function (m, detail) {
+      return '<mark class="nmh" title="Institution-specific content to be completed by faculty">NMH protocol, insert' + (detail ? ': ' + detail : '') + '</mark>';
+    });
     s = s.replace(/\[REVIEW\]/g, '<mark class="review" title="Clinical claim flagged for faculty review">REVIEW</mark>');
     s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
     s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
