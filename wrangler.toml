@@ -1,14 +1,23 @@
-# Cloudflare Pages project configuration.
-# You normally do not need to edit this. Variables and the KV binding are also
-# settable in the Cloudflare dashboard (Pages > your project > Settings), which is
-# the route the deployment guide uses.
+# Cloudflare Worker configuration. The site is static files in public/ served as
+# Worker assets, with a small Worker (src/) in front for login checks, the contact
+# form, and the admin page.
 
 name = "nmh-accm-hub"
-pages_build_output_dir = "public"
+main = "src/index.js"
 compatibility_date = "2026-10-01"
 
-# KV namespace used only for contact-form rate limiting. Create it in the dashboard
-# (Workers & Pages > KV > Create) and bind it as RATE_LIMIT in the Pages project settings.
+# Keep variables and secrets that were set in the Cloudflare dashboard.
+keep_vars = true
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+# Run the Worker for every request so the login check covers files too.
+run_worker_first = true
+
+# Contact-form rate limiting (optional). Create a KV namespace in the dashboard
+# (Storage & Databases > KV), then paste its ID below and remove the leading '#'
+# from these three lines. Without it the form still works, without the hourly cap.
 # [[kv_namespaces]]
 # binding = "RATE_LIMIT"
 # id = "paste-your-namespace-id-here"

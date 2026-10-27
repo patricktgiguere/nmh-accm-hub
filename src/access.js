@@ -1,9 +1,9 @@
-/* Defence in depth for Cloudflare Access.
+/* Defence in depth for Cloudflare Access. Runs on every request (see index.js).
    Cloudflare Access enforces login at the edge before any request reaches this site.
    This middleware re-checks the Access JWT so that nothing is served if Access is
    accidentally disabled, misconfigured, or bypassed via a preview URL.
 
-   Required environment variables (set in Pages > Settings > Variables):
+   Required environment variables (Worker > Settings > Variables and Secrets):
      ACCESS_TEAM_DOMAIN  e.g.  nmh-accm.cloudflareaccess.com
      ACCESS_AUD          the Application Audience (AUD) tag from the Access application
    If either is missing, the middleware fails CLOSED and returns 503 so you notice. */

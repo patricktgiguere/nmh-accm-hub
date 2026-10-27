@@ -5,7 +5,7 @@
    Who may use it: only signed-in users whose email is listed in ADMIN_EMAILS.
    The identity comes from the verified Cloudflare Access token (see _middleware.js).
 
-   Environment variables (Pages > Settings > Variables and Secrets):
+   Environment variables (Worker > Settings > Variables and Secrets):
      ADMIN_EMAILS    comma-separated, e.g. "patrick.giguere@nm.org"
      GITHUB_TOKEN    (secret) fine-grained personal access token with
                      "Contents: Read and write" on this one repository

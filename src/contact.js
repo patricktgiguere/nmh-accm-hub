@@ -7,12 +7,12 @@
      3. Rate limit: at most RATE_LIMIT_PER_HOUR messages per user per hour, tracked in KV.
      4. Message length capped; HTML stripped.
 
-   Environment variables (Pages > Settings > Variables and Secrets):
+   Environment variables (Worker > Settings > Variables and Secrets):
      RESEND_API_KEY   (secret)   from resend.com
      CONTACT_TO       patrick.giguere@nm.org
      CONTACT_FROM     e.g. "ACCM Hub <hub@yourdomain.org>"  (a domain you verified in Resend)
      RATE_LIMIT_PER_HOUR  optional, default 5
-   KV binding (Pages > Settings > Bindings):  RATE_LIMIT */
+   KV binding: RATE_LIMIT, configured in wrangler.toml */
 
 export async function onRequestPost({ request, env, data }) {
   const json = (obj, status = 200) => new Response(JSON.stringify(obj), { status, headers: { 'Content-Type': 'application/json' } });

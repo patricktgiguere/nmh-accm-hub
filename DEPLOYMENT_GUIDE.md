@@ -6,7 +6,7 @@ Written for a physician who has never deployed a website. Budget about 90 minute
 
 | Option | Per-user login | Files protected | Cost | Yearly maintenance | Verdict |
 |---|---|---|---|---|---|
-| Cloudflare Pages + Cloudflare Access | Yes, one-time code to allowlisted emails | Yes, Access gates the whole hostname | Free (Access free tier covers up to 50 users) | Edit an email list in a web form | **Recommended** |
+| Cloudflare Workers (static assets) + Cloudflare Access | Yes, one-time code to allowlisted emails | Yes, Access gates the whole hostname | Free (Access free tier covers up to 50 users) | Edit an email list in a web form | **Recommended** |
 | Self-built magic links (Workers + KV + mail provider) | Yes | Yes, if written correctly | Free to low | You own session security, token expiry, and the mailer | More code for you to maintain, no benefit over Access |
 | Netlify or Vercel password protection | No, shared password (or paid per-user tiers) | Partial | Paid tiers for anything beyond a shared password | Low | Fails your per-user requirement |
 
@@ -25,25 +25,25 @@ Cloudflare Access wins because the hard part (identity, sessions, one-time codes
 
 GitHub is now the place you edit content. Cloudflare will watch it and republish automatically.
 
-## Step 2. Create the Cloudflare Pages project
+## Step 2. Create the Cloudflare Worker
 
 1. Create a free account at https://dash.cloudflare.com.
-2. Left menu: "Workers & Pages". Click "Create", choose the "Pages" tab, "Connect to Git".
+2. Left menu: "Workers & Pages". Click "Create", then "Import a repository" (connect to Git).
 3. Authorize GitHub and select the `nmh-accm-hub` repository.
-4. Build settings: Framework preset "None". Build command: leave **empty**. Build output directory: `public`. Click "Save and Deploy".
-5. After a minute you will have a site at `https://nmh-accm-hub.pages.dev` (the exact name may differ). It will show a 503 "Site misconfigured" message. That is expected and correct: the site refuses to serve anything until Access is wired up.
+4. Build settings: leave the defaults. Build command empty, deploy command `npx wrangler deploy`, root directory `/`. Click "Create and deploy".
+5. After a minute the Worker is live at an address like `https://nmh-accm-hub.<yourname>.workers.dev`. Opening it shows a 503 "Site misconfigured" message. That is expected and correct: the site refuses to serve anything until Access is wired up in Steps 4 and 5.
 
 ## Step 3. Add your domain (optional but recommended)
 
 1. In Cloudflare, "Domain Registration", "Register Domains", buy your chosen name.
-2. Back in Workers & Pages, open your project, "Custom domains", "Set up a custom domain", enter the domain. Cloudflare configures DNS automatically because it manages the domain.
+2. Back in Workers & Pages, open the Worker, "Settings", "Domains & Routes", "Add", "Custom domain", enter the domain. Cloudflare configures DNS automatically because it manages the domain.
 
 ## Step 4. Turn on Cloudflare Access
 
 1. Left menu: "Zero Trust". First time, it asks you to choose a team name. This becomes your login address, for example `nmh-accm.cloudflareaccess.com`. Choose the **Free** plan.
 2. Zero Trust menu: "Access", "Applications", "Add an application", "Self-hosted".
 3. Application name: `ACCM Hub`. Session duration: 24 hours.
-4. Application domain: add your custom domain (for example `accm-hub.org`). Then click "Add domain" again and also add the `pages.dev` address from Step 2. **Both must be listed**, otherwise the pages.dev address is an unprotected back door.
+4. Application domain: add your custom domain (for example `accm-hub.org`). Then click "Add domain" again and also add the `workers.dev` address from Step 2. **Both must be listed**, otherwise the workers.dev address is an unprotected back door.
 5. Identity providers: leave "One-time PIN" checked. Uncheck anything else.
 6. Next, create a policy. Name: `Allowed users`. Action: Allow. Include rule: selector "Emails", then paste the email addresses of yourself, the PD, and each fellow, one per line.
 7. Save the application.
@@ -51,13 +51,13 @@ GitHub is now the place you edit content. Cloudflare will watch it and republish
 
 ## Step 5. Tell the site about Access
 
-1. Workers & Pages, your project, "Settings", "Variables and Secrets".
+1. Workers & Pages, your Worker, "Settings", "Variables and Secrets".
 2. Add variable `ACCESS_TEAM_DOMAIN` with value `yourteam.cloudflareaccess.com` (the team name from Step 4, with `.cloudflareaccess.com`).
 3. Add variable `ACCESS_AUD` with the AUD tag you copied.
-4. Go to "Deployments" and click "Retry deployment" on the latest one (variables apply to new deployments).
+4. Variables take effect immediately on a Worker. If anything looks stale, open "Deployments" and retry the latest build.
 5. Visit your site. You should be sent to a Cloudflare login page asking for your email. Enter it, get the code by email, enter the code. The Home page appears.
 
-Test the back door: open the `pages.dev` address in a private window. You should see the same login page, not the site.
+Test the back door: open the `workers.dev` address in a private window. You should see the same login page, not the site.
 
 ## Step 6. Set up the contact form email
 
@@ -67,13 +67,13 @@ The form sends through Resend, a transactional email service with a free tier th
 2. "Domains", "Add domain", enter your domain. Resend shows DNS records to add. Because Cloudflare manages your domain, go to Cloudflare, your domain, "DNS", and add each record exactly as Resend shows. Wait for Resend to show "Verified" (minutes to an hour).
    If you skipped buying a domain, Resend lets you send only to your own verified address from its test domain, which is actually fine for this use case since every message goes to you. Use the `onboarding@resend.dev` sender in that case.
 3. "API Keys", "Create API Key", name it `accm-hub`, permission "Sending access". Copy the key. It is shown once.
-4. Cloudflare, Workers & Pages, your project, Settings, Variables and Secrets:
+4. Cloudflare, Workers & Pages, your Worker, Settings, Variables and Secrets:
    - `RESEND_API_KEY`, type **Secret**, value: the key.
    - `CONTACT_TO`, value: `patrick.giguere@nm.org`
    - `CONTACT_FROM`, value: `ACCM Hub <hub@yourdomain.org>` (or `onboarding@resend.dev` if no domain).
    - `RATE_LIMIT_PER_HOUR`, value: `5` (optional).
-5. Rate limiting storage: Workers & Pages, "KV", "Create a namespace", name `accm-hub-ratelimit`. Then in your Pages project, Settings, "Bindings", "Add", type KV namespace, variable name `RATE_LIMIT`, select the namespace.
-6. Retry the deployment. Send yourself a test question from the Contact page. It should arrive within a minute, with reply-to set to your signed-in email.
+5. Rate limiting storage (optional but recommended): left menu "Storage & Databases", "KV", "Create a namespace", name `accm-hub-ratelimit`. Copy its ID. Then in GitHub open `wrangler.toml`, click the pencil, and at the bottom remove the `# ` from the three lines beginning `[[kv_namespaces]]`, pasting the ID in place of `paste-your-namespace-id-here`. Commit. (This one setting cannot be made from the dashboard because the deploy process rebuilds bindings from this file.)
+6. Send yourself a test question from the Contact page. It should arrive within a minute, with reply-to set to your signed-in email.
 
 A note on where the email lands: NM's mail filters may quarantine mail from an unfamiliar domain the first time. Check junk, and if needed ask NM IT to allowlist the sender address.
 
@@ -83,12 +83,12 @@ The site has a page at `/admin.html` where you can edit the orientation text, up
 
 1. GitHub, click your profile photo, Settings, Developer settings, Personal access tokens, Fine-grained tokens, "Generate new token".
 2. Name: `accm-hub-admin`. Expiration: one year (set a calendar reminder to renew). Repository access: "Only select repositories", choose `nmh-accm-hub`. Permissions: Repository permissions, Contents: "Read and write". Generate and copy the token.
-3. Cloudflare, Workers & Pages, your project, Settings, Variables and Secrets:
+3. Cloudflare, Workers & Pages, your Worker, Settings, Variables and Secrets:
    - `GITHUB_TOKEN`, type **Secret**, value: the token.
    - `GITHUB_REPO`, value: `yourgithubusername/nmh-accm-hub`.
    - `GITHUB_BRANCH`, value: `main`.
    - `ADMIN_EMAILS`, value: `patrick.giguere@nm.org` (add the PD's email after a comma if they should edit too).
-4. Retry the deployment. Visit `/admin.html`. It should greet you as administrator. Anyone not in `ADMIN_EMAILS` sees a "not an administrator" message and nothing else.
+4. Visit `/admin.html`. It should greet you as administrator. Anyone not in `ADMIN_EMAILS` sees a "not an administrator" message and nothing else.
 
 Everything you save on the admin page becomes a commit in GitHub and goes live about a minute later. The GitHub web editor still works as a fallback.
 
@@ -109,7 +109,7 @@ The site itself contains only synthetic cases and your own writing. Institutiona
 4. **Copyright and licensing.** Journal PDFs, textbook chapters, and society guidelines are typically licensed to the institution for personal use, not for redistribution on a site you run. Link to the publisher or library proxy page rather than uploading the PDF. Society guideline documents are usually free to link; some are not free to host.
 5. **GME office.** Not an approval as such, but they should know the site exists, since it is part of the fellowship's educational program and may appear in accreditation materials.
 
-Where the data lives: static files and case content are on Cloudflare's global network (US-based account, content replicated worldwide for delivery). Access login identities are stored by Cloudflare Zero Trust. Contact-form emails pass through Resend and land in your NM mailbox. Fellow notes exist only in each fellow's browser.
+Where the data lives: static files and case content are on Cloudflare's global network as Worker assets (US-based account, content replicated worldwide for delivery). Access login identities are stored by Cloudflare Zero Trust. Contact-form emails pass through Resend and land in your NM mailbox. Fellow notes exist only in each fellow's browser.
 
 ## Assumptions made in this build
 
@@ -123,7 +123,7 @@ Where the data lives: static files and case content are on Cloudflare's global n
 
 ## If something breaks
 
-- Site shows 503 "misconfigured": the two Access variables are missing or the deployment predates them. Check Step 5 and retry the deployment.
+- Site shows 503 "misconfigured": the two Access variables are missing. Check Step 5.
 - Login loop or 401: the AUD tag does not match. Re-copy it from the Access application.
 - Contact form says "not configured": a Resend variable is missing. Check Step 6.
 - Admin page says "Editing not configured": GITHUB_TOKEN or GITHUB_REPO is missing. Check Step 7. If saves fail with a GitHub error, the token may have expired or lack Contents write permission.

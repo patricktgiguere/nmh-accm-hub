@@ -1,6 +1,6 @@
 # ACCM Fellowship Curriculum Hub
 
-A private, per-user authenticated curriculum site for the Anesthesia Critical Care Medicine Fellowship at Northwestern Memorial Hospital. Static HTML with a single small server function for the contact form. Hosted on Cloudflare Pages, gated by Cloudflare Access.
+A private, per-user authenticated curriculum site for the Anesthesia Critical Care Medicine Fellowship at Northwestern Memorial Hospital. Static HTML with a small Cloudflare Worker in front for login checks, the contact form, and the admin page. Hosted on Cloudflare Workers, gated by Cloudflare Access.
 
 Read `DEPLOYMENT_GUIDE.md` first if you have not deployed yet. This file is the day-to-day manual.
 
@@ -27,10 +27,12 @@ public/                  everything the browser can see (after login)
     cases/_TEMPLATE.json Copy this to start a new case
     resources/manifest.json  The list the Resources page shows
   files/                 Put PDFs and documents here
-functions/
-  _middleware.js         Verifies the Cloudflare Access login on every request
-  api/contact.js         Contact form email sender
-wrangler.toml            Cloudflare project settings
+src/
+  index.js               Worker entry: routes requests
+  access.js              Verifies the Cloudflare Access login on every request
+  contact.js             Contact form email sender
+  admin.js               Admin page backend (commits to GitHub)
+wrangler.toml            Cloudflare Worker settings (KV namespace ID lives here)
 ```
 
 ## Making changes
@@ -119,9 +121,8 @@ Case structure, briefly: `stages` is a list. Each stage has a `narrative` and a 
 ## Local preview (optional, for anyone comfortable with a terminal)
 
 ```
-npm install -g wrangler
 cd nmh-accm-hub
-wrangler pages dev public
+npx wrangler dev
 ```
 
-Locally the Access check will block you (no token). To preview content only, open `public/index.html` through any simple static server, or temporarily comment out the body of `onRequest` in `functions/_middleware.js` and restore it before committing.
+Locally the Access check returns 401 (no login token). To preview content only, serve the `public` folder with any simple static server, for example `python3 -m http.server --directory public`.
