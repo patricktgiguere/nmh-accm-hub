@@ -112,6 +112,10 @@ Titles, subtitles, and file names describe the presentation, not the diagnosis, 
 
 Case structure, briefly: `stages` is a list. Each stage has a `narrative` and a list of `questions`. Every question is open response: `"type": "free"` with a `prompt` and a `modelAnswer`. The fellow types a response and presses Enter, and the model answer appears. Nothing is graded. Stages after the first stay locked until every question in the current stage has been answered and the fellow clicks "Commit and continue".
 
+## Appearance
+
+The site follows the device's light or dark setting by default. The Auto / Light / Dark control in the header overrides it, and the choice is remembered on that device only. Colours are defined once at the top of `public/assets/css/site.css`, so changing the palette is a matter of editing those values.
+
 ## Privacy and data
 
 - Progress, answers, and notes are stored in the fellow's browser (localStorage) under keys beginning `accm-hub:`. They are never sent to a server. Clearing browser data erases them. Export and import buttons exist on the Case Library page.
