@@ -1,19 +1,19 @@
 # Clinical review tracker
 
-Generated from the case files on 2026-10-26. Every case is `draft` until its checklist is cleared and its status set to `released` (admin page or index.json). Regenerate this file after edits with `python3 tools/build_review_tracker.py`.
-Total checklist items across 11 cases: 182.
+Generated from the case files. Every case is draft until its checklist is cleared and its status set to released.
+Total checklist items: 173.
 
 ## Day 3 on VA ECMO: a falling saturation
-File: `public/content/cases/va-ecmo-day-3.json`  ·  Topic: North-South syndrome: differential hypoxemia on peripheral VA ECMO
+File: public/content/cases/va-ecmo-day-3.json  ·  Topic: North-South syndrome: differential hypoxemia on peripheral VA ECMO
 
-Flags in text: 1 VERIFY, 5 NMH protocol inserts, 25 REVIEW. References: 8 total, 5 unconfirmed.
+Flags: 1 VERIFY, 5 NMH inserts, 25 REVIEW. References: 8, 5 unconfirmed.
 
 References to confirm:
-- Lorusso R, Shekar K, MacLaren G, et al. ELSO Interim Guidelines for Venoarterial Extracorporeal Membrane Oxygenation in Adult Cardiac Patients. ASAIO J. 2021;67(8):827-844. (I am confident this guideline exists. Confirm volume, pages, and DOI, and confirm it contains the right radial monitoring recommendation attributed to it.)
-- Stevens MC, Callaghan FM, Forrest P, Bannon PG, Grieve SM. A computational framework for adjusting flow during peripheral extracorporeal membrane oxygenation to reduce differential hypoxia. J Cardiovasc Transl Res (or J Biomech). 2021. (A computational study of coronary versus cerebral hypoxia in North-South syndrome appeared in a 2021 Springer journal (doi:10.1007/s12265-021-10110-2 surfaced in search). Author list and exact title must be confirmed before citing.)
-- Hoeper MM, Tudorache I, Kühn C, et al. Extracorporeal membrane oxygenation watershed. Circulation. 2014;130:864-865. (Classic imaging description of the watershed. Citation from memory.)
-- Combes A, Price S, Slutsky AS, Brodie D. Temporary circulatory support for cardiogenic shock. Lancet. 2020;396:199-212. (Overview of configurations including VAV. Citation from memory.)
-- Rao P, Khalpey Z, Smith R, Burkhoff D, Kociol RD. Venoarterial extracorporeal membrane oxygenation for cardiogenic shock and cardiac arrest: cardinal considerations for initiation and management. Circ Heart Fail. 2018;11:e004905. (Review covering monitoring and differential hypoxemia. Citation from memory.)
+- Lorusso R, Shekar K, MacLaren G, et al. ELSO Interim Guidelines for Venoarterial Extracorporeal Membrane Oxygenation in Adult Cardiac Patients. ASAIO J. 2021;67(8):827-844.
+- Stevens MC, Callaghan FM, Forrest P, Bannon PG, Grieve SM. A computational framework for adjusting flow during peripheral extracorporeal membrane oxygenation to reduce differential hypoxia. J Cardiovasc Transl Res (or J Biomech). 2021.
+- Hoeper MM, Tudorache I, Kühn C, et al. Extracorporeal membrane oxygenation watershed. Circulation. 2014;130:864-865.
+- Combes A, Price S, Slutsky AS, Brodie D. Temporary circulatory support for cardiogenic shock. Lancet. 2020;396:199-212.
+- Rao P, Khalpey Z, Smith R, Burkhoff D, Kociol RD. Venoarterial extracorporeal membrane oxygenation for cardiogenic shock and cardiac arrest: cardinal considerations for initiation and management. Circ Heart Fail. 2018;11:e004905.
 
 Checklist:
 - [ ] Stage 1 vignette: cannula configuration, inotrope status, ventilator description, and pulse oximetry values are synthetic and marked [REVIEW]. Confirm they are internally consistent with NMH practice.
@@ -31,17 +31,17 @@ Checklist:
 - [ ] No numeric thresholds for saturation, NIRS, flow, or anticoagulation were asserted as recommendations. If you add any, source them.
 
 ## Suction alarms at 03:10
-File: `public/content/cases/device-alarms-0310.json`  ·  Topic: Impella positioning, hemolysis, and unmasked RV failure
+File: public/content/cases/device-alarms-0310.json  ·  Topic: Impella positioning, hemolysis, and unmasked RV failure
 
-Flags in text: 10 VERIFY, 13 NMH protocol inserts, 15 REVIEW. References: 8 total, 6 unconfirmed.
+Flags: 10 VERIFY, 13 NMH inserts, 15 REVIEW. References: 8, 6 unconfirmed.
 
 References to confirm:
-- Abiomed. Impella CP with SmartAssist Instructions for Use and Clinical Reference Manual. Current version as supplied with devices at NMH. (Faculty should attach the current IFU edition and confirm the placement signal and motor current interpretations, target inlet depth, and suction alarm guidance quoted in this case against it. [NMH protocol, insert])
-- Møller JE, Engstrøm T, Jensen LO, et al. Microaxial flow pump or standard care in infarct-related cardiogenic shock (DanGer Shock). N Engl J Med. 2024;390:1382-1393. (I am confident this trial and citation exist. Confirm pages and DOI.)
-- Thiele H, Zeymer U, Akin I, et al. Extracorporeal life support in infarct-related cardiogenic shock (ECLS-SHOCK). N Engl J Med. 2023;389:1286-1297. (I am confident this trial exists. Confirm pages and DOI.)
-- Crowley J, Cronin B, Essandoh M, D'Alessandro D, Shelton K, Dalia AA. Transesophageal echocardiography for Impella placement and management. J Cardiothorac Vasc Anesth. 2019;33:2663-2668. (Citation from memory, including author order. Confirm before release.)
-- Geller BJ, Sinha SS, Kapur NK, et al. Escalating and de-escalating temporary mechanical circulatory support in cardiogenic shock: a scientific statement from the American Heart Association. Circulation. 2022;146:e50-e68. (Citation from memory. Confirm pages.)
-- Balthazar T, Vandenbriele C, Verbrugge FH, et al. Managing patients with short-term mechanical circulatory support: JACC review topic of the week. J Am Coll Cardiol. 2021;77:1243-1256. (Citation from memory. Confirm.)
+- Abiomed. Impella CP with SmartAssist Instructions for Use and Clinical Reference Manual. Current version as supplied with devices at NMH.
+- Møller JE, Engstrøm T, Jensen LO, et al. Microaxial flow pump or standard care in infarct-related cardiogenic shock (DanGer Shock). N Engl J Med. 2024;390:1382-1393.
+- Thiele H, Zeymer U, Akin I, et al. Extracorporeal life support in infarct-related cardiogenic shock (ECLS-SHOCK). N Engl J Med. 2023;389:1286-1297.
+- Crowley J, Cronin B, Essandoh M, D'Alessandro D, Shelton K, Dalia AA. Transesophageal echocardiography for Impella placement and management. J Cardiothorac Vasc Anesth. 2019;33:2663-2668.
+- Geller BJ, Sinha SS, Kapur NK, et al. Escalating and de-escalating temporary mechanical circulatory support in cardiogenic shock: a scientific statement from the American Heart Association. Circulation. 2022;146:e50-e68.
+- Balthazar T, Vandenbriele C, Verbrugge FH, et al. Managing patients with short-term mechanical circulatory support: JACC review topic of the week. J Am Coll Cardiol. 2021;77:1243-1256.
 
 Checklist:
 - [ ] All vignette values (performance level descriptions, lab trends, hemodynamics) are synthetic and intentionally non-numeric where a number would imply a threshold. Confirm you want them left qualitative or supply NMH-sourced numbers.
@@ -58,29 +58,20 @@ Checklist:
 - [ ] No LDH, plasma free hemoglobin, performance level, or inlet depth numbers were asserted. If you add any, source them to the IFU or NMH protocol.
 
 ## Breathless on awake VA ECMO
-File: `public/content/cases/breathless-awake-ecmo.json`  ·  Topic: East-West (RIDDLER) syndrome: differential hypocapnia on awake peripheral VA ECMO
+File: public/content/cases/breathless-awake-ecmo.json  ·  Topic: East-West (RIDDLER) syndrome: differential hypocapnia on awake peripheral VA ECMO
 
-Flags in text: 0 VERIFY, 5 NMH protocol inserts, 24 REVIEW. References: 6 total, 0 unconfirmed.
+Flags: 0 VERIFY, 0 NMH inserts, 0 REVIEW. References: 6, 0 unconfirmed.
 
 Checklist:
-- [ ] Framing: the case follows the Circulation paper's mechanism (differential decarboxylation driven by native hyperventilation and an iatrogenic sweep reduction). Your initial description emphasized lateral flow variation between brachiocephalic and left carotid. The case uses that anatomy as the substrate and the loop as the mechanism. Confirm this is the framing you want, and edit the 'Why East-West' passage in Stage 2 if not.
-- [ ] All gas values are synthetic and set per Dr. Giguere's direction: right radial PaO2 normal for the inspired oxygen throughout the East-West phase (94 then 97 mmHg on 2 L), PaCO2 in the 25 to 30 range (29 then 25), respiratory rate high 20s rising to mid-30s, post-oxygenator PaCO2 61 and pH 7.24. The PaO2 stays normal throughout. Morning-after paired gases (right radial PaCO2 38, post-oxygenator 40) are synthetic. Confirm they are the illustrative numbers you want.
-- [ ] Stage 1 vignette: Impella 5.5 via right axillary artery, extubation on day 4 for mobilization. Confirm this matches an NMH awake ECMO pathway or mark it explicitly as another center's practice.
-- [ ] Stage 3 model answer: the 1:1 sweep-to-flow starting point is attributed to Rosenberg 2025 and labeled expert opinion. Confirm you want it included at all, and insert NMH's sweep titration practice.
-- [ ] Stage 3 model answer: the statement that end-tidal CO2 is unhelpful here is my reasoning, not from the paper. Confirm or delete.
-- [ ] Stage 4 is now the recovery day: paired gases, a mobilization plan, and a counterfactual contrast with North-South posed as a thought experiment. The earlier draft introduced aspiration to force the contrast and was removed at Dr. Giguere's direction because her lungs are normal throughout. Confirm the mobilization plan matches NMH awake ECMO practice.
-- [ ] Controversies: the vertebrobasilar point (respiratory centers supplied via subclavians rather than the left carotid) is my anatomical observation, not from any cited source. Decide whether to keep, soften, or remove it.
-- [ ] Controversies: the characterization of the syndrome as newly named, single-source, and without a series is accurate as of October 2026 to my knowledge. Re-check the literature before release in case a series has since appeared.
-- [ ] Reference list: all six entries were confirmed this session, five via the Rosenberg 2025 reference list and one via the AACN site. None are marked VERIFY. Confirm you are satisfied with that provenance.
-- [ ] No sweep, flow, or gas targets are asserted as recommendations. If you add any, source them.
+- [ ] Reviewed and released by Dr. Giguere on 2026-10-27. Changes from draft: Impella removed from the vignette, Stage 1 model answer no longer pre-empts the sweep decision, Stage 2 meta paragraph removed.
 
 ## A right ventricle that will not cooperate
-File: `public/content/cases/rv-after-lvad-implant.json`  ·  Topic: Dual-lumen RA-to-PA cannula (ProtekDuo) for RV support after LVAD, and its use as a single-cannula VV configuration
+File: public/content/cases/rv-after-lvad-implant.json  ·  Topic: Dual-lumen RA-to-PA cannula (ProtekDuo) for RV support after LVAD, and its use as a single-cannula VV configuration
 
-Flags in text: 7 VERIFY, 12 NMH protocol inserts, 31 REVIEW. References: 9 total, 1 unconfirmed.
+Flags: 7 VERIFY, 12 NMH inserts, 31 REVIEW. References: 9, 1 unconfirmed.
 
 References to confirm:
-- LivaNova. ProtekDuo (and ProtekDuo+) dual-lumen cannula Instructions for Use. Current version as supplied at NMH. (The LivaNova product page confirms 29 Fr and 31 Fr sizes and right IJ insertion. Flow ranges, positioning criteria, PA tip position, and the indication language (the US page describes VV ECMO and does not list RV support as a labeled indication) must be checked against the IFU edition in use. [NMH protocol, insert])
+- LivaNova. ProtekDuo (and ProtekDuo+) dual-lumen cannula Instructions for Use. Current version as supplied at NMH.
 
 Checklist:
 - [ ] Stage 1 vignette: INTERMACS profile, preoperative hemodynamics, intraoperative management, and all overnight trends are synthetic and qualitative. Confirm internal consistency with NMH implant practice.
@@ -101,9 +92,9 @@ Checklist:
 - [ ] No numeric thresholds for CVP, PA pressure, flow increments, inotrope dosing, or anticoagulation were asserted as recommendations. If you add any, source them.
 
 ## Low-flow alarms on a durable LVAD
-File: `public/content/cases/lvad-low-flow-alarms.json`  ·  Topic: Suction (suck-down) events on a durable LVAD
+File: public/content/cases/lvad-low-flow-alarms.json  ·  Topic: Suction (suck-down) events on a durable LVAD
 
-Flags in text: 9 VERIFY, 9 NMH protocol inserts, 34 REVIEW. References: 9 total, 0 unconfirmed.
+Flags: 9 VERIFY, 9 NMH inserts, 34 REVIEW. References: 9, 0 unconfirmed.
 
 Checklist:
 - [ ] Stage 1 vignette: implant indication, timing, medications, and the controller readings are synthetic and qualitative. Confirm consistency with NMH VAD program practice.
@@ -123,13 +114,13 @@ Checklist:
 - [ ] No numeric MAP, speed, INR, flow threshold, or dose values were asserted as recommendations. If you add any, source them.
 
 ## The third shock this hour
-File: `public/content/cases/third-shock-this-hour.json`  ·  Topic: Electrical storm (VT storm) in the cardiothoracic ICU
+File: public/content/cases/third-shock-this-hour.json  ·  Topic: Electrical storm (VT storm) in the cardiothoracic ICU
 
-Flags in text: 7 VERIFY, 11 NMH protocol inserts, 53 REVIEW. References: 11 total, 2 unconfirmed.
+Flags: 7 VERIFY, 11 NMH inserts, 53 REVIEW. References: 11, 2 unconfirmed.
 
 References to confirm:
-- Nademanee K, Taylor R, Bailey WE, Rieders DE, Kosar EM. Treating electrical storm: sympathetic blockade versus advanced cardiac life support-guided therapy. Circulation. 2000;102:742-747. (Citation from memory. The study exists and is widely cited as the foundational sympatholysis data. Confirm pages and DOI, and confirm the mortality figures before quoting any number.)
-- Chatzidou S, Kontogiannis C, Tsilimigras DI, et al. Propranolol versus metoprolol for treatment of electrical storm in patients with implantable cardioverter-defibrillator. J Am Coll Cardiol. 2018;71:1897-1906. (Citation from memory. Confirm before release. Source for the non-selective versus selective beta blocker claim.)
+- Nademanee K, Taylor R, Bailey WE, Rieders DE, Kosar EM. Treating electrical storm: sympathetic blockade versus advanced cardiac life support-guided therapy. Circulation. 2000;102:742-747.
+- Chatzidou S, Kontogiannis C, Tsilimigras DI, et al. Propranolol versus metoprolol for treatment of electrical storm in patients with implantable cardioverter-defibrillator. J Am Coll Cardiol. 2018;71:1897-1906.
 
 Checklist:
 - [ ] Stage 1 vignette: device history, ED interrogation findings, hemodynamics, labs, and the antibiotic are synthetic and marked [REVIEW]. Confirm they are internally consistent.
@@ -151,14 +142,14 @@ Checklist:
 - [ ] No numeric thresholds for electrolytes, drug doses, ECMO flow, or ACT were asserted as recommendations. If you add any, source them.
 
 ## Tearing chest pain and a wide mediastinum
-File: `public/content/cases/chest-pain-wide-mediastinum.json`  ·  Topic: Acute aortic dissection: diagnosis, anti-impulse therapy, and perioperative critical care
+File: public/content/cases/chest-pain-wide-mediastinum.json  ·  Topic: Acute aortic dissection: diagnosis, anti-impulse therapy, and perioperative critical care
 
-Flags in text: 17 VERIFY, 15 NMH protocol inserts, 39 REVIEW. References: 8 total, 3 unconfirmed.
+Flags: 17 VERIFY, 15 NMH inserts, 39 REVIEW. References: 8, 3 unconfirmed.
 
 References to confirm:
-- Isselbacher EM, Cigarroa JE, Eagle KA. Cardiac tamponade complicating proximal aortic dissection: is pericardiocentesis harmful? Circulation. 1994;90:2375-2378. (Citation from memory. The study is described in secondary sources confirmed this session (most drained patients died after the procedure) but the primary citation details were not confirmed.)
-- Malaisrie SC, Szeto WY, Halas M, et al. 2021 The American Association for Thoracic Surgery expert consensus document: surgical treatment of acute type A aortic dissection. J Thorac Cardiovasc Surg. 2021;162:735-758.e2. (Existence of the document confirmed this session via CTSNet. Author list, volume, and pages from memory. Source for the arch extent and malperfusion framing.)
-- Evangelista A, Isselbacher EM, Bossone E, et al. Insights from the International Registry of Acute Aortic Dissection: a 20-year experience of collaborative clinical research. Circulation. 2018;137:1846-1860. (Citation from memory. Context for IRAD outcomes and malperfusion.)
+- Isselbacher EM, Cigarroa JE, Eagle KA. Cardiac tamponade complicating proximal aortic dissection: is pericardiocentesis harmful? Circulation. 1994;90:2375-2378.
+- Malaisrie SC, Szeto WY, Halas M, et al. 2021 The American Association for Thoracic Surgery expert consensus document: surgical treatment of acute type A aortic dissection. J Thorac Cardiovasc Surg. 2021;162:735-758.e2.
+- Evangelista A, Isselbacher EM, Bossone E, et al. Insights from the International Registry of Acute Aortic Dissection: a 20-year experience of collaborative clinical research. Circulation. 2018;137:1846-1860.
 
 Checklist:
 - [ ] Stage 1 vignette: the hemodynamics, the ED management, and the pathway routing suspected dissection to the CTICU are synthetic and marked [REVIEW] or [NMH protocol, insert].
@@ -182,14 +173,14 @@ Checklist:
 - [ ] All blood pressure and heart rate targets in the case are either cited to the 2022 ACC/AHA guideline and marked [VERIFY], or left qualitative and marked institutional. If you add any, source them.
 
 ## ST changes six hours after CABG
-File: `public/content/cases/st-changes-after-cabg.json`  ·  Topic: Early graft failure after CABG: recognition, differential, and the decision to re-image or re-explore
+File: public/content/cases/st-changes-after-cabg.json  ·  Topic: Early graft failure after CABG: recognition, differential, and the decision to re-image or re-explore
 
-Flags in text: 16 VERIFY, 10 NMH protocol inserts, 43 REVIEW. References: 9 total, 3 unconfirmed.
+Flags: 16 VERIFY, 10 NMH inserts, 43 REVIEW. References: 9, 3 unconfirmed.
 
 References to confirm:
-- Moussa ID, Klein LW, Shah B, et al. Consideration of a new definition of clinically relevant myocardial infarction after coronary revascularization: an expert consensus document from the Society for Cardiovascular Angiography and Interventions (SCAI). J Am Coll Cardiol. 2013;62:1563-1570. doi:10.1016/j.jacc.2013.08.720 (Existence and author list confirmed this session on the SCAI website, which links the paper under DOI 10.1002/ccd.25135 (the Catheter Cardiovasc Interv co-publication). The JACC volume, pages, and DOI above are from memory. The CK-MB and troponin thresholds quoted in the case (10 times and 70 times ULN without ancillary criteria, 5 times and 35 times with new Q waves or LBBB) are from memory and must be checked.)
-- Thielmann M, Massoudy P, Jaeger BR, et al. Emergency re-revascularization with percutaneous coronary intervention, reoperation, or conservative treatment in patients with acute perioperative graft failure following coronary artery bypass surgery. Eur J Cardiothorac Surg. 2006;30:117-125. (Citation from memory. A search this session surfaced only the appended conference discussion (Eur J Cardiothorac Surg 2006;30:125), which supports the title and journal but not the author list or page range of the main paper. Confirm before release.)
-- Kapur NK, Esposito ML, Bader Y, et al. Mechanical circulatory support devices for acute right ventricular failure. Circulation. 2017;136:314-326. (Citation from memory. Review of percutaneous and surgical RV support options. Not searched this session.)
+- Moussa ID, Klein LW, Shah B, et al. Consideration of a new definition of clinically relevant myocardial infarction after coronary revascularization: an expert consensus document from the Society for Cardiovascular Angiography and Interventions (SCAI). J Am Coll Cardiol. 2013;62:1563-1570. doi:10.1016/j.jacc.2013.08.720
+- Thielmann M, Massoudy P, Jaeger BR, et al. Emergency re-revascularization with percutaneous coronary intervention, reoperation, or conservative treatment in patients with acute perioperative graft failure following coronary artery bypass surgery. Eur J Cardiothorac Surg. 2006;30:117-125.
+- Kapur NK, Esposito ML, Bader Y, et al. Mechanical circulatory support devices for acute right ventricular failure. Circulation. 2017;136:314-326.
 
 Checklist:
 - [ ] Stage 1 vignette: graft configuration (LITA-LAD, SVG-OM, SVG-RCA), the description of the RCA target, PA catheter use, and the ECG description are synthetic and marked [REVIEW]. Confirm they reflect NMH practice and are internally consistent.
@@ -218,14 +209,14 @@ Checklist:
 - [ ] No numeric dose, device setting, or hemodynamic target was asserted as a recommendation. The only numeric thresholds in the case are the published MI definitions, each marked [VERIFY].
 
 ## The first night after pulmonary thromboendarterectomy
-File: `public/content/cases/first-night-after-pte.json`  ·  Topic: Postoperative critical care after pulmonary thromboendarterectomy for CTEPH: reperfusion lung injury, residual pulmonary hypertension, and RV failure
+File: public/content/cases/first-night-after-pte.json  ·  Topic: Postoperative critical care after pulmonary thromboendarterectomy for CTEPH: reperfusion lung injury, residual pulmonary hypertension, and RV failure
 
-Flags in text: 24 VERIFY, 14 NMH protocol inserts, 49 REVIEW. References: 9 total, 3 unconfirmed.
+Flags: 24 VERIFY, 14 NMH inserts, 49 REVIEW. References: 9, 3 unconfirmed.
 
 References to confirm:
-- Fedullo P, Kerr KM, Kim NH, Auger WR. Chronic thromboembolic pulmonary hypertension. Am J Respir Crit Care Med. 2011;183:1605-1613. doi:10.1164/rccm.201011-1854CI (Citation from memory. Search this session surfaced other Fedullo and Auger reviews (Clin Chest Med 2001;22:561-581 and Semin Respir Crit Care Med 2009;30:471-483, both confirmed) but not this specific AJRCCM paper. Confirm or substitute one of the confirmed reviews. Source for the UCSD postoperative management approach including fluid restriction and selective use of pulmonary vasodilators.)
-- Kramm T, Eberle B, Guth S, Mayer E. Inhaled iloprost to control residual pulmonary hypertension following pulmonary endarterectomy. Eur J Cardiothorac Surg. 2005;28:882-888. (Citation from memory. A randomized comparison of inhaled prostacyclin versus iNO after PTE surfaced in search this session (PMC5331109, authors and details not retrieved). Confirm which trial the case should cite for the inhaled iloprost versus iNO comparison and correct the citation.)
-- Levinson RM, Shure D, Moser KM. Reperfusion pulmonary edema after pulmonary artery thromboendarterectomy. Am Rev Respir Dis. 1986;134:1241-1245. (Citation from memory. Original description of reperfusion pulmonary edema after PTE from the UCSD group. Not confirmed this session.)
+- Fedullo P, Kerr KM, Kim NH, Auger WR. Chronic thromboembolic pulmonary hypertension. Am J Respir Crit Care Med. 2011;183:1605-1613. doi:10.1164/rccm.201011-1854CI
+- Kramm T, Eberle B, Guth S, Mayer E. Inhaled iloprost to control residual pulmonary hypertension following pulmonary endarterectomy. Eur J Cardiothorac Surg. 2005;28:882-888.
+- Levinson RM, Shure D, Moser KM. Reperfusion pulmonary edema after pulmonary artery thromboendarterectomy. Am Rev Respir Dis. 1986;134:1241-1245.
 
 Checklist:
 - [ ] Stage 1 vignette: the preoperative hemodynamics, the number of circulatory arrest periods, the description of the specimen, the PVR change off bypass, and the TEE findings are synthetic and marked [REVIEW]. Confirm they reflect NMH practice, including whether NMH uses DHCA with the UCSD technique.
@@ -256,13 +247,13 @@ Checklist:
 - [ ] No numeric dose, ventilator setting, hemodynamic target, or ECMO trigger was asserted as a recommendation. The only numbers in the case are synthetic vignette values and published trial results, each marked.
 
 ## A young patient after a two-valve operation
-File: `public/content/cases/young-patient-two-valves.json`  ·  Topic: The Ross procedure: what the intensivist needs to know about the autograft, the homograft, and the early postoperative risks
+File: public/content/cases/young-patient-two-valves.json  ·  Topic: The Ross procedure: what the intensivist needs to know about the autograft, the homograft, and the early postoperative risks
 
-Flags in text: 4 VERIFY, 8 NMH protocol inserts, 47 REVIEW. References: 9 total, 2 unconfirmed.
+Flags: 4 VERIFY, 8 NMH inserts, 47 REVIEW. References: 9, 2 unconfirmed.
 
 References to confirm:
-- Mazine A, David TE, Rao V, et al. Long-term outcomes of the Ross procedure versus mechanical aortic valve replacement: propensity-matched cohort study. Circulation. 2016;134:576-585. (The Toronto propensity-matched series. Citation from memory, including author order, volume, and pages. Confirm before release.)
-- Mazine A, El-Hamamsy I, Verma S, et al. Ross procedure in adults for cardiologists and cardiac surgeons: JACC state-of-the-art review. J Am Coll Cardiol. 2018;72:2761-2777. (Existence of the article confirmed by title this session. Author order, volume, and pages are from memory. Source for the description of the three implantation techniques.)
+- Mazine A, David TE, Rao V, et al. Long-term outcomes of the Ross procedure versus mechanical aortic valve replacement: propensity-matched cohort study. Circulation. 2016;134:576-585.
+- Mazine A, El-Hamamsy I, Verma S, et al. Ross procedure in adults for cardiologists and cardiac surgeons: JACC state-of-the-art review. J Am Coll Cardiol. 2018;72:2761-2777.
 
 Checklist:
 - [ ] All vignette details (bicuspid AR, cyclist, full root technique with external support, bypass and clamp times described qualitatively, intraoperative TEE findings, day-1 ECG and echo findings, operative findings at re-exploration) are synthetic and marked [REVIEW].
@@ -283,13 +274,13 @@ Checklist:
 - [ ] No blood pressure targets, drug doses, or echo thresholds were asserted as recommendations. If you add any, source them.
 
 ## Hypotension after mitral repair that worsens with inotropes
-File: `public/content/cases/hypotension-worse-with-inotropes.json`  ·  Topic: Systolic anterior motion of the mitral valve and dynamic LVOT obstruction after cardiac surgery
+File: public/content/cases/hypotension-worse-with-inotropes.json  ·  Topic: Systolic anterior motion of the mitral valve and dynamic LVOT obstruction after cardiac surgery
 
-Flags in text: 7 VERIFY, 3 NMH protocol inserts, 48 REVIEW. References: 9 total, 2 unconfirmed.
+Flags: 7 VERIFY, 3 NMH inserts, 48 REVIEW. References: 9, 2 unconfirmed.
 
 References to confirm:
-- Jebara VA, Mihaileanu S, Acar C, et al. Left ventricular outflow tract obstruction after mitral valve repair: results of the sliding leaflet technique. Circulation. 1993;88(5 Pt 2):II30-II34. (Carpentier group description of the sliding leaflet plasty for SAM. Citation from memory. A related 1988 Circulation abstract (Mihaileanu, Carpentier) on LVOT obstruction after Carpentier repair surfaced in search. Confirm the exact citation before release.)
-- Hahn RT, Abraham T, Adams MS, et al. Guidelines for performing a comprehensive transesophageal echocardiographic examination: recommendations from the American Society of Echocardiography and the Society of Cardiovascular Anesthesiologists. J Am Soc Echocardiogr. 2013;26:921-964. (Citation from memory. Source for the views used to assess the mitral apparatus and LVOT.)
+- Jebara VA, Mihaileanu S, Acar C, et al. Left ventricular outflow tract obstruction after mitral valve repair: results of the sliding leaflet technique. Circulation. 1993;88(5 Pt 2):II30-II34.
+- Hahn RT, Abraham T, Adams MS, et al. Guidelines for performing a comprehensive transesophageal echocardiographic examination: recommendations from the American Society of Echocardiography and the Society of Cardiovascular Anesthesiologists. J Am Soc Echocardiogr. 2013;26:921-964.
 
 Checklist:
 - [ ] All vignette details (repair technique, ring type, preoperative LV and septal description, inotrope and vasopressor at separation, hemodynamic trends, TEE findings at each stage, surgical findings and revision) are synthetic and marked [REVIEW]. No gradient, CVP, pressure, or dose numbers are given.
