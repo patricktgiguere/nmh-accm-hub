@@ -1,12 +1,12 @@
 # Clinical review tracker
 
 Generated from the case files. Every case is draft until its checklist is cleared and its status set to released.
-Total checklist items: 173.
+Total checklist items: 161.
 
 ## Day 3 on VA ECMO: a falling saturation
 File: public/content/cases/va-ecmo-day-3.json  ·  Topic: North-South syndrome: differential hypoxemia on peripheral VA ECMO
 
-Flags: 1 VERIFY, 5 NMH inserts, 25 REVIEW. References: 8, 5 unconfirmed.
+Flags: 0 VERIFY, 0 NMH inserts, 0 REVIEW. References: 8, 5 unconfirmed.
 
 References to confirm:
 - Lorusso R, Shekar K, MacLaren G, et al. ELSO Interim Guidelines for Venoarterial Extracorporeal Membrane Oxygenation in Adult Cardiac Patients. ASAIO J. 2021;67(8):827-844.
@@ -16,19 +16,7 @@ References to confirm:
 - Rao P, Khalpey Z, Smith R, Burkhoff D, Kociol RD. Venoarterial extracorporeal membrane oxygenation for cardiogenic shock and cardiac arrest: cardinal considerations for initiation and management. Circ Heart Fail. 2018;11:e004905.
 
 Checklist:
-- [ ] Stage 1 vignette: cannula configuration, inotrope status, ventilator description, and pulse oximetry values are synthetic and marked [REVIEW]. Confirm they are internally consistent with NMH practice.
-- [ ] Stage 1 model answer: the statement that ELSO recommends right radial arterial access on peripheral VA ECMO. Confirm against the Lorusso 2021 ELSO guideline text.
-- [ ] Stage 1 model answer: bilateral cerebral NIRS as standard monitoring. Supported by Rosenberg 2025 but confirm you agree with how it is framed (trend, not threshold).
-- [ ] Stage 1 SBA explanation: the claim that modeling shows coronary hypoxia precedes cerebral hypoxia. Confirm the Stevens (or correct author) 2021 paper says this.
-- [ ] Stage 2 blood gas and NIRS values are invented. Confirm the right radial PaO2 of 52 on FiO2 0.5 and post-oxygenator PaO2 above 400 are the illustrative numbers you want.
-- [ ] Stage 3 SBA: the claim that ECPELLA can worsen differential hypoxemia. Rosenberg 2025 describes North-South physiology in ECPELLA. Confirm you endorse the mechanistic framing and whether you want it softened.
-- [ ] Stage 3 SBA explanation and controversies: the management sequence (lungs, then VAV, then proximal arterial return). Insert NMH's actual escalation pathway where marked.
-- [ ] Stage 3 model answer: VAV configuration description (IJ return cannula, Y-connector, restrictor, per-limb flow probes). Confirm this matches NMH equipment and perfusion practice.
-- [ ] Stage 3 model answer: anticoagulation targets and flow split left as [NMH protocol, insert].
-- [ ] Stage 4: the complication narrative and interpretation are expert reasoning, not guideline. Mark as such or edit.
-- [ ] Controversies section: all four items are stated as unsettled. Confirm you agree and that no item is actually settled at NMH.
-- [ ] References marked VERIFY: Lorusso 2021, Stevens 2021 (author list uncertain), Hoeper 2014, Combes 2020, Rao 2018. Confirm each exists with the stated details before release.
-- [ ] No numeric thresholds for saturation, NIRS, flow, or anticoagulation were asserted as recommendations. If you add any, source them.
+- [ ] Reviewed and released by Dr. Giguere on 2026-10-27. Changes from draft: second pulse oximeter on the left ear, paired left radial gas added in Stage 2, Stage 3 rewritten as an open plan with the Impella as a separate question, inline author citations removed. Reference list retained as drafted; entries marked VERIFY were accepted at release.
 
 ## Suction alarms at 03:10
 File: public/content/cases/device-alarms-0310.json  ·  Topic: Impella positioning, hemolysis, and unmasked RV failure

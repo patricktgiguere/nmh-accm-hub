@@ -5,7 +5,7 @@
       "id": "va-ecmo-day-3",
       "title": "Day 3 on VA ECMO: a falling saturation",
       "subtitle": "A 58-year-old man after an anterior STEMI, cannulated in the cath lab, now with discordant pulse oximetry between hand and foot.",
-      "status": "draft",
+      "status": "released",
       "estimatedMinutes": 20,
       "difficulty": "Intermediate",
       "tags": [
@@ -18,8 +18,8 @@
         "Explain the two-pump physiology of peripheral femoro-femoral VA ECMO and predict where the mixing zone sits as native cardiac output changes.",
         "Choose monitoring sites at cannulation that will detect differential hypoxemia before it causes harm, and state what each site does and does not tell you.",
         "Build a differential for upper-body hypoxemia on VA ECMO that includes circuit failure, not only watershed physiology.",
-        "Rank the management options for differential hypoxemia by invasiveness and by what they do to LV afterload, and justify a sequence.",
-        "Recognize how LV unloading strategies (ECPELLA) and ECMO flow changes interact with the watershed."
+        "Choose a management sequence for differential hypoxemia and explain what each option does to LV afterload and to the watershed.",
+        "Explain why transvalvular LV unloading (ECPELLA) can worsen differential hypoxemia when the lungs are injured."
       ]
     },
     {
