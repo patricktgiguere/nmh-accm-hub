@@ -1,6 +1,6 @@
 # Fellow Orientation
 
-Welcome to the Anesthesiology Critical Care Medicine Fellowship at Northwestern Memorial Hospital. This page describes how the year is structured, what is expected of you in the cardiothoracic intensive care unit, which is the fellowship's home unit, and how to find your way through the program's administrative requirements. Off-service rotations (surgical ICU, medical ICU, transesophageal echocardiography, palliative care, and the coronary care unit) distribute their own orientation materials. If anything here is inaccurate or out of date, please tell the associate program director so it can be corrected.
+Welcome to the Anesthesiology Critical Care Medicine Fellowship at Northwestern Memorial Hospital. This page describes how the year is structured, what is expected of you in the cardiothoracic ICU, which is the fellowship's home unit, how the off-service rotations run, and what the program requires of you administratively. If anything here is inaccurate or out of date, tell the associate program director so it can be corrected.
 
 ## Program leadership and key contacts
 
@@ -8,129 +8,194 @@ Welcome to the Anesthesiology Critical Care Medicine Fellowship at Northwestern 
 
 **Associate Program Director.** Patrick Giguere, MD. patrick.giguere@nm.org
 
-**Program Coordinator.** Vi Vos. vi.tran@nm.org. The call schedule, vacation requests, rotation changes, and all scheduling questions go to Vi first.
+**Program Coordinator.** Vi Vos. vi.tran@nm.org. The call schedule, vacation requests, rotation changes, lecture slides, and all scheduling questions go to Vi first.
 
-For urgent clinical matters, contact the attending on service directly. For concerns about the learning environment, supervision, or wellbeing that you would prefer not to raise with the program directly, the Graduate Medical Education office is available to you at gme@northwestern.edu.
+You will be assigned a faculty advisor shortly after you start. Meet with them regularly for mentoring and for help with scholarly work. For urgent clinical matters, contact the attending on service directly. For concerns about the learning environment, supervision, or wellbeing that you would prefer not to raise with the program, the Graduate Medical Education office is available at gme@northwestern.edu.
 
 ## The year at a glance
 
-Your full rotation schedule was built before you started and sent to you by Vi. The CTICU months are distributed across the year rather than taken consecutively, so that your experience in the home unit grows alongside your experience elsewhere.
+Your full rotation schedule was built before you started and sent to you by Vi. CTICU months are distributed across the year rather than taken consecutively.
 
 - **Cardiothoracic ICU (home unit), six months.** Six one-month rotations, two months each on Team 1, Team 2, and Team 3.
-- **Surgical ICU, two months.** One week of SICU call is expected during this rotation.
-- **Medical ICU, one month.** No call expectation beyond your CTICU call.
+- **Surgical ICU, two months.** Includes one week as the rounding fellow with at-home night call.
+- **Medical ICU, one month.** No call beyond your CTICU call.
 - **Transesophageal echocardiography, one month.**
 - **Palliative care and coronary care unit, one month.** Two weeks each, paired.
 - **Elective, one month.** May be taken as a single month or divided into two two-week electives.
 
-**CTICU teams.** Teams 1 and 2 care for cardiac surgical and cardiology patients on the seventh floor. Team 3 cares for lung transplant patients on the ninth floor, together with cardiac patients and selected neurosurgical ICU patients.
+## The cardiothoracic ICU
 
-## The fellow's role
+### Teams and locations
 
-The fellow is the senior trainee on the unit and the first point of escalation for residents, advanced practice providers, and nursing staff. You will be expected to know every patient on your team, to anticipate problems rather than react to them, and to communicate clearly with the attending, the surgical teams, and families. Early in the year your attendings will be close at hand. As your judgment becomes evident, they will step back. This progression is deliberate and is calibrated to you rather than to the calendar.
+The CTICU has three teams. Each has one CTICU attending, a team of CTICU advanced practice providers, and anesthesia residents. Every patient also has a cardiac surgery attending, fellow, and resident.
 
-Two principles govern escalation. The first is that no attending in this program has ever been troubled by a call. Several have been troubled by its absence. The second is that a plan you have committed to and explained is always more useful than a hedge, even when it turns out to be wrong. Say what you think should happen and why.
+- **Team 1.** Feinberg 7 East, workroom across from room 708. Cardiac surgical patients.
+- **Team 2.** Feinberg 7 East, workroom across from room 715. Cardiac surgical patients, plus post-operative neurosurgical patients housed on the ninth floor.
+- **Team 3.** Feinberg 9, workroom across from room 946. Lung transplant patients, pre- and post-operative, together with cardiac surgical patients.
 
-You will also teach. Residents and students rotating through the unit learn most from the fellow, and your teaching is part of how you are evaluated.
+### A day on the unit
 
-## A day in the cardiothoracic ICU
-
-- **7:00 AM.** Arrive, pre-round, and prepare for rounds.
-- **9:00 AM.** Rounds. Early in the year you should be present and active. As the year progresses you will lead rounds.
+- **6:00 AM.** Overnight sign-out, Feinberg 762 (7 East conference room), also on Teams. Attendance is encouraged because every major overnight event is reviewed here, but it is not required.
+- **7:00 AM.** Be on the unit. Surgical teams round around now and the APPs join them. Use the time before rounds to pre-round, check in with the charge nurse about transfers and cases coming out of the operating room, and review the chart.
+- **9:00 AM.** Rounds. The APP or resident presents events and updates, then problems by organ system. In your first two to four weeks, be present and active: learn the unit, the nurses, the APPs, and the pharmacists, and get comfortable with the unit's procedures. As the year progresses you will direct management, lead rounds, coordinate care, and teach.
 - **After rounds.** Run the list with the team and confirm a plan for every patient.
 - **3:00 PM.** Run the list again. Close out the day's action items and review any clinical change since the morning.
-- **5:00 PM.** Typical end of day for the fellow who is not on call.
+- **4:30 PM.** Attending sign-out, Team 1 workroom. The day attendings sign out to the evening CTICU attending and the call fellow. Early in the year, listen and add relevant updates. Once comfortable, you will give the sign-out yourself. If the unit is stable and procedures are done, the non-call fellow goes home.
 
-Between these anchors you are expected to be physically present on the unit and engaged in bedside care alongside the residents and advanced practice providers. During a colleague's call week you are the only fellow on the unit from 7:00 AM until 1:00 PM, and you hand the active list to the call fellow when they arrive.
+Between these anchors you are expected to be physically on the unit and engaged in bedside care alongside the residents and APPs. During a colleague's call week you are the only fellow on the unit until the call fellow arrives, and you hand them the active list.
+
+### The fellow's role
+
+You are the senior trainee on the unit and the first point of escalation for residents, APPs, and nursing. Know every patient on your team, anticipate problems, and communicate clearly with the attending, the surgical teams, and families. Attendings stay close early in the year and step back as your judgment becomes evident. No attending in this program has ever been troubled by a call. Several have been troubled by its absence. A plan you have committed to and explained is more useful than a hedge, even when it turns out to be wrong.
+
+You will also teach. Residents and students learn most from the fellow, and your teaching is part of how you are evaluated.
 
 ## Fellow call
 
 Call is taken in one-week blocks, Monday through Sunday. Fellows do not provide in-house overnight coverage.
 
-**The call schedule is yours to build.** Before the year starts, the fellows agree among themselves on a call schedule covering at least the first four months, together with the holiday call schedule for the entire year, and submit both to Vi Vos. Changes thereafter are negotiated among the fellows and communicated to Vi.
+**The call schedule is yours to build.** Before the year starts, the fellows agree on a call schedule covering at least the first four months, plus the holiday call schedule for the full year, and submit both to Vi. Later changes are negotiated among the fellows and communicated to Vi.
 
-**Call week while on the CTICU**
+### Call week while on the CTICU
 
-- Arrive at 1:00 PM.
-- Attend attending sign-out at 4:30 PM.
-- Remain until approximately 8:00 to 9:00 PM to admit new cases from the operating room, and later if the unit is unstable.
+- **1:00 PM.** Arrive. Check in with all three teams and the charge nurse. Until sign-out, land new admissions from the operating room, help with procedures, and be an extra set of hands for unstable patients.
+- **4:30 PM.** Contact the evening CTICU attending and sit in on sign-out.
+- **6:00 PM.** Joint CTICU and cardiac surgery sign-out, 7 East conference room, Monday through Friday. Attend if the unit is stable and nothing is pending.
+- **Evening rounds.** After 6:00 PM, agree a time with the evening attending, the cardiac surgery fellow or resident, and the swing APPs, usually between 7:30 and 9:00 PM. Once rounds are done and the unit is stable, go home.
+- **Friday.** The call fellow may leave after the 6:00 PM sign-out if the unit is stable and no procedures are pending.
 
-**Call week while off service**
+### Call week while off service
 
-- Your rotation day is unchanged Monday through Friday.
-- Attend the Friday 4:30 PM CTICU sign-out so that you know the patients for the weekend.
-- Cover the weekend as described below.
+- Monday through Thursday, report to your rotation as normal.
+- Friday, attend the 4:30 PM CTICU sign-out so you know the patients for the weekend.
+- Cover the weekend as below.
 
-**Weekends, all call weeks.** Saturday and Sunday, approximately 6:00 AM to 6:00 PM.
+### Weekends, all call weeks
 
-**Sunday airway coverage.** On Sunday the call fellow carries the airway pager and the airway bag and is the primary proceduralist for induction and intubation of critically ill patients throughout the hospital, working with the airway attending. At cardiac arrests the fellow fills the airway role. Codes at Northwestern are run by the MICU resident.
+Saturday and Sunday, 6:00 AM to 6:00 PM. Attend morning sign-out in the Team 2 workroom, then check in with each team and the charge nurse. You are responsible for being familiar with all three teams' patients. Round with whichever team has the sickest patients. Your priorities are outstanding and urgent procedures, new admissions from the operating room, and airway, code, and ECMO pages. Leave at 6:00 PM.
+
+**Shock call pages.** Internal and outside services initiate conference calls to arrange transfer of patients in cardiogenic shock who may benefit from ECMO or cardiac surgical intervention. Dial in when you can. They are an education in themselves.
+
+## Airway coverage
+
+The fellows share one airway pager, passed to the call fellow each week. If you are the call fellow while off service, hand the pager to a co-fellow on the CTICU for the weekdays and take it back for the weekend.
+
+**Weekdays.** The on-call fellow on the CTICU responds to airways after rounds to supervise the anesthesia residents. You are not expected to leave rounds for airway codes, cardiac arrests, or ECPR cannulations. Your role is to help the residents build an induction plan. ICU patients often have physiologically and anatomically difficult airways, and these cases are valuable preparation for managing them as an attending.
+
+**Saturday.** A resident airway team is present. The fellow supervises.
+
+**Sunday.** There are no anesthesia residents. The call fellow carries the airway pager and the airway bag alone and is the primary proceduralist for induction and intubation at every airway code and cardiac arrest in the hospital. An attending anesthesiologist from the ICU or the operating room attends. At cardiac arrests the fellow fills the airway role. Codes at Northwestern are run by the MICU resident. If two events occur at once, respond to one, let the attending anesthesiologist respond to the other, and notify a CTICU attending so that a second attending can assist.
+
+**Who arrives at an emergency airway.** The anesthesia team brings the airway bag, which holds everything needed for intubation: endotracheal tubes, laryngoscope blades, syringes, supraglottic airways, oral airways, and the rest. Respiratory therapy brings the video laryngoscope. Pharmacy brings the induction drugs and vasoactives, including propofol, etomidate, and rocuronium. Blue airway bags are in each CTICU team room. Monday through Saturday the anesthesia residents bring the bag. On Sunday that is your job, at every airway, without exception. After use, return the bag to the anesthesia technicians on the fifth floor for restocking and bring a new one back to the team room.
+
+**ECPR cannulations.** Attendance is recommended but not required. These patients are admitted to the CTICU under your care, so it is in your interest to be there.
+
+## Off-service rotations
+
+### Surgical ICU
+
+Feinberg 8 East. Team room across from rooms 808 and 809, behind the nursing station. The attending schedule and contact numbers are on the whiteboard in the resident workroom across from room 808.
+
+The SICU is a consulting service. You are not the primary team, and most management decisions, including imaging, fluid, diuresis, and vasoactive changes, are communicated to and approved by the primary surgical team (thoracic, transplant, vascular, ENT, and others). The daytime team is two trauma critical care fellows, you, any other off-service fellows, a senior resident (usually a PGY-2), an APP who does not carry patients, and medical students. The resident and APP are your conduit to the primary teams. Communication within the team runs through a monthly SICU WhatsApp group. Ask to be added on day one.
+
+**Rounding fellow week.** Each week either you or one of the trauma critical care fellows is the rounding fellow. Arrive 6:00 to 6:30 AM during intern and night-team sign-out. Check in with the interns and the APP for anything unfolding, then chart and walk round and build plans. Rounds are at 8:30 AM and you lead them. Afterward, set a time for afternoon rounds with the attending (usually 3:00 PM), alert them to expected admissions, and run the list in the team room with the resident, interns, and APP. Use the afternoon to land admissions, check on patients, and teach. After afternoon rounds, check whether the interns need help with lines, admissions, or consults, then go home. **During your rounding fellow week you take at-home night call Monday, Tuesday, Wednesday, and Friday.** Get the night residents' contact information before you leave, set expectations, and arrange a time to run the list by phone.
+
+**Other weeks.** Arrive around 7:00 AM, check in with the rounding fellow, help residents and students with procedures, plan teaching, and leave after checking out with the rounding fellow. No weekend coverage beyond your CTICU call weekends.
+
+### Medical ICU
+
+The MICU has four teams. You rotate on MICU 4, Galter 9, not to be confused with the CTICU team numbering. Arrive 6:30 to 7:00 AM and ask a nurse to point you to the APP team room. The team is APPs and an attending, with no residents. Pre-round. Rounds are 8:00 to 8:30 AM depending on the attending. The APPs present by problem rather than by organ system, which is a deliberate feature of the MICU culture. The other MICU teams carry interns, a senior resident, and pulmonary critical care fellows. Learn who those fellows are, since you will help each other. Their contact information is usually posted on the APP workroom door.
+
+### Transesophageal echocardiography
+
+For one month you join the cardiac operating rooms each morning for the first-start cases, working alongside the echo attending and performing the intraoperative transesophageal echocardiograms. Contact Ashley Budd, MD, cardiothoracic anesthesia fellowship program director, one week before you start. ashley.budd@nm.org
+
+### Electives
+
+Electives build clinical depth in an area of your choosing. Contact the listed person one week before you start. If you want an elective not listed here, speak with Dr. Gupta or Dr. Giguere.
+
+- **Cardiology TEE and echo.** Feinberg 8-309, 8:30 AM.
+- **Coronary care unit.** Galter 9, 7:00 AM. Daniel Schimmel, MD. dschimme@nm.org
+- **Interventional pulmonology.** Feinberg 10-760, 7:00 AM. Sean Smith, MD. Sean.Smith2@nm.org
+- **Nephrology.** Yusra Cheema, MD. yusra.cheema@nm.org
+- **Neurocritical care.** Feinberg 9, workroom on the southeast corner of the unit.
+- **Palliative medicine.** Join the interdisciplinary team Teams call at 8:30 AM each weekday (Palliative IDT Daily, +1 872-240-1267, conference ID 460 042 719#), then page a palliative care consult pager (57393 or 18465) to meet the team.
+- **Pediatric ICU.** Adrian Zurca, MD, Lurie Children's. azurca@luriechildrens.org
+- **Additional MICU or SICU time.** Arranged through the program.
 
 ## Education
 
 All scheduled educational activities are protected time. You are released from clinical duties to attend, whether you are on the CTICU, off service, or the call fellow. If clinical demands repeatedly prevent attendance, tell the program leadership.
 
-**ICU Fellow Education Consortium.** A joint curriculum with the surgical ICU and neurosurgical ICU fellows, held on Wednesdays at 1:00 PM from October onward, hosted on Teams. Sessions include case discussions, lectures, and simulation. Each fellow presents during the year, either a case for morbidity and mortality review or a lecture.
+**ICU Fellow Education Consortium.** A joint curriculum with the surgical ICU and neurosurgical ICU fellows, Wednesdays at 1:00 PM from October onward, on Teams. Case discussions, lectures, and simulation. Each fellow presents during the year, either an M&M case or a lecture.
 
-**Quarterly multidisciplinary morbidity and mortality conference.** Cardiac anesthesia, anesthesia critical care, and cardiac surgery fellows jointly review cases from the operating room and events in the ICU.
+**Quarterly multidisciplinary M&M.** Cardiac anesthesia, anesthesia critical care, and cardiac surgery fellows review cases from the operating room and events in the ICU.
 
-**Anesthesia fellows career series.** Several sessions through the year, usually 5:00 to 6:00 PM with dinner provided. Topics include personal finance, applying and interviewing for positions, and preparation for the anesthesiology oral examination.
+**Journal club.** Monthly, attended by the critical care faculty and all fellows. One fellow presents each month, choosing either a landmark article from the program's repository or a recent publication of their own interest. Submit the article to Vi two weeks before the session. It is distributed one week before. Come having read it.
 
-**The Case Library on this site.** Self-paced, problem-based cases from the cardiothoracic and general ICU, designed to be completed in spare moments on a clinical day and then discussed with your attending. You are expected to work through the library over the course of the year and to bring at least one case to discussion each week. See the final section of this page.
+**Patient Safety Grand Rounds.** Attend monthly. McGaw requires documented attendance at least once a year.
 
-**Journal club.** Held once a month and attended by the critical care and anesthesia critical care faculty and all fellows. One fellow presents each month. The presenting fellow may select an article from the program's repository of landmark critical care literature or may choose a recent publication of their own interest. The chosen article is submitted to Vi Vos two weeks before the session, and one week before the session it is distributed to all fellows and faculty for reading. Come having read it. The value of journal club lies in the discussion, and the discussion depends on everyone having done the work.
+**Anesthesia fellows career series.** Several sessions through the year, usually 5:00 to 6:00 PM with dinner. Personal finance, applying and interviewing for positions, and preparation for the anesthesiology oral examination.
 
-## Quality improvement project
+**The Case Library on this site.** Self-paced, staged cases from the cardiothoracic and general ICU, designed for spare moments on a clinical day. Work through the library over the year and bring at least one case to discussion with your attending each week.
 
-Every fellow completes a quality improvement project during the year. The project should address a real problem in the care of critically ill patients at Northwestern, be scoped so that it can produce a measurable result within the fellowship year, and be presented to the division on completion. Identify a faculty mentor and a topic early. Projects started in the spring rarely finish.
+Forward the slides from every lecture and journal club you present to Vi promptly.
 
-A good project is small, specific, and measurable. A single process on a single unit, with a baseline, an intervention, and a remeasurement, teaches more than an ambitious proposal that never reaches implementation. The associate program director can help you narrow an idea and connect you with the relevant stakeholders in nursing, pharmacy, perfusion, or informatics.
+## Scholarship and quality improvement
 
-Presentation at a regional or national meeting is encouraged and the program will support it. See the section on conferences below.
+**Quality improvement project.** Every fellow completes one. It should address a real problem in the care of critically ill patients at Northwestern, be scoped to produce a measurable result within the year, and be presented to the division on completion. A single process on a single unit, with a baseline, an intervention, and a remeasurement, teaches more than an ambitious proposal that never reaches implementation. Identify a mentor and a topic early. Projects started in the spring rarely finish.
 
-## Conferences
+**Scholarly activity.** Involvement in lectures, book chapters, abstracts, or original research is expected during the fellowship. Many faculty welcome fellows onto their projects. Discuss ideas with Dr. Gupta or your advisor and they will help identify contacts.
 
-Northwestern funds attendance at one national conference during the fellowship year. Funding for a second conference may be available if you are presenting at it. Meetings our fellows have attended in recent years include the American Society of Anesthesiologists annual meeting, the Society of Cardiovascular Anesthesiologists, the Society of Critical Care Anesthesiologists, and the Society of Critical Care Medicine Critical Care Congress. Choose the meeting that fits your interests and your career direction, and plan the dates with your co-fellows early, since conference travel interacts with the call schedule and with vacation. Submit abstracts well before the deadline. The quality improvement project is often a natural source of a presentation. [NMH protocol, insert: how to request conference funding and the approval process.]
+**Conferences.** Northwestern funds one national conference during the fellowship year. Funding for a second may be available if you are presenting. Recent fellows have attended the ASA, SCA, SOCCA, and SCCM annual meetings. Plan dates with your co-fellows early, since travel interacts with call and vacation. The QI project is often a natural source of an abstract. [NMH protocol, insert: how to request conference funding and the approval process.]
 
-## Time away
+## Evaluation and progress
 
-You receive twenty days away from training per year, consistent with American Board of Anesthesiology requirements. The program is flexible about when you take it, subject to three rules.
+**Attending evaluations.** Attendings evaluate you in New Innovations at the end of each rotation. Sign each evaluation electronically to document that you have reviewed it. Your evaluations of faculty and of the program are anonymous and need no signature.
 
-1. Vacation cannot be taken during a week in which you are the call fellow.
-2. At least one fellow must be available to fill the call role at all times, so coordinate with one another before submitting a request.
-3. Notify Vi Vos in advance.
+**MyTIPreport.** A phone application for requesting evaluations. On the CTICU, at the end of every week you work with an attending, send them a MyTIPreport request. Use the free-text field to ask for feedback on something specific: a procedure, how you ran rounds, your teaching. A pointed question produces far more useful feedback than a blank request.
 
-Sick leave, family leave, and extended absence are governed by institutional and ABA policy. Speak with the program director early if you anticipate needing any of them, since the ABA's training requirements may affect how the time is counted.
+**Semi-annual review.** You will meet with Dr. Gupta twice during the year to review your evaluations, procedure log, attendance, duty hours, QI project, and your own view of where you stand. Come prepared to say what is going well, what is not, and what you want from the rest of the year.
+
+**Clinical Competency Committee.** As required by the ACGME, core faculty meet semi-annually to assess each fellow against the Anesthesiology Critical Care Medicine Milestones, drawing on evaluations, direct observation, and faculty input. Milestones describe a trajectory, not a grade. The committee's purpose is to identify where additional support or experience would help you reach independent practice.
 
 ## Administrative requirements
 
-**New Innovations.** You are responsible for three things in New Innovations.
+The Clinical Competency Committee requires all of the following for graduation and a certificate of training.
 
-- Enter your duty hours every month.
-- Enter vacation days as you take them.
-- Submit evaluations when they are assigned to you.
+- Case and procedure log entries, kept current daily or weekly.
+- Duty hours entered in New Innovations, kept current. Reconstructing months of hours after the fact is unreliable and a burden on everyone. Log honestly. The system exists to protect you.
+- Vacation days entered in New Innovations as taken.
+- Faculty evaluations (semi-annually), program evaluation (annually), and competency self-evaluation (semi-annually), completed in New Innovations when assigned.
+- Attendance at Patient Safety Grand Rounds.
+- Quality improvement project.
+- Scholarly activity.
+- An M&M case presentation.
+- Current ACLS, ATLS, and PALS certification.
+- All vacation days used or scheduled by March 1.
+- Confirmation in New Innovations that you have read the Critical Care Medicine Fellowship Policies and Procedures Manual.
 
-Duty-hour logging is reviewed and must be kept current. Reconstructing months of hours after the fact is unreliable and is a burden on everyone involved. Log honestly. The purpose of the system is to protect you.
+## Time away
 
-**MyTIPreport.** A phone application used to request evaluations from attendings. The expectation on the CTICU is that at the end of every week you work with an attending, you send them a MyTIPreport request, and they complete a short evaluation of your performance for that week.
+You receive twenty days away from training per year, consistent with ABA requirements. The program is flexible about when you take it, subject to three rules.
 
-Use the free-text section of the request to ask for specific feedback. If you want an attending's assessment of a particular procedure, of how you ran rounds, or of your teaching, say so. A pointed question produces far more useful feedback than a blank request.
+1. Vacation cannot be taken during a week in which you are the call fellow.
+2. At least one fellow must be available to fill the call role at all times, so coordinate before submitting a request.
+3. Notify Vi in advance, and schedule or use all days by March 1.
 
-**Semi-annual review.** You will meet with the program director twice during the year for a formal review of your progress. The meeting draws on your attending evaluations, your procedure log, your duty-hour and attendance record, your quality improvement project, and your own assessment of where you stand. Come prepared to say what is going well, what is not, and what you want from the second half of the year.
+Sick leave, family leave, and extended absence are governed by institutional and ABA policy. Speak with the program director early if you anticipate needing any of them, since ABA training requirements affect how the time is counted.
 
-**Clinical Competency Committee.** As required by the ACGME, a committee of core faculty meets semi-annually to review each fellow's performance against the Anesthesiology Critical Care Medicine Milestones. The committee's assessment is based on the full body of evaluations, direct observation, and faculty input, and it informs both your semi-annual review and the program's reporting to the ACGME. Milestone assessments describe a trajectory rather than a grade. A fellow early in the year is not expected to be at the level of a fellow near graduation, and the committee's purpose is to identify where additional support or experience would help you reach independent practice.
+## Wellbeing
 
-## Professionalism and wellbeing
-
-Fatigue, illness, and personal circumstances that affect your work are to be communicated rather than concealed. The program would far rather adjust a schedule than discover a problem after the fact. Resources for physician wellbeing are available through the institution and the GME office, and using them carries no penalty and no stigma.
+Fatigue, illness, and personal circumstances that affect your work are to be communicated rather than concealed. The program would far rather adjust a schedule than discover a problem after the fact. Establish care with a primary care provider when you start, even if you are well. Institutional wellness resources are at [mcgaw.northwestern.edu/trainee-benefits/wellness](https://www.mcgaw.northwestern.edu/trainee-benefits/wellness.html), and the departmental peer support program is at [sites.northwestern.edu/peersupport](https://sites.northwestern.edu/peersupport/). Using them carries no penalty and no stigma.
 
 ## Before you start
 
 **Before day one**
 
 - Rotation schedule received from Vi.
-- Fellow call schedule for at least the first four months agreed and submitted to Vi.
-- Holiday call schedule for the full year agreed and submitted to Vi.
-- This page read in full, and one case in the Case Library completed so that the format is familiar before you are busy.
+- Call schedule for at least the first four months, and holiday call for the year, agreed among the fellows and submitted to Vi.
+- This page read in full, and one case in the Case Library completed.
 
 **On day one you should receive**
 
@@ -140,19 +205,16 @@ Fatigue, illness, and personal circumstances that affect your work are to be com
 
 **Confirm that you can log in to**
 
-- New Innovations (duty hours, vacation, evaluations).
-- MyTIPreport (requesting attending evaluations).
+- New Innovations (duty hours, vacation, evaluations, procedure log, policies manual).
+- MyTIPreport.
+- Teams, for the 6:00 AM sign-out and the Wednesday consortium.
 
 ## How to use this site
 
-The Case Library releases each case in stages. At every stage you will be asked to commit to a plan in writing before the model answer opens. Write your actual plan, not a hedge. Your responses and notes are stored only in the browser you are using. They are never sent to a server and are not visible to faculty. The cost of that privacy is that they do not follow you between devices, and a shared workstation may erase them. The Case Library page has an export button if you wish to keep them.
+The Case Library releases each case in stages and asks you to commit to a plan in writing before the model answer opens. Write your actual plan, not a hedge. Your responses are stored only in the browser you are using, never sent to a server, and not visible to faculty. They do not follow you between devices, and a shared workstation may erase them. The Case Library page has an export button.
 
-When you finish a case, mark it complete and bring the discussion prompts to your next week with faculty. The cases are intended to begin a conversation, not to replace one.
-
-The Resources page indexes protocols, references, and reading by topic. Institutional protocols are linked to their authoritative source wherever possible so that you are always reading the current version.
-
-The Contact page sends a message directly to the associate program director. Use it for questions about the curriculum, a case, or the program. It is not monitored in real time and is not for clinical matters.
+The Resources page indexes protocols, references, and reading by topic. The Contact page sends a message to the associate program director for questions about the curriculum or the program. It is not monitored in real time and is not for clinical matters.
 
 ## Patient information
 
-Every patient, laboratory value, and image on this site is synthetic. Do not enter patient names, medical record numbers, dates of service, or any other identifier anywhere on this site, including in your private notes and in messages sent through the Contact page. This is a condition of the site's existence, not a formality.
+Every patient, laboratory value, and image on this site is synthetic. Do not enter patient names, medical record numbers, dates of service, or any other identifier anywhere on this site, including in private notes and Contact messages. This is a condition of the site's existence.
