@@ -147,7 +147,7 @@ Forward the slides from every lecture and journal club you present to Vi promptl
 
 **Scholarly activity.** Involvement in lectures, book chapters, abstracts, or original research is expected during the fellowship. Many faculty welcome fellows onto their projects. Discuss ideas with Dr. Gupta or your advisor and they will help identify contacts.
 
-**Conferences.** Northwestern funds one national conference during the fellowship year. Funding for a second may be available if you are presenting. Recent fellows have attended the ASA, SCA, SOCCA, and SCCM annual meetings. Plan dates with your co-fellows early, since travel interacts with call and vacation. The QI project is often a natural source of an abstract. [NMH protocol, insert: how to request conference funding and the approval process.]
+**Conferences.** Northwestern funds one national conference during the fellowship year. Funding for a second may be available if you are presenting. Recent fellows have attended the ASA, SCA, SOCCA, and SCCM annual meetings. Plan dates with your co-fellows early, since travel interacts with call and vacation. The QI project is often a natural source of an abstract.
 
 ## Evaluation and progress
 
