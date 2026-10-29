@@ -1,12 +1,20 @@
-/* Defence in depth for Cloudflare Access. Runs on every request (see index.js).
-   Cloudflare Access enforces login at the edge before any request reaches this site.
-   This middleware re-checks the Access JWT so that nothing is served if Access is
-   accidentally disabled, misconfigured, or bypassed via a preview URL.
+/* Two gates, one middleware. Runs on every request (see index.js).
+
+   1. Admin (/admin.html and /api/admin): Cloudflare Access enforces an email one-time
+      PIN at the edge, scoped to those paths in the Access application. This middleware
+      re-checks the Access JWT so nothing is served if Access is disabled or bypassed.
+   2. Everything else: the shared fellowship password (gate.js). A valid Access JWT is
+      also accepted, so an admin signed in through Access never sees the password page.
 
    Required environment variables (Worker > Settings > Variables and Secrets):
      ACCESS_TEAM_DOMAIN  e.g.  nmh-accm.cloudflareaccess.com
      ACCESS_AUD          the Application Audience (AUD) tag from the Access application
-   If either is missing, the middleware fails CLOSED and returns 503 so you notice. */
+     SITE_PASSWORD       (secret) the shared fellowship password
+   If any is missing, the middleware fails CLOSED and returns 503 so you notice. */
+import { hasValidCookie, redirectToLogin } from './gate.js';
+
+const ADMIN_PATHS = ['/admin.html', '/admin', '/api/admin'];
+const OPEN_PATHS = ['/robots.txt', '/login', '/logout'];
 
 const certCache = { keys: null, fetched: 0 };
 
@@ -49,20 +57,25 @@ export async function onRequest(context) {
   const { request, env, next, data } = context;
   const url = new URL(request.url);
 
-  // robots.txt must be reachable by crawlers so they see the Disallow. Everything else is gated.
-  if (url.pathname === '/robots.txt') return next();
+  // robots.txt must be reachable by crawlers so they see the Disallow. The login page is open by nature.
+  if (OPEN_PATHS.includes(url.pathname)) return next();
 
-  if (!env.ACCESS_TEAM_DOMAIN || !env.ACCESS_AUD) {
-    return new Response('Site misconfigured: ACCESS_TEAM_DOMAIN and ACCESS_AUD are not set. See DEPLOYMENT_GUIDE.md step 5.', { status: 503 });
+  if (!env.ACCESS_TEAM_DOMAIN || !env.ACCESS_AUD || !env.SITE_PASSWORD) {
+    return new Response('Site misconfigured: ACCESS_TEAM_DOMAIN, ACCESS_AUD, and SITE_PASSWORD must all be set. See DEPLOYMENT_GUIDE.md.', { status: 503 });
   }
 
   const token = request.headers.get('cf-access-jwt-assertion') || (request.headers.get('cookie') || '').match(/CF_Authorization=([^;]+)/)?.[1];
   let claims = null;
   if (token) { try { claims = await verifyAccessJWT(token, env.ACCESS_TEAM_DOMAIN, env.ACCESS_AUD); } catch (e) { claims = null; } }
-  if (!claims) {
-    return new Response('Not signed in. Open the site at its main address to log in.', { status: 401, headers: { 'X-Robots-Tag': 'noindex' } });
+  const isAdminPath = ADMIN_PATHS.some(p => url.pathname === p || url.pathname.startsWith(p + '/'));
+
+  if (isAdminPath) {
+    if (!claims) return new Response('Not signed in. Open the admin page at its main address to log in.', { status: 401, headers: { 'X-Robots-Tag': 'noindex' } });
+  } else if (!claims && !(await hasValidCookie(request, env))) {
+    if (url.pathname.startsWith('/api/')) return new Response(JSON.stringify({ error: 'Not signed in.' }), { status: 401, headers: { 'Content-Type': 'application/json' } });
+    return redirectToLogin(request);
   }
-  data.userEmail = claims.email || '';
+  data.userEmail = claims ? (claims.email || '') : '';
   const res = await next();
   // Belt and braces: ensure noindex even if _headers is edited incorrectly.
   const out = new Response(res.body, res);

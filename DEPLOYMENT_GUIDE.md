@@ -52,6 +52,16 @@ Done on 2026-10-26. Recorded here so it can be repeated or audited.
 
 **Adding or removing a fellow** is step 5's email list: Zero Trust, Access controls, Policies, "Allowed users", edit, save.
 
+## Step 4b. Shared fellowship password (added 2026-10-28)
+
+Fellows no longer need an email on the Access list. The site is gated by one shared password; Access now covers only the admin page.
+
+1. Worker, Settings, Variables and Secrets, add a **secret** named `SITE_PASSWORD` with the password. Entry is case-insensitive and ignores spaces.
+2. Zero Trust, Access, Applications, open "ACCM Hub", edit the application's public hostname entries so the path is `admin.html` (and a second entry for `api/admin`) rather than the whole site. Keep the "Allowed users" policy; it now lists administrators only.
+3. Open the site in a private window. You should see the password page, not an email prompt. Open `/admin.html` and you should get the email one-time code.
+
+Wrong attempts are slowed by 1.5 seconds and an IP is refused after 10 failures in 15 minutes. Failure counts use the `RATE_LIMIT` KV namespace when it is bound and are otherwise kept in memory per Worker instance (good enough; see Step 6 for the KV binding).
+
 ## Step 5. Tell the site about Access
 
 Done on 2026-10-26. `ACCESS_TEAM_DOMAIN` and `ACCESS_AUD` are set both in the Worker's Variables and Secrets and in `wrangler.toml` under `[vars]`, so they survive redeploys. If the Access application is ever recreated, update the AUD tag in both places.

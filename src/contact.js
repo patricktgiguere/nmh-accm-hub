@@ -1,8 +1,9 @@
 /* POST /api/contact
    Sends a fellow's question to the APD by email using Resend (https://resend.com).
    Spam and abuse controls:
-     1. The site is behind Cloudflare Access, so only allowlisted users reach this endpoint,
-        and the sender's identity comes from the verified Access token (not from the form).
+     1. The site is behind the shared fellowship password, so only fellows reach this
+        endpoint. The sender gives their name and email in the form (an admin signed in
+        through Access has the verified email attached instead).
      2. Honeypot field ("website") must be empty.
      3. Rate limit: at most RATE_LIMIT_PER_HOUR messages per user per hour, tracked in KV.
      4. Message length capped; HTML stripped.
@@ -17,12 +18,16 @@
 export async function onRequestPost({ request, env, data }) {
   const json = (obj, status = 200) => new Response(JSON.stringify(obj), { status, headers: { 'Content-Type': 'application/json' } });
 
-  const fromEmail = (data && data.userEmail) || request.headers.get('cf-access-authenticated-user-email') || '';
-  if (!fromEmail) return json({ error: 'Not signed in.' }, 401);
-
   let body;
   try { body = await request.json(); } catch { return json({ error: 'Bad request.' }, 400); }
   if (body.website) return json({ ok: true }); // honeypot: pretend success, send nothing
+
+  const accessEmail = (data && data.userEmail) || request.headers.get('cf-access-authenticated-user-email') || '';
+  const formEmail = String(body.email || '').trim().slice(0, 200);
+  const fromName = String(body.name || '').trim().slice(0, 100);
+  const fromEmail = accessEmail || formEmail;
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fromEmail)) return json({ error: 'Please give an email address so a reply can reach you.' }, 400);
+  if (!accessEmail && fromName.length < 2) return json({ error: 'Please give your name.' }, 400);
 
   const message = String(body.message || '').trim();
   const caseTitle = String(body.caseTitle || 'General question').slice(0, 200);
@@ -44,8 +49,9 @@ export async function onRequestPost({ request, env, data }) {
   }
 
   const clean = s => s.replace(/[<>]/g, c => ({ '<': '&lt;', '>': '&gt;' }[c]));
-  const text = `Case / topic: ${caseTitle}\nFrom: ${fromEmail}\nPage: ${body.page || ''}\n\n${message}`;
-  const html = `<p><strong>Case / topic:</strong> ${clean(caseTitle)}<br><strong>From:</strong> ${clean(fromEmail)}<br><strong>Page:</strong> ${clean(String(body.page || ''))}</p><pre style="white-space:pre-wrap;font-family:inherit">${clean(message)}</pre>`;
+  const fromLabel = fromName ? `${fromName} <${fromEmail}>` : fromEmail;
+  const text = `Case / topic: ${caseTitle}\nFrom: ${fromLabel}\nPage: ${body.page || ''}\n\n${message}`;
+  const html = `<p><strong>Case / topic:</strong> ${clean(caseTitle)}<br><strong>From:</strong> ${clean(fromLabel)}<br><strong>Page:</strong> ${clean(String(body.page || ''))}</p><pre style="white-space:pre-wrap;font-family:inherit">${clean(message)}</pre>`;
 
   const r = await fetch('https://api.resend.com/emails', {
     method: 'POST',

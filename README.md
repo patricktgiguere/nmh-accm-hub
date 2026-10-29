@@ -1,12 +1,12 @@
 # ACCM Fellowship Curriculum Hub
 
-A private, per-user authenticated curriculum site for the Anesthesia Critical Care Medicine Fellowship at Northwestern Memorial Hospital. Static HTML with a small Cloudflare Worker in front for login checks, the contact form, and the admin page. Hosted on Cloudflare Workers, gated by Cloudflare Access.
+A private curriculum site for the Anesthesia Critical Care Medicine Fellowship at Northwestern Memorial Hospital. Static HTML with a small Cloudflare Worker in front for login checks, the contact form, and the admin page. Hosted on Cloudflare Workers. Fellows enter a shared password; the admin page is gated by Cloudflare Access.
 
 Read `DEPLOYMENT_GUIDE.md` first if you have not deployed yet. This file is the day-to-day manual.
 
 ## How it works, in one paragraph
 
-Every page is a plain HTML file in `public/`. Content lives in `public/content/` as Markdown and JSON files that the pages load and render in the browser. There is no build step and no database. Cloudflare Access sits in front of the whole site: nobody sees anything, including PDFs in `public/files/`, without logging in with an email on your allowlist. A fellow's progress and notes are stored only in their own browser. The contact form posts to `functions/api/contact.js`, which emails you through Resend.
+Every page is a plain HTML file in `public/`. Content lives in `public/content/` as Markdown and JSON files that the pages load and render in the browser. There is no build step and no database. A shared fellowship password sits in front of the whole site: nobody sees anything, including PDFs in `public/files/`, without entering it on `/login`. The admin page and admin API are additionally gated by Cloudflare Access with a one-time email code. A fellow's progress and notes are stored only in their own browser. The contact form posts to `functions/api/contact.js`, which emails you through Resend.
 
 ## Folder map
 
@@ -29,7 +29,8 @@ public/                  everything the browser can see (after login)
   files/                 Put PDFs and documents here
 src/
   index.js               Worker entry: routes requests
-  access.js              Verifies the Cloudflare Access login on every request
+  access.js              Checks the fellowship password cookie (site) or the Cloudflare Access login (admin) on every request
+  gate.js                The /login page, password check, signed 30-day cookie, and wrong-attempt limiting
   contact.js             Contact form email sender
   admin.js               Admin page backend (commits to GitHub)
 wrangler.toml            Cloudflare Worker settings (KV namespace ID lives here)
@@ -47,19 +48,21 @@ If a page shows "could not load", the most common cause is a JSON syntax error: 
 
 ### Add a fellow
 
-1. Cloudflare dashboard, Zero Trust, Access, Applications, open "ACCM Hub".
-2. Open the policy "Allowed users", edit the Include rule "Emails", add the fellow's email, save.
-3. That is all. They go to the site, enter their email, receive a one-time code, and are in. No code changes, no deploy.
+Tell them the fellowship password. They open the site, enter it on the login page, and stay signed in on that device for 30 days. Nothing to configure.
 
-### Remove a fellow
+### Change the password
 
-Same screen, delete the email from the list, save. Their session expires at the next login check (the session length is set in the Access application settings; the deployment guide sets it to 24 hours).
+Cloudflare dashboard, Workers & Pages, the worker, Settings, Variables and Secrets, edit `SITE_PASSWORD`. Every device is signed out immediately and needs the new password. Case and spaces do not matter when entering it.
+
+### Add an administrator
+
+The admin page uses Cloudflare Access, not the shared password. Zero Trust, Access, Applications, open "ACCM Hub", edit the "Allowed users" policy to add the email, and also add it to the `ADMIN_EMAILS` variable on the worker.
 
 ### Annual rollover
 
 In June or July:
 
-1. Access policy: remove graduating fellows, add incoming fellows.
+1. Change `SITE_PASSWORD` so graduating fellows' devices sign out, and give incoming fellows the new one.
 2. `content/orientation.md`: update schedule, contacts, and dates.
 3. `content/resources/manifest.json`: update the `updated` field on anything you replaced.
 4. Review each case's `version` and `status`. Anything you reviewed over the year can move from `draft` to `released`.
@@ -120,7 +123,7 @@ The site follows the device's light or dark setting by default. The Auto / Light
 
 - Progress, answers, and notes are stored in the fellow's browser (localStorage) under keys beginning `accm-hub:`. They are never sent to a server. Clearing browser data erases them. Export and import buttons exist on the Case Library page.
 - The contact form sends the fellow's signed-in email, the case title, the page address, and the message to your email via Resend. Nothing is stored on Cloudflare beyond a one-hour rate-limit counter keyed to the sender's email.
-- No analytics, no cookies other than the Cloudflare Access session cookie.
+- No analytics, no cookies other than the signed login cookie (`accm_hub`, 30 days, holds only an expiry and a signature) and, on the admin page, the Cloudflare Access session cookie.
 
 ## Local preview (optional, for anyone comfortable with a terminal)
 
@@ -129,4 +132,4 @@ cd nmh-accm-hub
 npx wrangler dev
 ```
 
-Locally the Access check returns 401 (no login token). To preview content only, serve the `public` folder with any simple static server, for example `python3 -m http.server --directory public`.
+Locally the gate returns 503 unless `SITE_PASSWORD` is set in `.dev.vars`. To preview content only, serve the `public` folder with any simple static server, for example `python3 -m http.server --directory public`.
