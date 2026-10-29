@@ -14,6 +14,7 @@ keep_vars = true
 ACCESS_TEAM_DOMAIN = "wandering-scene-8ab6.cloudflareaccess.com"
 ACCESS_AUD = "89afa9d4c07b3234f0977f8ff0f7ffa022f268cfbcb7eb6acc7129e76c563430"
 CONTACT_TO = "patrick.giguere@nm.org"
+CONTACT_FROM = "hub@nmaccm.org"
 ADMIN_EMAILS = "patricktgiguere@gmail.com,patrick.giguere@nm.org"
 GITHUB_REPO = "patricktgiguere/nmh-accm-hub"
 GITHUB_BRANCH = "main"
