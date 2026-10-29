@@ -1,5 +1,5 @@
 {
-  "_howto": "One entry per case. 'id' must match the JSON file name in this folder. Keep title, tags, objectives, estimatedMinutes, and difficulty in sync with the case file (this index is what the library page searches). status: 'draft' shows the case with a draft badge, 'released' shows it cleanly, 'hidden' removes it from the library without deleting the file. Planned cases that do not have a file yet should stay 'hidden'. Titles and subtitles describe the presentation, not the diagnosis. The 'topic' field inside each case file names the diagnosis and is shown only in the wrap-up.",
+  "_howto": "One entry per case. 'id' must match the JSON file name in this folder. Keep title, tags, objectives, estimatedMinutes, and difficulty in sync with the case file (this index is what the library page searches). status: 'released' is visible to fellows. Anything else ('draft', 'hidden') is served only to administrators signed in through Access, and shows a draft badge to them. Planned cases that do not have a file yet should stay 'hidden'. Titles and subtitles describe the presentation, not the diagnosis. The 'topic' field inside each case file names the diagnosis and is shown only in the wrap-up.",
   "cases": [
     {
       "id": "va-ecmo-day-3",

@@ -35,7 +35,7 @@
     shown.forEach(function (c) {
       var p = prog[c.id] || {};
       var state = p.completed ? '<span class="pill ok">Completed</span>' : (p.stage > 0 ? '<span class="pill">In progress</span>' : '');
-      var draft = c.status === 'draft' ? '<span class="pill warn">Draft, not yet faculty-reviewed</span>' : '';
+      var draft = c.status !== 'released' ? '<span class="pill warn">Draft, visible to administrators only</span>' : '';
       var a = Hub.el('a', { class: 'card link', href: '/case.html?id=' + encodeURIComponent(c.id) });
       a.innerHTML =
         '<h2>' + Hub.escapeHtml(c.title) + '</h2>' +

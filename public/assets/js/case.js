@@ -8,7 +8,7 @@
 
   var c;
   try { c = await Hub.getJSON('/content/cases/' + id + '.json'); }
-  catch (e) { root.innerHTML = '<p class="notice flag">That case could not be loaded. Check that <code>content/cases/' + Hub.escapeHtml(id) + '.json</code> exists and is valid JSON.</p>'; return; }
+  catch (e) { root.innerHTML = '<p class="notice flag">That case is not available. It may still be in faculty review, or the address may be wrong.</p>'; return; }
 
   document.title = c.title + ' · ACCM Curriculum Hub';
   var key = 'case:' + c.id;

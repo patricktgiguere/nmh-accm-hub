@@ -65,7 +65,7 @@ In June or July:
 1. Change `SITE_PASSWORD` so graduating fellows' devices sign out, and give incoming fellows the new one.
 2. `content/orientation.md`: update schedule, contacts, and dates.
 3. `content/resources/manifest.json`: update the `updated` field on anything you replaced.
-4. Review each case's `version` and `status`. Anything you reviewed over the year can move from `draft` to `released`.
+4. Review each case's `version` and `status`. Anything you reviewed over the year can move from `draft` to `released`. Only released cases are served to fellows; drafts are visible to administrators who have signed in to the admin page in that browser.
 5. Optional: ask departing fellows to export their notes (button at the bottom of the Case Library) if they want them.
 
 ### Add or replace a file (PDF, document)

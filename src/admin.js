@@ -25,7 +25,7 @@ function safePath(p) {
   if (!/^[A-Za-z0-9._\/-]+$/.test(p)) return null;
   return p;
 }
-function isAdmin(env, email) {
+export function isAdmin(env, email) {
   return (env.ADMIN_EMAILS || '').split(',').map(s => s.trim().toLowerCase()).filter(Boolean).includes((email || '').toLowerCase());
 }
 function gh(env, path, init = {}) {
