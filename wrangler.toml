@@ -24,6 +24,11 @@ binding = "ASSETS"
 # Run the Worker for every request so the login check covers files too.
 run_worker_first = true
 
+# Contact form email: sent through Cloudflare Email Routing from hub@nmaccm.org to
+# CONTACT_TO, which must be a verified destination address in Email Routing.
+[[send_email]]
+name = "EMAIL"
+
 # Contact-form rate limiting (optional). Create a KV namespace in the dashboard
 # (Storage & Databases > KV), then paste its ID below and remove the leading '#'
 # from these three lines. Without it the form still works, without the hourly cap.

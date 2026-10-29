@@ -6,7 +6,7 @@ Read `DEPLOYMENT_GUIDE.md` first if you have not deployed yet. This file is the 
 
 ## How it works, in one paragraph
 
-Every page is a plain HTML file in `public/`. Content lives in `public/content/` as Markdown and JSON files that the pages load and render in the browser. There is no build step and no database. A shared fellowship password sits in front of the whole site: nobody sees anything, including PDFs in `public/files/`, without entering it on `/login`. The admin page and admin API are additionally gated by Cloudflare Access with a one-time email code. A fellow's progress and notes are stored only in their own browser. The contact form posts to `functions/api/contact.js`, which emails you through Resend.
+Every page is a plain HTML file in `public/`. Content lives in `public/content/` as Markdown and JSON files that the pages load and render in the browser. There is no build step and no database. A shared fellowship password sits in front of the whole site: nobody sees anything, including PDFs in `public/files/`, without entering it on `/login`. The admin page and admin API are additionally gated by Cloudflare Access with a one-time email code. A fellow's progress and notes are stored only in their own browser. The contact form posts to `/api/contact`, which emails you through Cloudflare Email Routing from hub@nmaccm.org.
 
 ## Folder map
 
@@ -122,7 +122,7 @@ The site follows the device's light or dark setting by default. The Auto / Light
 ## Privacy and data
 
 - Progress, answers, and notes are stored in the fellow's browser (localStorage) under keys beginning `accm-hub:`. They are never sent to a server. Clearing browser data erases them. Export and import buttons exist on the Case Library page.
-- The contact form sends the fellow's signed-in email, the case title, the page address, and the message to your email via Resend. Nothing is stored on Cloudflare beyond a one-hour rate-limit counter keyed to the sender's email.
+- The contact form sends the name and email the fellow entered, the case title, the page address, and the message to your email via Cloudflare Email Routing. Nothing is stored on Cloudflare beyond a one-hour rate-limit counter keyed to the sender's email.
 - No analytics, no cookies other than the signed login cookie (`accm_hub`, 30 days, holds only an expiry and a signature) and, on the admin page, the Cloudflare Access session cookie.
 
 ## Local preview (optional, for anyone comfortable with a terminal)

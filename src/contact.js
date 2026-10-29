@@ -1,5 +1,8 @@
 /* POST /api/contact
-   Sends a fellow's question to the APD by email using Resend (https://resend.com).
+   Sends a fellow's question to the APD by email through Cloudflare Email Routing
+   (send_email binding "EMAIL" in wrangler.toml). The destination (CONTACT_TO) must be a
+   verified destination address in Email Routing, and CONTACT_FROM must be on a zone
+   with Email Routing enabled (hub@nmaccm.org).
    Spam and abuse controls:
      1. The site is behind the shared fellowship password, so only fellows reach this
         endpoint. The sender gives their name and email in the form (an admin signed in
@@ -9,9 +12,8 @@
      4. Message length capped; HTML stripped.
 
    Environment variables (Worker > Settings > Variables and Secrets):
-     RESEND_API_KEY   (secret)   from resend.com
-     CONTACT_TO       patrick.giguere@nm.org
-     CONTACT_FROM     e.g. "ACCM Hub <hub@yourdomain.org>"  (a domain you verified in Resend)
+     CONTACT_TO       patrick.giguere@nm.org (verified in Email Routing)
+     CONTACT_FROM     hub@nmaccm.org
      RATE_LIMIT_PER_HOUR  optional, default 5
    KV binding: RATE_LIMIT, configured in wrangler.toml */
 
@@ -44,7 +46,7 @@ export async function onRequestPost({ request, env, data }) {
     await env.RATE_LIMIT.put(key, String(n + 1), { expirationTtl: 3700 });
   }
 
-  if (!env.RESEND_API_KEY || !env.CONTACT_TO || !env.CONTACT_FROM) {
+  if (!env.EMAIL || !env.CONTACT_TO || !env.CONTACT_FROM) {
     return json({ error: 'Contact form is not configured yet. Email the APD directly.' }, 503);
   }
 
@@ -53,20 +55,39 @@ export async function onRequestPost({ request, env, data }) {
   const text = `Case / topic: ${caseTitle}\nFrom: ${fromLabel}\nPage: ${body.page || ''}\n\n${message}`;
   const html = `<p><strong>Case / topic:</strong> ${clean(caseTitle)}<br><strong>From:</strong> ${clean(fromLabel)}<br><strong>Page:</strong> ${clean(String(body.page || ''))}</p><pre style="white-space:pre-wrap;font-family:inherit">${clean(message)}</pre>`;
 
-  const r = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { 'Authorization': `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      from: env.CONTACT_FROM,
-      to: [env.CONTACT_TO],
-      reply_to: fromEmail,
-      subject: `[ACCM Hub] ${caseTitle}`,
-      text, html
-    })
-  });
-  if (!r.ok) {
-    const detail = await r.text().catch(() => '');
-    console.log('Resend error', r.status, detail);
+  const boundary = 'b' + crypto.randomUUID().replace(/-/g, '');
+  const headerSafe = s => String(s).replace(/[\r\n]+/g, ' ');
+  const raw = [
+    `From: ACCM Hub <${env.CONTACT_FROM}>`,
+    `To: ${env.CONTACT_TO}`,
+    `Reply-To: ${headerSafe(fromLabel)}`,
+    `Subject: ${headerSafe('[ACCM Hub] ' + caseTitle)}`,
+    `Date: ${new Date().toUTCString()}`,
+    `Message-ID: <${crypto.randomUUID()}@nmaccm.org>`,
+    'MIME-Version: 1.0',
+    `Content-Type: multipart/alternative; boundary="${boundary}"`,
+    '',
+    `--${boundary}`,
+    'Content-Type: text/plain; charset=utf-8',
+    'Content-Transfer-Encoding: 8bit',
+    '',
+    text,
+    '',
+    `--${boundary}`,
+    'Content-Type: text/html; charset=utf-8',
+    'Content-Transfer-Encoding: 8bit',
+    '',
+    html,
+    '',
+    `--${boundary}--`,
+    ''
+  ].join('\r\n');
+
+  try {
+    const { EmailMessage } = await import('cloudflare:email');
+    await env.EMAIL.send(new EmailMessage(env.CONTACT_FROM, env.CONTACT_TO, raw));
+  } catch (e) {
+    console.log('Email send error', String(e));
     return json({ error: 'Email service error. Try again later.' }, 502);
   }
   return json({ ok: true });

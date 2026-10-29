@@ -1,6 +1,6 @@
 # Deployment guide
 
-Written for a physician who has never deployed a website. Budget about 90 minutes the first time. You will create three free accounts (GitHub, Cloudflare, Resend) and optionally buy one domain name.
+Written for a physician who has never deployed a website. Budget about 90 minutes the first time. You will create two free accounts (GitHub, Cloudflare) and optionally buy one domain name.
 
 ## Why this architecture
 
@@ -74,21 +74,15 @@ Done on 2026-10-26. `ACCESS_TEAM_DOMAIN` and `ACCESS_AUD` are set both in the Wo
 
 Test the back door: open the `workers.dev` address in a private window. You should see the same login page, not the site.
 
-## Step 6. Set up the contact form email
+## Step 6. Contact form email (done 2026-10-28, Cloudflare Email Routing)
 
-The form sends through Resend, a transactional email service with a free tier that is far more than this site will use.
+The form sends through Cloudflare's own Email Routing, so there is no third-party account. Mail goes from `hub@nmaccm.org` to `CONTACT_TO`.
 
-1. Create an account at https://resend.com.
-2. "Domains", "Add domain", enter your domain. Resend shows DNS records to add. Because Cloudflare manages your domain, go to Cloudflare, your domain, "DNS", and add each record exactly as Resend shows. Wait for Resend to show "Verified" (minutes to an hour).
-   If you skipped buying a domain, Resend lets you send only to your own verified address from its test domain, which is actually fine for this use case since every message goes to you. Use the `onboarding@resend.dev` sender in that case.
-3. "API Keys", "Create API Key", name it `accm-hub`, permission "Sending access". Copy the key. It is shown once.
-4. Cloudflare, Workers & Pages, your Worker, Settings, Variables and Secrets:
-   - `RESEND_API_KEY`, type **Secret**, value: the key.
-   - `CONTACT_TO`, value: `patrick.giguere@nm.org`
-   - `CONTACT_FROM`, value: `ACCM Hub <hub@yourdomain.org>` (or `onboarding@resend.dev` if no domain).
-   - `RATE_LIMIT_PER_HOUR`, value: `5` (optional).
-5. Rate limiting storage (optional but recommended): left menu "Storage & Databases", "KV", "Create a namespace", name `accm-hub-ratelimit`. Copy its ID. Then in GitHub open `wrangler.toml`, click the pencil, and at the bottom remove the `# ` from the three lines beginning `[[kv_namespaces]]`, pasting the ID in place of `paste-your-namespace-id-here`. Commit. (This one setting cannot be made from the dashboard because the deploy process rebuilds bindings from this file.)
-6. Send yourself a test question from the Contact page. It should arrive within a minute, with reply-to set to your signed-in email.
+1. Cloudflare, Email Service, Email Routing, Destination addresses: `patrick.giguere@nm.org` was added and must be **verified** by clicking the link Cloudflare emails to it. Until it is verified, sends fail.
+2. Email Routing for `nmaccm.org`: enabled, DNS records (MX, SPF, DKIM) added automatically.
+3. `wrangler.toml` has a `[[send_email]]` binding named `EMAIL`. Worker variables: `CONTACT_TO` = `patrick.giguere@nm.org`, `CONTACT_FROM` = `hub@nmaccm.org`, `RATE_LIMIT_PER_HOUR` = `5` (optional).
+4. Rate limiting storage (optional but recommended): left menu "Storage & Databases", "KV", "Create a namespace", name `accm-hub-ratelimit`. Copy its ID. Then in `wrangler.toml` remove the `# ` from the three lines beginning `[[kv_namespaces]]`, pasting the ID in place of `paste-your-namespace-id-here`. Commit. This also makes login attempt limiting exact.
+5. Send yourself a test question from the Contact page. It should arrive within a minute, with reply-to set to the name and email entered in the form. NM's mail filter may junk the first one.
 
 A note on where the email lands: NM's mail filters may quarantine mail from an unfamiliar domain the first time. Check junk, and if needed ask NM IT to allowlist the sender address.
 
@@ -124,16 +118,16 @@ The site itself contains only synthetic cases and your own writing. Institutiona
 4. **Copyright and licensing.** Journal PDFs, textbook chapters, and society guidelines are typically licensed to the institution for personal use, not for redistribution on a site you run. Link to the publisher or library proxy page rather than uploading the PDF. Society guideline documents are usually free to link; some are not free to host.
 5. **GME office.** Not an approval as such, but they should know the site exists, since it is part of the fellowship's educational program and may appear in accreditation materials.
 
-Where the data lives: static files and case content are on Cloudflare's global network as Worker assets (US-based account, content replicated worldwide for delivery). Access login identities are stored by Cloudflare Zero Trust. Contact-form emails pass through Resend and land in your NM mailbox. Fellow notes exist only in each fellow's browser.
+Where the data lives: static files and case content are on Cloudflare's global network as Worker assets (US-based account, content replicated worldwide for delivery). Access login identities are stored by Cloudflare Zero Trust. Contact-form emails are sent by Cloudflare Email Routing and land in your NM mailbox. Fellow notes exist only in each fellow's browser.
 
 ## Assumptions made in this build
 
-- You own the Cloudflare, GitHub, and Resend accounts personally, as you stated.
+- You own the Cloudflare and GitHub accounts personally, as you stated.
 - Fellows may use any email address; the allowlist is by individual email, not by domain. If every fellow has an @northwestern.edu or @nm.org address, you can add a domain rule to the Access policy for convenience, but keep the explicit list as the primary control.
 - Fewer than 50 users total, which keeps Access on the free tier.
 - Fellows will use personal phones and shared hospital workstations. Local-only notes therefore do not sync. The export and import buttons are the mitigation. If this turns out to be a real friction, the alternative is opt-in server-side notes keyed to the Access identity, which would require a privacy review and is deliberately not built.
 - The two drafted cases are marked `draft` and will stay that way until you clear each `reviewChecklist`. The remaining nine cases are listed in `index.json` as `hidden` placeholders.
-- Resend is used for email. Any transactional email API would work with a small change to `functions/api/contact.js`.
+- Cloudflare Email Routing is used for email. Any transactional email API would work with a small change to `src/contact.js`.
 - The contact form does not use a CAPTCHA. Access authentication, a honeypot field, and per-user rate limiting are the controls. If you ever remove Access, add Cloudflare Turnstile to the form before going live.
 
 ## If something breaks
