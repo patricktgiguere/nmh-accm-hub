@@ -1,6 +1,6 @@
 # ACCM Fellowship Curriculum Hub
 
-A private curriculum site for the Anesthesia Critical Care Medicine Fellowship at Northwestern Memorial Hospital. Static HTML with a small Cloudflare Worker in front for login checks, the contact form, and the admin page. Hosted on Cloudflare Workers. Fellows enter a shared password; the admin page is gated by Cloudflare Access.
+A private curriculum site for the Anesthesia Critical Care Medicine Fellowship at Northwestern Memorial Hospital, at https://nmaccm.org (also reachable at the original workers.dev address). Static HTML with a small Cloudflare Worker in front for login checks, the contact form, and the admin page. Hosted on Cloudflare Workers. Fellows enter a shared password; the admin page is gated by Cloudflare Access.
 
 Read `DEPLOYMENT_GUIDE.md` first if you have not deployed yet. This file is the day-to-day manual.
 

@@ -62,6 +62,10 @@ Fellows no longer need an email on the Access list. The site is gated by one sha
 
 Wrong attempts are slowed by 1.5 seconds and an IP is refused after 10 failures in 15 minutes. Failure counts use the `RATE_LIMIT` KV namespace when it is bound and are otherwise kept in memory per Worker instance (good enough; see Step 6 for the KV binding).
 
+## Step 4c. Custom domain (done 2026-10-28)
+
+`nmaccm.org` was registered through Cloudflare Registrar (auto-renew on) and attached to the Worker under Domains & Routes as `nmaccm.org` and `www.nmaccm.org`. Cloudflare manages the DNS records and certificate. The Access application lists `admin.html` and `api/admin` on both `nmaccm.org` and the workers.dev hostname. The shared password gate lives in the Worker and applies to every hostname.
+
 ## Step 5. Tell the site about Access
 
 Done on 2026-10-26. `ACCESS_TEAM_DOMAIN` and `ACCESS_AUD` are set both in the Worker's Variables and Secrets and in `wrangler.toml` under `[vars]`, so they survive redeploys. If the Access application is ever recreated, update the AUD tag in both places.
