@@ -171,7 +171,7 @@ The Clinical Competency Committee requires all of the following for graduation a
 - Quality improvement project.
 - Scholarly activity.
 - An M&M case presentation.
-- Current ACLS, ATLS, and PALS certification.
+- Current ACLS, ATLS, PALS, and CALS certification.
 - All vacation days used or scheduled by March 1.
 - Confirmation in New Innovations that you have read the Critical Care Medicine Fellowship Policies and Procedures Manual.
 
