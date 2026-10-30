@@ -28,7 +28,23 @@
 
 <main id="main">
   <h1>Resources</h1>
-  <p class="lead">Protocols, references, and reading. Items are listed from <code>content/resources/manifest.json</code>. Institutional protocols may be linked to the NM intranet rather than hosted here.</p>
+  <p class="lead">The journal club's landmark papers, plus protocols, references, and reading. Institutional protocols may be linked to the NM intranet rather than hosted here.</p>
+
+  <section aria-labelledby="papers-h">
+    <h2 id="papers-h">Landmark papers</h2>
+    <p class="small muted">The critical care journal club repository, grouped by session. Each entry links to the PDF and gives the finding in one line. Journal club presenters may choose any paper here or a recent publication of their own.</p>
+    <div class="card">
+      <label for="pq">Search papers</label>
+      <input type="search" id="pq" placeholder="Trial name, author, topic, or finding">
+      <label for="ptopic">Topic</label>
+      <select id="ptopic"><option value="">All topics</option></select>
+    </div>
+    <p id="pcount" class="muted small" aria-live="polite"></p>
+    <div id="papers"></div>
+  </section>
+
+  <section aria-labelledby="other-h">
+  <h2 id="other-h">Protocols and references</h2>
 
   <div class="card">
     <label for="q">Search</label>
@@ -42,6 +58,7 @@
     <thead><tr><th>Resource</th><th>Topics</th><th>Type</th><th>Updated</th></tr></thead>
     <tbody></tbody>
   </table>
+  </section>
 </main>
 
 <footer class="site">
@@ -80,6 +97,44 @@
     count.textContent = shown.length + ' of ' + items.length + ' resources shown';
   }
   q.addEventListener('input', render); tagSel.addEventListener('change', render); render();
+})();
+
+(async function () {
+  var box = document.getElementById('papers'), pq = document.getElementById('pq'), ptopic = document.getElementById('ptopic'), pcount = document.getElementById('pcount');
+  var data;
+  try { data = await Hub.getJSON('/content/resources/articles.json'); }
+  catch (e) { box.innerHTML = '<p class="notice flag">Could not load the paper list.</p>'; return; }
+  var papers = data.articles || [];
+  var topics = {}; papers.forEach(function (p) { topics[p.topic] = true; });
+  Object.keys(topics).sort().forEach(function (t) { var o = document.createElement('option'); o.value = t; o.textContent = t; ptopic.appendChild(o); });
+
+  function render() {
+    var term = pq.value.trim().toLowerCase(), topic = ptopic.value;
+    var shown = papers.filter(function (p) {
+      if (topic && p.topic !== topic) return false;
+      if (term && [p.title, p.citation, p.finding, p.session, p.topic].join(' ').toLowerCase().indexOf(term) < 0) return false;
+      return true;
+    });
+    var groups = [], byWeek = {};
+    shown.forEach(function (p) {
+      if (!byWeek[p.week]) { byWeek[p.week] = { week: p.week, session: p.session, items: [] }; groups.push(byWeek[p.week]); }
+      byWeek[p.week].items.push(p);
+    });
+    box.innerHTML = '';
+    groups.forEach(function (g) {
+      var sec = document.createElement('div'); sec.className = 'card';
+      var html = '<h3>Week ' + g.week + ': ' + Hub.escapeHtml(g.session) + '</h3><ul class="papers">';
+      g.items.forEach(function (p) {
+        html += '<li><a href="' + Hub.escapeHtml(p.path) + '" target="_blank" rel="noopener">' + Hub.escapeHtml(p.title) + '</a>' +
+          '<br><span class="small muted">' + Hub.escapeHtml(p.citation) + (p.doi ? ' <a class="small" href="https://doi.org/' + Hub.escapeHtml(p.doi) + '" target="_blank" rel="noopener">doi</a>' : '') + '</span>' +
+          '<br><span class="small">' + Hub.escapeHtml(p.finding) + '</span></li>';
+      });
+      html += '</ul>';
+      sec.innerHTML = html; box.appendChild(sec);
+    });
+    pcount.textContent = shown.length + ' of ' + papers.length + ' papers shown';
+  }
+  pq.addEventListener('input', render); ptopic.addEventListener('change', render); render();
 })();
 </script>
 </body>

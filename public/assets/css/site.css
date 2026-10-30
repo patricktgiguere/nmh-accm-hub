@@ -238,3 +238,8 @@ body.print-view .rationale { display: block !important; }
 body.print-view .stage.locked > .stage-head { opacity: 1; }
 textarea[readonly] { background: var(--bg); color: var(--ink-soft); }
 .model-answer:focus { outline: 3px solid var(--accent); }
+
+/* Landmark papers list on the Resources page */
+ul.papers { list-style: none; padding: 0; margin: 0; }
+ul.papers li { padding: 10px 0; border-top: 1px solid var(--line); }
+ul.papers li:first-child { border-top: 0; }
