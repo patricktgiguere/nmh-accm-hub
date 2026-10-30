@@ -32,7 +32,7 @@
 
   <section aria-labelledby="papers-h">
     <h2 id="papers-h">Landmark papers</h2>
-    <p class="small muted">The critical care journal club repository, grouped by session. Each entry links to the PDF and gives the finding in one line. Journal club presenters may choose any paper here or a recent publication of their own.</p>
+    <p class="small muted">The critical care journal club repository, grouped by session, with the trials published since it was assembled. Each entry gives the finding in one line and links to the PDF where we host one. Entries marked journal link open at the publisher; use the NM library login for full text. Journal club presenters may choose any paper here or a recent publication of their own.</p>
     <div class="card">
       <label for="pq">Search papers</label>
       <input type="search" id="pq" placeholder="Trial name, author, topic, or finding">
@@ -115,18 +115,20 @@
       if (term && [p.title, p.citation, p.finding, p.session, p.topic].join(' ').toLowerCase().indexOf(term) < 0) return false;
       return true;
     });
-    var groups = [], byWeek = {};
+    var groups = [], bySess = {};
     shown.forEach(function (p) {
-      if (!byWeek[p.week]) { byWeek[p.week] = { week: p.week, session: p.session, items: [] }; groups.push(byWeek[p.week]); }
-      byWeek[p.week].items.push(p);
+      if (!bySess[p.session]) { bySess[p.session] = { session: p.session, items: [] }; groups.push(bySess[p.session]); }
+      bySess[p.session].items.push(p);
     });
     box.innerHTML = '';
     groups.forEach(function (g) {
       var sec = document.createElement('div'); sec.className = 'card';
-      var html = '<h3>Week ' + g.week + ': ' + Hub.escapeHtml(g.session) + '</h3><ul class="papers">';
+      var html = '<h3>' + Hub.escapeHtml(g.session) + '</h3><ul class="papers">';
       g.items.forEach(function (p) {
-        html += '<li><a href="' + Hub.escapeHtml(p.path) + '" target="_blank" rel="noopener">' + Hub.escapeHtml(p.title) + '</a>' +
-          '<br><span class="small muted">' + Hub.escapeHtml(p.citation) + (p.doi ? ' <a class="small" href="https://doi.org/' + Hub.escapeHtml(p.doi) + '" target="_blank" rel="noopener">doi</a>' : '') + '</span>' +
+        var href = p.path ? Hub.escapeHtml(p.path) : 'https://doi.org/' + Hub.escapeHtml(p.doi || '');
+        html += '<li><a href="' + href + '" target="_blank" rel="noopener">' + Hub.escapeHtml(p.title) + '</a>' +
+          (p.path ? '' : ' <span class="pill neutral small">journal link</span>') +
+          '<br><span class="small muted">' + Hub.escapeHtml(p.citation) + (p.doi && p.path ? ' <a class="small" href="https://doi.org/' + Hub.escapeHtml(p.doi) + '" target="_blank" rel="noopener">doi</a>' : '') + '</span>' +
           '<br><span class="small">' + Hub.escapeHtml(p.finding) + '</span></li>';
       });
       html += '</ul>';

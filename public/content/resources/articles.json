@@ -1,1279 +1,1920 @@
 {
- "_howto": "Landmark papers from the fellowship journal club, grouped by session. Each entry: week, session title, topic, short title, citation, one-line finding, path to the PDF in public/files/articles/, and DOI where the PDF carried one. Add new papers by appending an entry and uploading the PDF.",
+ "_howto": "Landmark papers from the fellowship journal club, grouped by session. Each entry: order (session sequence), session title, topic, short title, citation, one-line finding, year, DOI, and path to a PDF in public/files/articles/ when one is hosted. Entries without a path link to the DOI; fellows reach full text through the NM library. Add new papers by appending an entry and, if you have the PDF, uploading it.",
  "articles": [
   {
-   "week": 1,
    "session": "ARDS: low tidal volume",
    "topic": "ARDS",
    "title": "ARMA: low tidal volume ventilation in ARDS",
    "citation": "ARDS Network. N Engl J Med. 2000.",
    "finding": "6 mL/kg predicted body weight versus 12 mL/kg: mortality 31% versus 40%. The foundation of lung-protective ventilation.",
-   "path": "/files/articles/w01-arma-nejm-2000.pdf"
+   "path": "/files/articles/w01-arma-nejm-2000.pdf",
+   "order": 1,
+   "year": 2000
   },
   {
-   "week": 2,
-   "session": "ARDS: definition and protective ventilation beyond ARDS",
-   "topic": "ARDS",
-   "title": "IMPROVE: intraoperative lung-protective ventilation",
-   "citation": "Futier E, et al. N Engl J Med. 2013.",
-   "finding": "Low tidal volume, PEEP, and recruitment during abdominal surgery reduced postoperative pulmonary complications.",
-   "path": "/files/articles/w02-futier-improve-nejm-2013.pdf",
-   "doi": "10.1056/NEJMoa1301082"
-  },
-  {
-   "week": 2,
-   "session": "ARDS: definition and protective ventilation beyond ARDS",
-   "topic": "ARDS",
-   "title": "PReVENT: low versus intermediate tidal volume without ARDS",
-   "citation": "Simonis FD, et al. JAMA. 2018.",
-   "finding": "In ventilated patients without ARDS, 6 versus 10 mL/kg made no difference to ventilator-free days.",
-   "path": "/files/articles/w02-simonis-prvent-jama-2018.pdf",
-   "doi": "10.1001/jama.2018.14280"
-  },
-  {
-   "week": 2,
    "session": "ARDS: definition and protective ventilation beyond ARDS",
    "topic": "ARDS",
    "title": "The Berlin definition of ARDS",
    "citation": "ARDS Definition Task Force. JAMA. 2012.",
    "finding": "Replaced the 1994 AECC definition with mild, moderate, and severe categories by PaO2/FiO2 on PEEP of at least 5.",
    "path": "/files/articles/w02-ranieri-jama-2012.pdf",
-   "doi": "10.1001/jama.2012.5669"
+   "doi": "10.1001/jama.2012.5669",
+   "order": 2,
+   "year": 2012
   },
   {
-   "week": 3,
+   "session": "ARDS: definition and protective ventilation beyond ARDS",
+   "topic": "ARDS",
+   "title": "IMPROVE: intraoperative lung-protective ventilation",
+   "citation": "Futier E, et al. N Engl J Med. 2013.",
+   "finding": "Low tidal volume, PEEP, and recruitment during abdominal surgery reduced postoperative pulmonary complications.",
+   "path": "/files/articles/w02-futier-improve-nejm-2013.pdf",
+   "doi": "10.1056/NEJMoa1301082",
+   "order": 2,
+   "year": 2013
+  },
+  {
+   "session": "ARDS: definition and protective ventilation beyond ARDS",
+   "topic": "ARDS",
+   "title": "PReVENT: low versus intermediate tidal volume without ARDS",
+   "citation": "Simonis FD, et al. JAMA. 2018.",
+   "finding": "In ventilated patients without ARDS, 6 versus 10 mL/kg made no difference to ventilator-free days.",
+   "path": "/files/articles/w02-simonis-prvent-jama-2018.pdf",
+   "doi": "10.1001/jama.2018.14280",
+   "order": 2,
+   "year": 2018
+  },
+  {
+   "session": "ARDS: steroids and PEEP",
+   "topic": "ARDS",
+   "title": "LaSRS: methylprednisolone for persistent ARDS",
+   "citation": "Steinberg KP, et al. N Engl J Med. 2006.",
+   "finding": "No 60-day mortality benefit, more ventilator-free days early, and higher mortality when started after day 14.",
+   "path": "/files/articles/w03-steinberg-nejm-2006.pdf",
+   "order": 3,
+   "year": 2006
+  },
+  {
    "session": "ARDS: steroids and PEEP",
    "topic": "ARDS",
    "title": "ART: lung recruitment and titrated PEEP",
    "citation": "Cavalcanti AB, et al. JAMA. 2017.",
    "finding": "Aggressive recruitment maneuvers with PEEP titration increased 28-day mortality compared with low PEEP.",
    "path": "/files/articles/w03-cavalcanti-jama-2017.pdf",
-   "doi": "10.1001/jama.2017.14171"
+   "doi": "10.1001/jama.2017.14171",
+   "order": 3,
+   "year": 2017
   },
   {
-   "week": 3,
    "session": "ARDS: steroids and PEEP",
    "topic": "ARDS",
    "title": "EPVent-2: esophageal pressure-guided PEEP",
    "citation": "Beitler JR, et al. JAMA. 2019.",
    "finding": "Esophageal pressure-guided PEEP was no better than an empiric high PEEP-FiO2 table for death or ventilator-free days.",
    "path": "/files/articles/w03-beitler-jama-2019.pdf",
-   "doi": "10.1001/jama.2019.0555"
+   "doi": "10.1001/jama.2019.0555",
+   "order": 3,
+   "year": 2019
   },
   {
-   "week": 3,
+   "order": 3,
    "session": "ARDS: steroids and PEEP",
    "topic": "ARDS",
-   "title": "LaSRS: methylprednisolone for persistent ARDS",
-   "citation": "Steinberg KP, et al. N Engl J Med. 2006.",
-   "finding": "No 60-day mortality benefit, more ventilator-free days early, and higher mortality when started after day 14.",
-   "path": "/files/articles/w03-steinberg-nejm-2006.pdf"
+   "title": "DEXA-ARDS: dexamethasone in moderate to severe ARDS",
+   "citation": "Villar et al.. Lancet Respir Med. 2020.",
+   "finding": "Early dexamethasone for 10 days increased ventilator-free days and reduced 60-day mortality (21% versus 36%). Open label, stopped early for slow enrollment.",
+   "doi": "10.1016/S2213-2600(19)30417-5",
+   "year": 2020
   },
   {
-   "week": 4,
-   "session": "ARDS: fluids, catheters, and paralysis",
+   "order": 3,
+   "session": "ARDS: steroids and PEEP",
    "topic": "ARDS",
-   "title": "ACURASYS: cisatracurium in early severe ARDS",
-   "citation": "Papazian L, et al. N Engl J Med. 2010.",
-   "finding": "48 hours of cisatracurium improved adjusted 90-day survival and ventilator-free days without more weakness.",
-   "path": "/files/articles/w04-papazian-nejm-2010.pdf"
+   "title": "CAPE COD: hydrocortisone in severe community-acquired pneumonia",
+   "citation": "Dequin et al.. N Engl J Med. 2023.",
+   "finding": "Hydrocortisone reduced 28-day mortality from 11.9% to 6.2% in severe CAP. The steroid trial most likely to change what you do this year.",
+   "doi": "10.1056/NEJMoa2215145",
+   "year": 2023
   },
   {
-   "week": 4,
    "session": "ARDS: fluids, catheters, and paralysis",
    "topic": "ARDS",
    "title": "FACTT: conservative versus liberal fluid management",
    "citation": "Wiedemann HP, et al. N Engl J Med. 2006.",
    "finding": "Conservative fluids improved oxygenation and ventilator-free days with no difference in mortality or dialysis.",
-   "path": "/files/articles/w04-wiedemann-nejm-2006.pdf"
+   "path": "/files/articles/w04-wiedemann-nejm-2006.pdf",
+   "order": 4,
+   "year": 2006
   },
   {
-   "week": 4,
    "session": "ARDS: fluids, catheters, and paralysis",
    "topic": "ARDS",
    "title": "FACTT: pulmonary artery versus central venous catheter",
    "citation": "Wheeler AP, et al. N Engl J Med. 2006.",
    "finding": "PAC-guided management did not improve survival or organ function and doubled catheter complications.",
-   "path": "/files/articles/w04-wheeler-nejm-2006.pdf"
+   "path": "/files/articles/w04-wheeler-nejm-2006.pdf",
+   "order": 4,
+   "year": 2006
   },
   {
-   "week": 4,
+   "session": "ARDS: fluids, catheters, and paralysis",
+   "topic": "ARDS",
+   "title": "ACURASYS: cisatracurium in early severe ARDS",
+   "citation": "Papazian L, et al. N Engl J Med. 2010.",
+   "finding": "48 hours of cisatracurium improved adjusted 90-day survival and ventilator-free days without more weakness.",
+   "path": "/files/articles/w04-papazian-nejm-2010.pdf",
+   "order": 4,
+   "year": 2010
+  },
+  {
    "session": "ARDS: fluids, catheters, and paralysis",
    "topic": "ARDS",
    "title": "ROSE: early neuromuscular blockade in ARDS",
    "citation": "Moss M, et al. N Engl J Med. 2019.",
    "finding": "Early cisatracurium with deep sedation versus usual care with light sedation: no difference in 90-day mortality.",
    "path": "/files/articles/w04-moss-rose-nejm-2019.pdf",
-   "doi": "10.1056/NEJMoa1901686"
+   "doi": "10.1056/NEJMoa1901686",
+   "order": 4,
+   "year": 2019
   },
   {
-   "week": 5,
    "session": "ARDS: proning and inhaled nitric oxide",
    "topic": "ARDS",
-   "title": "Inhaled nitric oxide in ARDS: meta-analysis",
-   "citation": "Adhikari NKJ, et al. Crit Care Med. 2014.",
-   "finding": "Inhaled nitric oxide improves oxygenation but does not reduce mortality at any severity of ARDS.",
-   "path": "/files/articles/w05-adhikari-ccm-2014.pdf",
-   "doi": "10.1097/CCM.0b013e3182a27909"
+   "title": "Prone positioning in acute respiratory failure",
+   "citation": "Gattinoni L, et al. N Engl J Med. 2001.",
+   "finding": "Proning improved oxygenation but not survival. Post hoc, the sickest quartile appeared to benefit, which set up PROSEVA.",
+   "path": "/files/articles/w05-gattinoni-nejm-2001.pdf",
+   "order": 5,
+   "year": 2001
   },
   {
-   "week": 5,
+   "session": "ARDS: proning and inhaled nitric oxide",
+   "topic": "ARDS",
+   "title": "Prone-Supine II: proning in moderate and severe ARDS",
+   "citation": "Taccone P, et al. JAMA. 2009.",
+   "finding": "No mortality benefit overall, with a trend toward benefit in severe hypoxemia.",
+   "path": "/files/articles/w05-taccone-jama-2009.pdf",
+   "order": 5,
+   "year": 2009
+  },
+  {
    "session": "ARDS: proning and inhaled nitric oxide",
    "topic": "ARDS",
    "title": "PROSEVA: prone positioning in severe ARDS",
    "citation": "Guerin C, et al. N Engl J Med. 2013.",
    "finding": "Prone sessions of at least 16 hours in PaO2/FiO2 under 150 cut 28-day mortality from 33% to 16%.",
    "path": "/files/articles/w05-guerin-nejm-2013.pdf",
-   "doi": "10.1056/NEJMoa1214103"
+   "doi": "10.1056/NEJMoa1214103",
+   "order": 5,
+   "year": 2013
   },
   {
-   "week": 5,
    "session": "ARDS: proning and inhaled nitric oxide",
    "topic": "ARDS",
-   "title": "Prone positioning in acute respiratory failure",
-   "citation": "Gattinoni L, et al. N Engl J Med. 2001.",
-   "finding": "Proning improved oxygenation but not survival. Post hoc, the sickest quartile appeared to benefit, which set up PROSEVA.",
-   "path": "/files/articles/w05-gattinoni-nejm-2001.pdf"
+   "title": "Inhaled nitric oxide in ARDS: meta-analysis",
+   "citation": "Adhikari NKJ, et al. Crit Care Med. 2014.",
+   "finding": "Inhaled nitric oxide improves oxygenation but does not reduce mortality at any severity of ARDS.",
+   "path": "/files/articles/w05-adhikari-ccm-2014.pdf",
+   "doi": "10.1097/CCM.0b013e3182a27909",
+   "order": 5,
+   "year": 2014
   },
   {
-   "week": 5,
-   "session": "ARDS: proning and inhaled nitric oxide",
-   "topic": "ARDS",
-   "title": "Prone-Supine II: proning in moderate and severe ARDS",
-   "citation": "Taccone P, et al. JAMA. 2009.",
-   "finding": "No mortality benefit overall, with a trend toward benefit in severe hypoxemia.",
-   "path": "/files/articles/w05-taccone-jama-2009.pdf"
-  },
-  {
-   "week": 6,
    "session": "ARDS: ECMO and oscillation",
    "topic": "ARDS",
    "title": "CESAR: referral for ECMO in severe respiratory failure",
    "citation": "Peek GJ, et al. Lancet. 2009.",
    "finding": "Transfer to an ECMO center improved survival without severe disability at 6 months. Only 75% of the ECMO arm received ECMO.",
-   "path": "/files/articles/w06-cesar-peek-lancet-2009.pdf"
+   "path": "/files/articles/w06-cesar-peek-lancet-2009.pdf",
+   "order": 6,
+   "year": 2009
   },
   {
-   "week": 6,
-   "session": "ARDS: ECMO and oscillation",
-   "topic": "ARDS",
-   "title": "EOLIA: ECMO for severe ARDS",
-   "citation": "Combes A, et al. N Engl J Med. 2018.",
-   "finding": "60-day mortality 35% with early ECMO versus 46% with conventional care, not significant, with 28% crossover to rescue ECMO.",
-   "path": "/files/articles/w06-combes-nejm-2018.pdf",
-   "doi": "10.1056/NEJMoa1800385"
-  },
-  {
-   "week": 6,
    "session": "ARDS: ECMO and oscillation",
    "topic": "ARDS",
    "title": "OSCAR: high-frequency oscillation in ARDS",
    "citation": "Young D, et al. N Engl J Med. 2013.",
    "finding": "HFOV made no difference to 30-day mortality.",
    "path": "/files/articles/w06-oscar-young-nejm-2013.pdf",
-   "doi": "10.1056/NEJMoa1215716"
+   "doi": "10.1056/NEJMoa1215716",
+   "order": 6,
+   "year": 2013
   },
   {
-   "week": 6,
    "session": "ARDS: ECMO and oscillation",
    "topic": "ARDS",
    "title": "OSCILLATE: high-frequency oscillation in early ARDS",
    "citation": "Ferguson ND, et al. N Engl J Med. 2013.",
    "finding": "Stopped early. HFOV increased in-hospital mortality (47% versus 35%).",
    "path": "/files/articles/w06-oscillate-ferguson-nejm-2013.pdf",
-   "doi": "10.1056/NEJMoa1215554"
+   "doi": "10.1056/NEJMoa1215554",
+   "order": 6,
+   "year": 2013
   },
   {
-   "week": 7,
-   "session": "Noninvasive ventilation",
-   "topic": "Respiratory support",
-   "title": "3CPO: NIV in acute cardiogenic pulmonary edema",
-   "citation": "Gray A, et al. N Engl J Med. 2008.",
-   "finding": "CPAP and NIPPV relieved dyspnea and acidosis faster than oxygen alone but did not reduce 7-day mortality or intubation.",
-   "path": "/files/articles/w07-gray-nejm-2008.pdf"
+   "session": "ARDS: ECMO and oscillation",
+   "topic": "ARDS",
+   "title": "EOLIA: ECMO for severe ARDS",
+   "citation": "Combes A, et al. N Engl J Med. 2018.",
+   "finding": "60-day mortality 35% with early ECMO versus 46% with conventional care, not significant, with 28% crossover to rescue ECMO.",
+   "path": "/files/articles/w06-combes-nejm-2018.pdf",
+   "doi": "10.1056/NEJMoa1800385",
+   "order": 6,
+   "year": 2018
   },
   {
-   "week": 7,
-   "session": "Noninvasive ventilation",
-   "topic": "Respiratory support",
-   "title": "Early NIV after extubation in hypercapnic patients",
-   "citation": "Ferrer M, et al. Lancet. 2009.",
-   "finding": "Preventive NIV in chronic respiratory disease with hypercapnia during the SBT reduced post-extubation respiratory failure and 90-day mortality.",
-   "path": "/files/articles/w07-ferrer-lancet-2009.pdf"
+   "order": 6,
+   "session": "ARDS: ECMO and oscillation",
+   "topic": "ARDS",
+   "title": "REST: extracorporeal CO2 removal to enable lower tidal volumes",
+   "citation": "McNamee et al.. JAMA. 2021.",
+   "finding": "ECCO2R with 3 mL/kg tidal volumes did not reduce 90-day mortality, increased serious adverse events, and the trial stopped early for futility.",
+   "doi": "10.1001/jama.2021.13374",
+   "year": 2021
   },
   {
-   "week": 7,
    "session": "Noninvasive ventilation",
    "topic": "Respiratory support",
    "title": "NIV for respiratory failure after extubation",
    "citation": "Esteban A, et al. N Engl J Med. 2004.",
    "finding": "NIV for established post-extubation failure did not prevent reintubation and increased ICU mortality, largely by delaying reintubation.",
-   "path": "/files/articles/w07-esteban-nejm-2004.pdf"
+   "path": "/files/articles/w07-esteban-nejm-2004.pdf",
+   "order": 7,
+   "year": 2004
   },
   {
-   "week": 7,
+   "session": "Noninvasive ventilation",
+   "topic": "Respiratory support",
+   "title": "3CPO: NIV in acute cardiogenic pulmonary edema",
+   "citation": "Gray A, et al. N Engl J Med. 2008.",
+   "finding": "CPAP and NIPPV relieved dyspnea and acidosis faster than oxygen alone but did not reduce 7-day mortality or intubation.",
+   "path": "/files/articles/w07-gray-nejm-2008.pdf",
+   "order": 7,
+   "year": 2008
+  },
+  {
+   "session": "Noninvasive ventilation",
+   "topic": "Respiratory support",
+   "title": "Early NIV after extubation in hypercapnic patients",
+   "citation": "Ferrer M, et al. Lancet. 2009.",
+   "finding": "Preventive NIV in chronic respiratory disease with hypercapnia during the SBT reduced post-extubation respiratory failure and 90-day mortality.",
+   "path": "/files/articles/w07-ferrer-lancet-2009.pdf",
+   "order": 7,
+   "year": 2009
+  },
+  {
    "session": "Noninvasive ventilation",
    "topic": "Respiratory support",
    "title": "NIVAS: NIV after abdominal surgery",
    "citation": "Jaber S, et al. JAMA. 2016.",
    "finding": "NIV for hypoxemic respiratory failure after abdominal surgery reduced reintubation within 7 days.",
    "path": "/files/articles/w07-jaber-jama-2016.pdf",
-   "doi": "10.1001/jama.2016.2706"
+   "doi": "10.1001/jama.2016.2706",
+   "order": 7,
+   "year": 2016
   },
   {
-   "week": 8,
    "session": "High-flow nasal cannula",
    "topic": "Respiratory support",
    "title": "BiPOP: high-flow oxygen versus BiPAP after cardiothoracic surgery",
    "citation": "Stephan F, et al. JAMA. 2015.",
    "finding": "High-flow nasal oxygen was noninferior to BiPAP for treatment failure in hypoxemic patients after cardiothoracic surgery.",
    "path": "/files/articles/w08-stephan-jama-2015.pdf",
-   "doi": "10.1001/jama.2015.5213"
+   "doi": "10.1001/jama.2015.5213",
+   "order": 8,
+   "year": 2015
   },
   {
-   "week": 8,
    "session": "High-flow nasal cannula",
    "topic": "Respiratory support",
    "title": "FLORALI: high-flow oxygen in hypoxemic respiratory failure",
    "citation": "Frat JP, et al. N Engl J Med. 2015.",
    "finding": "No difference in intubation overall, but HFNC had lower 90-day mortality than standard oxygen or NIV.",
    "path": "/files/articles/w08-frat-nejm-2015.pdf",
-   "doi": "10.1056/NEJMoa1503326"
+   "doi": "10.1056/NEJMoa1503326",
+   "order": 8,
+   "year": 2015
   },
   {
-   "week": 8,
    "session": "High-flow nasal cannula",
    "topic": "Respiratory support",
    "title": "HFNC versus NIV after extubation in high-risk patients",
    "citation": "Hernandez G, et al. JAMA. 2016.",
    "finding": "High-flow nasal cannula was noninferior to NIV for reintubation and post-extubation respiratory failure.",
    "path": "/files/articles/w08-hernandez-high-risk-jama-2016.pdf",
-   "doi": "10.1001/jama.2016.14194"
+   "doi": "10.1001/jama.2016.14194",
+   "order": 8,
+   "year": 2016
   },
   {
-   "week": 8,
    "session": "High-flow nasal cannula",
    "topic": "Respiratory support",
    "title": "HFNC versus conventional oxygen after extubation in low-risk patients",
    "citation": "Hernandez G, et al. JAMA. 2016.",
    "finding": "High-flow nasal cannula reduced reintubation within 72 hours compared with conventional oxygen.",
    "path": "/files/articles/w08-hernandez-low-risk-jama-2016.pdf",
-   "doi": "10.1001/jama.2016.2711"
+   "doi": "10.1001/jama.2016.2711",
+   "order": 8,
+   "year": 2016
   },
   {
-   "week": 9,
-   "session": "Weaning and extubation",
+   "order": 8,
+   "session": "High-flow nasal cannula",
    "topic": "Respiratory support",
-   "title": "Four methods of weaning from mechanical ventilation",
-   "citation": "Esteban A, et al. N Engl J Med. 1995.",
-   "finding": "Once-daily spontaneous breathing trials weaned patients faster than pressure support or SIMV.",
-   "path": "/files/articles/w09-esteban-nejm-1995.pdf"
+   "title": "RENOVATE: high-flow oxygen versus NIV in acute respiratory failure",
+   "citation": "RENOVATE Investigators. JAMA. 2025.",
+   "finding": "HFNC was noninferior to NIV for intubation or death in most patient groups, with the exception of immunocompromised patients, where the result was inconclusive.",
+   "doi": "10.1001/jama.2024.26244",
+   "year": 2025
   },
   {
-   "week": 9,
-   "session": "Weaning and extubation",
-   "topic": "Respiratory support",
-   "title": "Methylprednisolone to prevent post-extubation laryngeal edema",
-   "citation": "Francois B, et al. Lancet. 2007.",
-   "finding": "Methylprednisolone started 12 hours before planned extubation reduced laryngeal edema and reintubation.",
-   "path": "/files/articles/w09-francois-lancet-2007.pdf"
-  },
-  {
-   "week": 9,
    "session": "Weaning and extubation",
    "topic": "Respiratory support",
    "title": "Rapid shallow breathing index",
    "citation": "Yang KL, Tobin MJ. N Engl J Med. 1991.",
    "finding": "Frequency to tidal volume ratio of 105 or less during a spontaneous breathing trial predicted successful weaning.",
-   "path": "/files/articles/w09-yang-nejm-1991.pdf"
+   "path": "/files/articles/w09-yang-nejm-1991.pdf",
+   "order": 9,
+   "year": 1991
   },
   {
-   "week": 9,
+   "session": "Weaning and extubation",
+   "topic": "Respiratory support",
+   "title": "Four methods of weaning from mechanical ventilation",
+   "citation": "Esteban A, et al. N Engl J Med. 1995.",
+   "finding": "Once-daily spontaneous breathing trials weaned patients faster than pressure support or SIMV.",
+   "path": "/files/articles/w09-esteban-nejm-1995.pdf",
+   "order": 9,
+   "year": 1995
+  },
+  {
+   "session": "Weaning and extubation",
+   "topic": "Respiratory support",
+   "title": "Methylprednisolone to prevent post-extubation laryngeal edema",
+   "citation": "Francois B, et al. Lancet. 2007.",
+   "finding": "Methylprednisolone started 12 hours before planned extubation reduced laryngeal edema and reintubation.",
+   "path": "/files/articles/w09-francois-lancet-2007.pdf",
+   "order": 9,
+   "year": 2007
+  },
+  {
    "session": "Weaning and extubation",
    "topic": "Respiratory support",
    "title": "TracMan: early versus late tracheostomy",
    "citation": "Young D, et al. JAMA. 2013.",
    "finding": "Tracheostomy at day 4 versus day 10 did not change 30-day mortality, and clinicians predicted the need for prolonged ventilation poorly.",
-   "path": "/files/articles/w09-young-jama-2013.pdf"
+   "path": "/files/articles/w09-young-jama-2013.pdf",
+   "order": 9,
+   "year": 2013
   },
   {
-   "week": 10,
    "session": "Tracheostomy timing and hyperoxia",
    "topic": "Respiratory support",
    "title": "Early versus late tracheotomy and pneumonia",
    "citation": "Terragni PP, et al. JAMA. 2010.",
    "finding": "Tracheotomy at 6 to 8 days versus 13 to 15 days did not significantly reduce ventilator-associated pneumonia.",
-   "path": "/files/articles/w10-terragni-jama-2010.pdf"
+   "path": "/files/articles/w10-terragni-jama-2010.pdf",
+   "order": 10,
+   "year": 2010
   },
   {
-   "week": 10,
+   "session": "Tracheostomy timing and hyperoxia",
+   "topic": "Respiratory support",
+   "title": "TracMan: early versus late tracheostomy",
+   "citation": "Young D, et al. JAMA. 2013.",
+   "finding": "Tracheostomy at day 4 versus day 10 did not change 30-day mortality, and clinicians predicted the need for prolonged ventilation poorly.",
+   "path": "/files/articles/w10-young-jama-2013.pdf",
+   "order": 10,
+   "year": 2013
+  },
+  {
    "session": "Tracheostomy timing and hyperoxia",
    "topic": "Respiratory support",
    "title": "Oxygen-ICU: conservative versus conventional oxygen",
    "citation": "Girardis M, et al. JAMA. 2016.",
    "finding": "Targeting PaO2 70 to 100 mm Hg lowered ICU mortality in a single-center trial stopped early.",
    "path": "/files/articles/w10-girardis-jama-2016.pdf",
-   "doi": "10.1001/jama.2016.11993"
+   "doi": "10.1001/jama.2016.11993",
+   "order": 10,
+   "year": 2016
   },
   {
-   "week": 10,
    "session": "Tracheostomy timing and hyperoxia",
    "topic": "Respiratory support",
    "title": "SO-COOL: avoiding hyperoxemia on cardiopulmonary bypass",
    "citation": "McGuinness SP, et al. Anesthesiology. 2016.",
    "finding": "Avoiding hyperoxemia during bypass did not reduce acute kidney injury after cardiac surgery.",
    "path": "/files/articles/w10-mcguinness-anesthesiology-2016.pdf",
-   "doi": "10.1097/ALN.0000000000001226"
+   "doi": "10.1097/ALN.0000000000001226",
+   "order": 10,
+   "year": 2016
   },
   {
-   "week": 10,
+   "order": 10,
    "session": "Tracheostomy timing and hyperoxia",
    "topic": "Respiratory support",
-   "title": "TracMan: early versus late tracheostomy",
-   "citation": "Young D, et al. JAMA. 2013.",
-   "finding": "Tracheostomy at day 4 versus day 10 did not change 30-day mortality, and clinicians predicted the need for prolonged ventilation poorly.",
-   "path": "/files/articles/w10-young-jama-2013.pdf"
+   "title": "HOT-ICU: lower versus higher oxygenation targets",
+   "citation": "Schjørring et al.. N Engl J Med. 2021.",
+   "finding": "PaO2 60 versus 90 mm Hg in acute hypoxemic respiratory failure: no difference in 90-day mortality.",
+   "doi": "10.1056/NEJMoa2032510",
+   "year": 2021
   },
   {
-   "week": 12,
+   "order": 10,
+   "session": "Tracheostomy timing and hyperoxia",
+   "topic": "Respiratory support",
+   "title": "PILOT: oxygen saturation targets in ventilated adults",
+   "citation": "Semler et al.. N Engl J Med. 2022.",
+   "finding": "SpO2 targets of 90%, 94%, and 98% produced the same ventilator-free days and mortality.",
+   "doi": "10.1056/NEJMoa2208415",
+   "year": 2022
+  },
+  {
+   "order": 10,
+   "session": "Tracheostomy timing and hyperoxia",
+   "topic": "Respiratory support",
+   "title": "UK-ROX: conservative oxygen therapy in ventilated adults",
+   "citation": "Martin et al.. JAMA. 2025.",
+   "finding": "Conservative oxygen (SpO2 around 90%) versus usual care in 16,500 ventilated patients: no difference in 90-day mortality.",
+   "doi": "10.1001/jama.2025.9663",
+   "year": 2025
+  },
+  {
    "session": "Sepsis: early goal-directed therapy and fluids",
    "topic": "Sepsis",
-   "title": "CLASSIC: restrictive intravenous fluid in septic shock",
-   "citation": "Meyhoff TS, et al. N Engl J Med. 2022.",
-   "finding": "Restricting IV fluid in the ICU after initial resuscitation did not change 90-day mortality.",
-   "path": "/files/articles/w12-meyhoff-classic-nejm-2022.pdf",
-   "doi": "10.1056/NEJMoa2202707"
+   "title": "Rivers: early goal-directed therapy",
+   "citation": "Rivers E, et al. N Engl J Med. 2001.",
+   "finding": "Single-center trial in which EGDT reduced in-hospital mortality from 46.5% to 30.5%. Not reproduced by ProCESS, ARISE, or ProMISe.",
+   "path": "/files/articles/w12-rivers-nejm-2001.pdf",
+   "order": 12,
+   "year": 2001
   },
   {
-   "week": 12,
-   "session": "Sepsis: early goal-directed therapy and fluids",
-   "topic": "Sepsis",
-   "title": "CLOVERS: restrictive versus liberal fluids in sepsis-induced hypotension",
-   "citation": "Shapiro NI, et al. N Engl J Med. 2023.",
-   "finding": "Early vasopressors with restricted fluid versus liberal fluid: no difference in 90-day mortality.",
-   "path": "/files/articles/w12-shapiro-clovers-nejm-2023.pdf",
-   "doi": "10.1056/NEJMoa2212663"
-  },
-  {
-   "week": 12,
    "session": "Sepsis: early goal-directed therapy and fluids",
    "topic": "Sepsis",
    "title": "ProCESS: protocol-based care for early septic shock",
    "citation": "ProCESS Investigators. N Engl J Med. 2014.",
    "finding": "Protocolized EGDT, protocolized standard therapy, and usual care had the same 60-day mortality.",
    "path": "/files/articles/w12-process-nejm-2014.pdf",
-   "doi": "10.1056/NEJMoa1401602"
+   "doi": "10.1056/NEJMoa1401602",
+   "order": 12,
+   "year": 2014
   },
   {
-   "week": 12,
    "session": "Sepsis: early goal-directed therapy and fluids",
    "topic": "Sepsis",
-   "title": "Rivers: early goal-directed therapy",
-   "citation": "Rivers E, et al. N Engl J Med. 2001.",
-   "finding": "Single-center trial in which EGDT reduced in-hospital mortality from 46.5% to 30.5%. Not reproduced by ProCESS, ARISE, or ProMISe.",
-   "path": "/files/articles/w12-rivers-nejm-2001.pdf"
+   "title": "CLASSIC: restrictive intravenous fluid in septic shock",
+   "citation": "Meyhoff TS, et al. N Engl J Med. 2022.",
+   "finding": "Restricting IV fluid in the ICU after initial resuscitation did not change 90-day mortality.",
+   "path": "/files/articles/w12-meyhoff-classic-nejm-2022.pdf",
+   "doi": "10.1056/NEJMoa2202707",
+   "order": 12,
+   "year": 2022
   },
   {
-   "week": 13,
-   "session": "Sepsis: resuscitation targets",
+   "session": "Sepsis: early goal-directed therapy and fluids",
    "topic": "Sepsis",
-   "title": "ANDROMEDA-SHOCK: capillary refill versus lactate targets",
-   "citation": "Hernandez G, et al. JAMA. 2019.",
-   "finding": "Peripheral perfusion-targeted resuscitation did not significantly reduce 28-day mortality (34.9% versus 43.4%) but produced less organ dysfunction.",
-   "path": "/files/articles/w13-hernandez-jama-2019.pdf",
-   "doi": "10.1001/jama.2019.0071"
+   "title": "CLOVERS: restrictive versus liberal fluids in sepsis-induced hypotension",
+   "citation": "Shapiro NI, et al. N Engl J Med. 2023.",
+   "finding": "Early vasopressors with restricted fluid versus liberal fluid: no difference in 90-day mortality.",
+   "path": "/files/articles/w12-shapiro-clovers-nejm-2023.pdf",
+   "doi": "10.1056/NEJMoa2212663",
+   "order": 12,
+   "year": 2023
   },
   {
-   "week": 13,
+   "order": 12,
+   "session": "Sepsis: early goal-directed therapy and fluids",
+   "topic": "Sepsis",
+   "title": "ARISE FLUIDS: restricted fluids and early vasopressors",
+   "citation": "ARISE FLUIDS Investigators. N Engl J Med. 2026.",
+   "finding": "Restricted fluids with early vasopressors did not increase days alive and out of hospital at 90 days. Completes the CLASSIC and CLOVERS trio.",
+   "doi": "10.1056/NEJMoa2516225",
+   "year": 2026
+  },
+  {
    "session": "Sepsis: resuscitation targets",
    "topic": "Sepsis",
    "title": "LACTATE: early lactate-guided therapy",
    "citation": "Jansen TC, et al. Am J Respir Crit Care Med. 2010.",
    "finding": "Targeting a 20% lactate decrease every 2 hours reduced adjusted in-hospital mortality.",
    "path": "/files/articles/w13-jansen-ajrccm-2010.pdf",
-   "doi": "10.1164/rccm.200912-1918OC"
+   "doi": "10.1164/rccm.200912-1918OC",
+   "order": 13,
+   "year": 2010
   },
   {
-   "week": 13,
    "session": "Sepsis: resuscitation targets",
    "topic": "Sepsis",
    "title": "OPTIMISE: cardiac output-guided hemodynamic therapy",
    "citation": "Pearse RM, et al. JAMA. 2014.",
    "finding": "A perioperative cardiac output-guided algorithm did not significantly reduce complications; the updated meta-analysis favored it.",
    "path": "/files/articles/w13-pearse-jama-optimise-2014.pdf",
-   "doi": "10.1001/jama.2014.5305"
+   "doi": "10.1001/jama.2014.5305",
+   "order": 13,
+   "year": 2014
   },
   {
-   "week": 13,
    "session": "Sepsis: resuscitation targets",
    "topic": "Sepsis",
    "title": "RELIEF: restrictive versus liberal fluids in major abdominal surgery",
    "citation": "Myles PS, et al. N Engl J Med. 2018.",
    "finding": "A restrictive regimen did not improve disability-free survival and increased acute kidney injury.",
    "path": "/files/articles/w13-myles-nejm-2018.pdf",
-   "doi": "10.1056/NEJMoa1801601"
+   "doi": "10.1056/NEJMoa1801601",
+   "order": 13,
+   "year": 2018
   },
   {
-   "week": 14,
-   "session": "Steroids in septic shock",
+   "session": "Sepsis: resuscitation targets",
    "topic": "Sepsis",
-   "title": "ADRENAL: hydrocortisone in septic shock",
-   "citation": "Venkatesh B, et al. N Engl J Med. 2018.",
-   "finding": "Continuous hydrocortisone did not reduce 90-day mortality but shortened shock, ventilation, and ICU stay.",
-   "path": "/files/articles/w14-venkatesh-nejm-2018.pdf",
-   "doi": "10.1056/NEJMoa1705835"
+   "title": "ANDROMEDA-SHOCK: capillary refill versus lactate targets",
+   "citation": "Hernandez G, et al. JAMA. 2019.",
+   "finding": "Peripheral perfusion-targeted resuscitation did not significantly reduce 28-day mortality (34.9% versus 43.4%) but produced less organ dysfunction.",
+   "path": "/files/articles/w13-hernandez-jama-2019.pdf",
+   "doi": "10.1001/jama.2019.0071",
+   "order": 13,
+   "year": 2019
   },
   {
-   "week": 14,
-   "session": "Steroids in septic shock",
+   "order": 13,
+   "session": "Sepsis: resuscitation targets",
    "topic": "Sepsis",
-   "title": "APROCCHSS: hydrocortisone plus fludrocortisone",
-   "citation": "Annane D, et al. N Engl J Med. 2018.",
-   "finding": "Hydrocortisone with fludrocortisone reduced 90-day mortality in septic shock from 49% to 43%.",
-   "path": "/files/articles/w14-annane-nejm-2018.pdf",
-   "doi": "10.1056/NEJMoa1705716"
+   "title": "ANDROMEDA-SHOCK-2: capillary refill-targeted resuscitation",
+   "citation": "ANDROMEDA-SHOCK-2 Investigators. JAMA. 2025.",
+   "finding": "A capillary refill-targeted protocol won on a hierarchical composite (win ratio 1.16) with identical 28-day mortality (26.5% versus 26.6%).",
+   "doi": "10.1001/jama.2025.20962",
+   "year": 2025
   },
   {
-   "week": 14,
+   "order": 13,
+   "session": "Sepsis: resuscitation targets",
+   "topic": "Sepsis",
+   "title": "SODa-BIC: sodium bicarbonate in metabolic acidosis with shock",
+   "citation": "SODa-BIC Investigators. N Engl J Med. 2026.",
+   "finding": "Bicarbonate did not reduce major adverse kidney events at 30 days (40.2% versus 39.4%).",
+   "doi": "10.1056/NEJMoa2600526",
+   "year": 2026
+  },
+  {
    "session": "Steroids in septic shock",
    "topic": "Sepsis",
    "title": "CORTICUS: hydrocortisone in septic shock",
    "citation": "Sprung CL, et al. N Engl J Med. 2008.",
    "finding": "Hydrocortisone hastened shock reversal but did not improve 28-day mortality, regardless of corticotropin response.",
-   "path": "/files/articles/w14-sprung-corticus-nejm-2008.pdf"
+   "path": "/files/articles/w14-sprung-corticus-nejm-2008.pdf",
+   "order": 14,
+   "year": 2008
   },
   {
-   "week": 14,
    "session": "Steroids in septic shock",
    "topic": "Sepsis",
    "title": "HYPRESS: hydrocortisone in severe sepsis without shock",
    "citation": "Keh D, et al. JAMA. 2016.",
    "finding": "Hydrocortisone did not prevent progression to septic shock.",
    "path": "/files/articles/w14-keh-hypress-jama-2016.pdf",
-   "doi": "10.1001/jama.2016.14799"
+   "doi": "10.1001/jama.2016.14799",
+   "order": 14,
+   "year": 2016
   },
   {
-   "week": 15,
+   "session": "Steroids in septic shock",
+   "topic": "Sepsis",
+   "title": "ADRENAL: hydrocortisone in septic shock",
+   "citation": "Venkatesh B, et al. N Engl J Med. 2018.",
+   "finding": "Continuous hydrocortisone did not reduce 90-day mortality but shortened shock, ventilation, and ICU stay.",
+   "path": "/files/articles/w14-venkatesh-nejm-2018.pdf",
+   "doi": "10.1056/NEJMoa1705835",
+   "order": 14,
+   "year": 2018
+  },
+  {
+   "session": "Steroids in septic shock",
+   "topic": "Sepsis",
+   "title": "APROCCHSS: hydrocortisone plus fludrocortisone",
+   "citation": "Annane D, et al. N Engl J Med. 2018.",
+   "finding": "Hydrocortisone with fludrocortisone reduced 90-day mortality in septic shock from 49% to 43%.",
+   "path": "/files/articles/w14-annane-nejm-2018.pdf",
+   "doi": "10.1056/NEJMoa1705716",
+   "order": 14,
+   "year": 2018
+  },
+  {
    "session": "Vasopressors and inotropes in shock",
    "topic": "Sepsis",
-   "title": "ATHOS-3: angiotensin II for vasodilatory shock",
-   "citation": "Khanna A, et al. N Engl J Med. 2017.",
-   "finding": "Angiotensin II raised MAP in catecholamine-resistant vasodilatory shock. Not powered for mortality.",
-   "path": "/files/articles/w15-khanna-nejm-2017.pdf",
-   "doi": "10.1056/NEJMoa1704154"
+   "title": "VASST: vasopressin versus norepinephrine",
+   "citation": "Russell JA, et al. N Engl J Med. 2008.",
+   "finding": "Adding low-dose vasopressin did not reduce 28-day mortality overall; a possible benefit appeared in less severe shock.",
+   "path": "/files/articles/w15-russell-vasst-nejm-2008.pdf",
+   "order": 15,
+   "year": 2008
   },
   {
-   "week": 15,
+   "session": "Vasopressors and inotropes in shock",
+   "topic": "Sepsis",
+   "title": "SOAP II: dopamine versus norepinephrine in shock",
+   "citation": "De Backer D, et al. N Engl J Med. 2010.",
+   "finding": "No overall mortality difference, but dopamine caused more arrhythmias and higher mortality in cardiogenic shock.",
+   "path": "/files/articles/w15-de-backer-nejm-2010.pdf",
+   "order": 15,
+   "year": 2010
+  },
+  {
    "session": "Vasopressors and inotropes in shock",
    "topic": "Sepsis",
    "title": "Esmolol for heart rate control in septic shock",
    "citation": "Morelli A, et al. JAMA. 2013.",
    "finding": "Single-center trial in which esmolol to a heart rate of 80 to 94 reduced 28-day mortality from 80.5% to 49.4%. Treat the control mortality with suspicion.",
    "path": "/files/articles/w15-morelli-jama-2013.pdf",
-   "doi": "10.1001/jama.2013.278477"
+   "doi": "10.1001/jama.2013.278477",
+   "order": 15,
+   "year": 2013
   },
   {
-   "week": 15,
    "session": "Vasopressors and inotropes in shock",
    "topic": "Sepsis",
-   "title": "SOAP II: dopamine versus norepinephrine in shock",
-   "citation": "De Backer D, et al. N Engl J Med. 2010.",
-   "finding": "No overall mortality difference, but dopamine caused more arrhythmias and higher mortality in cardiogenic shock.",
-   "path": "/files/articles/w15-de-backer-nejm-2010.pdf"
+   "title": "ATHOS-3: angiotensin II for vasodilatory shock",
+   "citation": "Khanna A, et al. N Engl J Med. 2017.",
+   "finding": "Angiotensin II raised MAP in catecholamine-resistant vasodilatory shock. Not powered for mortality.",
+   "path": "/files/articles/w15-khanna-nejm-2017.pdf",
+   "doi": "10.1056/NEJMoa1704154",
+   "order": 15,
+   "year": 2017
   },
   {
-   "week": 15,
+   "order": 15,
    "session": "Vasopressors and inotropes in shock",
    "topic": "Sepsis",
-   "title": "VASST: vasopressin versus norepinephrine",
-   "citation": "Russell JA, et al. N Engl J Med. 2008.",
-   "finding": "Adding low-dose vasopressin did not reduce 28-day mortality overall; a possible benefit appeared in less severe shock.",
-   "path": "/files/articles/w15-russell-vasst-nejm-2008.pdf"
+   "title": "STRESS-L: landiolol in septic shock",
+   "citation": "Whitehouse et al.. JAMA. 2023.",
+   "finding": "Landiolol for tachycardia in established septic shock did not improve organ failure and was associated with higher mortality. Stopped early. Read against Morelli.",
+   "doi": "10.1001/jama.2023.20134",
+   "year": 2023,
+   "path": "/files/articles/add-stress-l.pdf"
   },
   {
-   "week": 16,
    "session": "Sepsis: blood pressure targets and activated protein C",
    "topic": "Sepsis",
-   "title": "LeoPARDS: levosimendan in sepsis",
-   "citation": "Gordon AC, et al. N Engl J Med. 2016.",
-   "finding": "Levosimendan did not reduce organ dysfunction and caused more supraventricular tachyarrhythmia.",
-   "path": "/files/articles/w16-gordon-leopards-nejm-2016.pdf",
-   "doi": "10.1056/NEJMoa1609409"
+   "title": "PROWESS: drotrecogin alfa in severe sepsis",
+   "citation": "Bernard GR, et al. N Engl J Med. 2001.",
+   "finding": "Recombinant activated protein C reduced 28-day mortality from 30.8% to 24.7%, with more serious bleeding.",
+   "path": "/files/articles/w16-bernard-prowess-nejm-2001.pdf",
+   "order": 16,
+   "year": 2001
   },
   {
-   "week": 16,
+   "session": "Sepsis: blood pressure targets and activated protein C",
+   "topic": "Sepsis",
+   "title": "Risks and benefits of activated protein C: Sounding Board",
+   "citation": "Warren HS, et al. N Engl J Med. 2002.",
+   "finding": "The FDA reviewers' account of the PROWESS protocol change midway through the trial and why the result should be read cautiously.",
+   "path": "/files/articles/w16-jc-prowess-commentary-nejm.pdf",
+   "order": 16,
+   "year": 2002
+  },
+  {
    "session": "Sepsis: blood pressure targets and activated protein C",
    "topic": "Sepsis",
    "title": "PROWESS-SHOCK: drotrecogin alfa in septic shock",
    "citation": "Ranieri VM, et al. N Engl J Med. 2012.",
    "finding": "No mortality benefit. The drug was withdrawn from the market.",
    "path": "/files/articles/w16-ranieri-prowess-shock-2012-nejm.pdf",
-   "doi": "10.1056/NEJMoa1202290"
+   "doi": "10.1056/NEJMoa1202290",
+   "order": 16,
+   "year": 2012
   },
   {
-   "week": 16,
-   "session": "Sepsis: blood pressure targets and activated protein C",
-   "topic": "Sepsis",
-   "title": "PROWESS: drotrecogin alfa in severe sepsis",
-   "citation": "Bernard GR, et al. N Engl J Med. 2001.",
-   "finding": "Recombinant activated protein C reduced 28-day mortality from 30.8% to 24.7%, with more serious bleeding.",
-   "path": "/files/articles/w16-bernard-prowess-nejm-2001.pdf"
-  },
-  {
-   "week": 16,
-   "session": "Sepsis: blood pressure targets and activated protein C",
-   "topic": "Sepsis",
-   "title": "Risks and benefits of activated protein C: Sounding Board",
-   "citation": "Warren HS, et al. N Engl J Med. 2002.",
-   "finding": "The FDA reviewers' account of the PROWESS protocol change midway through the trial and why the result should be read cautiously.",
-   "path": "/files/articles/w16-jc-prowess-commentary-nejm.pdf"
-  },
-  {
-   "week": 16,
    "session": "Sepsis: blood pressure targets and activated protein C",
    "topic": "Sepsis",
    "title": "SEPSISPAM: high versus low blood pressure target",
    "citation": "Asfar P, et al. N Engl J Med. 2014.",
    "finding": "MAP 80 to 85 versus 65 to 70: no mortality difference, more atrial fibrillation, less renal replacement in chronic hypertension.",
    "path": "/files/articles/w16-asfar-sepsispam-nejm-2014.pdf",
-   "doi": "10.1056/NEJMoa1312173"
+   "doi": "10.1056/NEJMoa1312173",
+   "order": 16,
+   "year": 2014
   },
   {
-   "week": 17,
+   "session": "Sepsis: blood pressure targets and activated protein C",
+   "topic": "Sepsis",
+   "title": "LeoPARDS: levosimendan in sepsis",
+   "citation": "Gordon AC, et al. N Engl J Med. 2016.",
+   "finding": "Levosimendan did not reduce organ dysfunction and caused more supraventricular tachyarrhythmia.",
+   "path": "/files/articles/w16-gordon-leopards-nejm-2016.pdf",
+   "doi": "10.1056/NEJMoa1609409",
+   "order": 16,
+   "year": 2016
+  },
+  {
+   "order": 16,
+   "session": "Sepsis: blood pressure targets and activated protein C",
+   "topic": "Sepsis",
+   "title": "65 trial: permissive hypotension in older patients",
+   "citation": "Lamontagne et al.. JAMA. 2020.",
+   "finding": "MAP 60 to 65 in patients 65 and older: no increase in 90-day mortality, with less vasopressor exposure.",
+   "doi": "10.1001/jama.2020.0930",
+   "year": 2020
+  },
+  {
+   "order": 16,
+   "session": "Sepsis: blood pressure targets and activated protein C",
+   "topic": "Sepsis",
+   "title": "LOVIT: intravenous vitamin C in sepsis",
+   "citation": "Lamontagne et al.. N Engl J Med. 2022.",
+   "finding": "High-dose vitamin C increased the composite of death or persistent organ dysfunction at 28 days.",
+   "doi": "10.1056/NEJMoa2200644",
+   "year": 2022
+  },
+  {
+   "session": "Transfusion thresholds",
+   "topic": "Transfusion",
+   "title": "TRICC: transfusion requirements in critical care",
+   "citation": "Hebert PC, et al. N Engl J Med. 1999.",
+   "finding": "Hb 7 versus 10 threshold: noninferior overall, and lower mortality in younger and less ill patients.",
+   "path": "/files/articles/w17-hebert-tricc-nejm-1999.pdf",
+   "order": 17,
+   "year": 1999
+  },
+  {
    "session": "Transfusion thresholds",
    "topic": "Transfusion",
    "title": "FOCUS: transfusion after hip fracture surgery",
    "citation": "Carson JL, et al. N Engl J Med. 2011.",
    "finding": "Liberal (Hb under 10) versus restrictive (symptoms or Hb under 8) in high-risk elderly patients: no difference in death or walking.",
    "path": "/files/articles/w17-carson-focus-nejm-2011.pdf",
-   "doi": "10.1056/NEJMoa1012452"
+   "doi": "10.1056/NEJMoa1012452",
+   "order": 17,
+   "year": 2011
   },
   {
-   "week": 17,
-   "session": "Transfusion thresholds",
-   "topic": "Transfusion",
-   "title": "TRICC: transfusion requirements in critical care",
-   "citation": "Hebert PC, et al. N Engl J Med. 1999.",
-   "finding": "Hb 7 versus 10 threshold: noninferior overall, and lower mortality in younger and less ill patients.",
-   "path": "/files/articles/w17-hebert-tricc-nejm-1999.pdf"
-  },
-  {
-   "week": 17,
-   "session": "Transfusion thresholds",
-   "topic": "Transfusion",
-   "title": "TRISS: transfusion threshold in septic shock",
-   "citation": "Holst LB, et al. N Engl J Med. 2014.",
-   "finding": "Hb 7 versus 9 in septic shock: same 90-day mortality with half the transfusions.",
-   "path": "/files/articles/w17-holst-triss-nejm-2014.pdf",
-   "doi": "10.1056/NEJMoa1406617"
-  },
-  {
-   "week": 17,
    "session": "Transfusion thresholds",
    "topic": "Transfusion",
    "title": "Transfusion strategies in acute upper GI bleeding",
    "citation": "Villanueva C, et al. N Engl J Med. 2013.",
    "finding": "A restrictive threshold of 7 improved 6-week survival and reduced rebleeding compared with 9.",
    "path": "/files/articles/w17-villanueva-nejm-2013.pdf",
-   "doi": "10.1056/NEJMoa1211801"
+   "doi": "10.1056/NEJMoa1211801",
+   "order": 17,
+   "year": 2013
   },
   {
-   "week": 18,
+   "session": "Transfusion thresholds",
+   "topic": "Transfusion",
+   "title": "TRISS: transfusion threshold in septic shock",
+   "citation": "Holst LB, et al. N Engl J Med. 2014.",
+   "finding": "Hb 7 versus 9 in septic shock: same 90-day mortality with half the transfusions.",
+   "path": "/files/articles/w17-holst-triss-nejm-2014.pdf",
+   "doi": "10.1056/NEJMoa1406617",
+   "order": 17,
+   "year": 2014
+  },
+  {
+   "order": 17,
+   "session": "Transfusion thresholds",
+   "topic": "Transfusion",
+   "title": "MINT: transfusion threshold in myocardial infarction",
+   "citation": "Carson et al.. N Engl J Med. 2023.",
+   "finding": "Liberal (Hb under 10) versus restrictive (7 to 8) in MI with anemia: death or MI 16.9% versus 14.5%, not significant, favoring liberal. The one place restrictive may be wrong.",
+   "doi": "10.1056/NEJMoa2307983",
+   "year": 2023
+  },
+  {
+   "order": 17,
+   "session": "Transfusion thresholds",
+   "topic": "Transfusion",
+   "title": "HEMOTION: transfusion in traumatic brain injury",
+   "citation": "Turgeon et al.. N Engl J Med. 2024.",
+   "finding": "Liberal (under 10) versus restrictive (under 7) in TBI: unfavorable outcome 68.4% versus 73.5%, not significant.",
+   "doi": "10.1056/NEJMoa2404360",
+   "year": 2024
+  },
+  {
+   "order": 17,
+   "session": "Transfusion thresholds",
+   "topic": "Transfusion",
+   "title": "TRAIN: transfusion in acute brain injury",
+   "citation": "Taccone et al.. JAMA. 2024.",
+   "finding": "A liberal threshold (Hb under 9) reduced unfavorable neurologic outcome at 180 days compared with 7.",
+   "doi": "10.1001/jama.2024.20424",
+   "year": 2024
+  },
+  {
+   "session": "Transfusion in cardiac surgery",
+   "topic": "Transfusion",
+   "title": "TRACS: transfusion after cardiac surgery",
+   "citation": "Hajjar LA, et al. JAMA. 2010.",
+   "finding": "Hematocrit 24% versus 30% was noninferior for a composite of death and severe morbidity.",
+   "path": "/files/articles/w18-hajjar-tracs-jama-2010.pdf",
+   "order": 18,
+   "year": 2010
+  },
+  {
    "session": "Transfusion in cardiac surgery",
    "topic": "Transfusion",
    "title": "TITRe2: transfusion after cardiac surgery",
    "citation": "Murphy GJ, et al. N Engl J Med. 2015.",
    "finding": "Hb under 7.5 versus under 9: no difference in infection or ischemic events; 90-day mortality was higher in the restrictive arm as a secondary outcome.",
    "path": "/files/articles/w18-murphy-titre2-nejm-2015.pdf",
-   "doi": "10.1056/NEJMoa1403612"
+   "doi": "10.1056/NEJMoa1403612",
+   "order": 18,
+   "year": 2015
   },
   {
-   "week": 18,
-   "session": "Transfusion in cardiac surgery",
-   "topic": "Transfusion",
-   "title": "TRACS: transfusion after cardiac surgery",
-   "citation": "Hajjar LA, et al. JAMA. 2010.",
-   "finding": "Hematocrit 24% versus 30% was noninferior for a composite of death and severe morbidity.",
-   "path": "/files/articles/w18-hajjar-tracs-jama-2010.pdf"
-  },
-  {
-   "week": 18,
    "session": "Transfusion in cardiac surgery",
    "topic": "Transfusion",
    "title": "TRICS III: restrictive transfusion in cardiac surgery",
    "citation": "Mazer CD, et al. N Engl J Med. 2017.",
    "finding": "Hb under 7.5 was noninferior to Hb under 9.5 for death, MI, stroke, and new dialysis.",
    "path": "/files/articles/w18-mazer-nejm-2017.pdf",
-   "doi": "10.1056/NEJMoa1711818"
+   "doi": "10.1056/NEJMoa1711818",
+   "order": 18,
+   "year": 2017
   },
   {
-   "week": 18,
    "session": "Transfusion in cardiac surgery",
    "topic": "Transfusion",
    "title": "TRICS III: six-month outcomes",
    "citation": "Mazer CD, et al. N Engl J Med. 2018.",
    "finding": "Noninferiority of the restrictive strategy persisted at 6 months.",
    "path": "/files/articles/w18-mazer-nejm-2018.pdf",
-   "doi": "10.1056/NEJMoa1808561"
+   "doi": "10.1056/NEJMoa1808561",
+   "order": 18,
+   "year": 2018
   },
   {
-   "week": 19,
-   "session": "Transfusion: age of blood and trauma resuscitation",
-   "topic": "Transfusion",
-   "title": "PAMPer: prehospital plasma in hemorrhagic shock",
-   "citation": "Sperry JL, et al. N Engl J Med. 2018.",
-   "finding": "Prehospital thawed plasma during air transport reduced 30-day mortality.",
-   "path": "/files/articles/w19-sperry-nejm-2018.pdf",
-   "doi": "10.1056/NEJMoa1802345"
-  },
-  {
-   "week": 19,
    "session": "Transfusion: age of blood and trauma resuscitation",
    "topic": "Transfusion",
    "title": "PROPPR: 1:1:1 versus 1:1:2 in severe trauma",
    "citation": "Holcomb JB, et al. JAMA. 2015.",
    "finding": "No difference in 24-hour or 30-day mortality; 1:1:1 achieved hemostasis more often with fewer deaths from exsanguination.",
    "path": "/files/articles/w19-holcomb-proppr-jama-2015.pdf",
-   "doi": "10.1001/jama.2015.12"
+   "doi": "10.1001/jama.2015.12",
+   "order": 19,
+   "year": 2015
   },
   {
-   "week": 19,
    "session": "Transfusion: age of blood and trauma resuscitation",
    "topic": "Transfusion",
    "title": "TRANSFUSE: age of red cells",
    "citation": "Cooper DJ, et al. N Engl J Med. 2017.",
    "finding": "Freshest available versus standard-issue red cells: no difference in 90-day mortality.",
    "path": "/files/articles/w19-2017-cooper-transfuse-nejm-age-of-blood-products-corrected.pdf",
-   "doi": "10.1056/NEJMoa1707572"
+   "doi": "10.1056/NEJMoa1707572",
+   "order": 19,
+   "year": 2017
   },
   {
-   "week": 20,
-   "session": "Sedation: interruption and no-sedation strategies",
-   "topic": "Sedation and delirium",
-   "title": "ABC: paired sedation and ventilator weaning",
-   "citation": "Girard TD, et al. Lancet. 2008.",
-   "finding": "Daily awakening trial paired with a breathing trial increased ventilator-free days and reduced 1-year mortality.",
-   "path": "/files/articles/w20-girard-lancet-2008.pdf"
+   "session": "Transfusion: age of blood and trauma resuscitation",
+   "topic": "Transfusion",
+   "title": "PAMPer: prehospital plasma in hemorrhagic shock",
+   "citation": "Sperry JL, et al. N Engl J Med. 2018.",
+   "finding": "Prehospital thawed plasma during air transport reduced 30-day mortality.",
+   "path": "/files/articles/w19-sperry-nejm-2018.pdf",
+   "doi": "10.1056/NEJMoa1802345",
+   "order": 19,
+   "year": 2018
   },
   {
-   "week": 20,
+   "order": 19,
+   "session": "Transfusion: age of blood and trauma resuscitation",
+   "topic": "Transfusion",
+   "title": "PACER: platelet transfusion before central line placement",
+   "citation": "van Baarle et al.. N Engl J Med. 2023.",
+   "finding": "Withholding prophylactic platelets at counts of 10 to 50 before CVC placement increased catheter-related bleeding.",
+   "doi": "10.1056/NEJMoa2214322",
+   "year": 2023,
+   "path": "/files/articles/add-pacer.pdf"
+  },
+  {
+   "order": 19,
+   "session": "Transfusion: age of blood and trauma resuscitation",
+   "topic": "Transfusion",
+   "title": "PATCH-Trauma: prehospital tranexamic acid",
+   "citation": "PATCH-Trauma Investigators. N Engl J Med. 2023.",
+   "finding": "Prehospital TXA improved 28-day survival but not survival with favorable functional outcome at 6 months.",
+   "doi": "10.1056/NEJMoa2215457",
+   "year": 2023
+  },
+  {
    "session": "Sedation: interruption and no-sedation strategies",
    "topic": "Sedation and delirium",
    "title": "Daily interruption of sedative infusions",
    "citation": "Kress JP, et al. N Engl J Med. 2000.",
    "finding": "Daily sedation interruption shortened mechanical ventilation and ICU stay.",
-   "path": "/files/articles/w20-kress-nejm-2000.pdf"
+   "path": "/files/articles/w20-kress-nejm-2000.pdf",
+   "order": 20,
+   "year": 2000
   },
   {
-   "week": 20,
+   "session": "Sedation: interruption and no-sedation strategies",
+   "topic": "Sedation and delirium",
+   "title": "ABC: paired sedation and ventilator weaning",
+   "citation": "Girard TD, et al. Lancet. 2008.",
+   "finding": "Daily awakening trial paired with a breathing trial increased ventilator-free days and reduced 1-year mortality.",
+   "path": "/files/articles/w20-girard-lancet-2008.pdf",
+   "order": 20,
+   "year": 2008
+  },
+  {
    "session": "Sedation: interruption and no-sedation strategies",
    "topic": "Sedation and delirium",
    "title": "No sedation for ventilated patients",
    "citation": "Strom T, et al. Lancet. 2010.",
    "finding": "A protocol of no sedation with morphine boluses increased ventilator-free days and shortened ICU stay.",
-   "path": "/files/articles/w20-strom-lancet-2010.pdf"
+   "path": "/files/articles/w20-strom-lancet-2010.pdf",
+   "order": 20,
+   "year": 2010
   },
   {
-   "week": 20,
    "session": "Sedation: interruption and no-sedation strategies",
    "topic": "Sedation and delirium",
    "title": "SLEAP: daily interruption with protocolized sedation",
    "citation": "Mehta S, et al. JAMA. 2012.",
    "finding": "Adding daily interruption to nurse-driven protocolized sedation did not shorten ventilation and increased sedative doses and nursing workload.",
    "path": "/files/articles/w20-mehta-jama-2012.pdf",
-   "doi": "10.1001/jama.2012.13872"
+   "doi": "10.1001/jama.2012.13872",
+   "order": 20,
+   "year": 2012
   },
   {
-   "week": 21,
    "session": "Sedation: dexmedetomidine and benzodiazepines",
    "topic": "Sedation and delirium",
    "title": "Lorazepam as a risk factor for delirium",
    "citation": "Pandharipande P, et al. Anesthesiology. 2006.",
    "finding": "Lorazepam was an independent, dose-related risk factor for transitioning to delirium.",
-   "path": "/files/articles/w21-pandharipande-anesthesiology-2006.pdf"
+   "path": "/files/articles/w21-pandharipande-anesthesiology-2006.pdf",
+   "order": 21,
+   "year": 2006
   },
   {
-   "week": 21,
+   "session": "Sedation: dexmedetomidine and benzodiazepines",
+   "topic": "Sedation and delirium",
+   "title": "MENDS: dexmedetomidine versus lorazepam",
+   "citation": "Pandharipande PP, et al. JAMA. 2007.",
+   "finding": "Dexmedetomidine produced more days alive without delirium or coma than lorazepam.",
+   "path": "/files/articles/w21-pandharipande-mends-jama-2007.pdf",
+   "order": 21,
+   "year": 2007
+  },
+  {
+   "session": "Sedation: dexmedetomidine and benzodiazepines",
+   "topic": "Sedation and delirium",
+   "title": "MIDEX and PRODEX: dexmedetomidine versus midazolam or propofol",
+   "citation": "Jakob SM, et al. JAMA. 2012.",
+   "finding": "Dexmedetomidine was noninferior for time at target sedation and shortened ventilation compared with midazolam.",
+   "path": "/files/articles/w21-jakob-jama-2012.pdf",
+   "order": 21,
+   "year": 2012
+  },
+  {
+   "order": 21,
+   "session": "Sedation: dexmedetomidine and benzodiazepines",
+   "topic": "Sedation and delirium",
+   "title": "SPICE III: early dexmedetomidine as primary sedative",
+   "citation": "Shehabi et al.. N Engl J Med. 2019.",
+   "finding": "No difference in 90-day mortality overall, with heterogeneity by age suggesting harm in younger patients and benefit in older.",
+   "doi": "10.1056/NEJMoa1904710",
+   "year": 2019
+  },
+  {
    "session": "Sedation: dexmedetomidine and benzodiazepines",
    "topic": "Sedation and delirium",
    "title": "MENDS2: dexmedetomidine versus propofol in sepsis",
    "citation": "Hughes CG, et al. N Engl J Med. 2021.",
    "finding": "No difference in days alive without delirium or coma, ventilator-free days, or 90-day mortality.",
    "path": "/files/articles/w21-hughes-mends2-nejm-2021.pdf",
-   "doi": "10.1056/NEJMoa2024922"
+   "doi": "10.1056/NEJMoa2024922",
+   "order": 21,
+   "year": 2021
   },
   {
-   "week": 21,
+   "order": 21,
    "session": "Sedation: dexmedetomidine and benzodiazepines",
    "topic": "Sedation and delirium",
-   "title": "MENDS: dexmedetomidine versus lorazepam",
-   "citation": "Pandharipande PP, et al. JAMA. 2007.",
-   "finding": "Dexmedetomidine produced more days alive without delirium or coma than lorazepam.",
-   "path": "/files/articles/w21-pandharipande-mends-jama-2007.pdf"
+   "title": "A2B: dexmedetomidine or clonidine versus propofol",
+   "citation": "Walsh et al.. JAMA. 2025.",
+   "finding": "Neither alpha-2 agonist shortened time to extubation, and both caused more agitation. Dexmedetomidine was associated with more bradycardia.",
+   "doi": "10.1001/jama.2025.7200",
+   "year": 2025,
+   "path": "/files/articles/add-a2b.pdf"
   },
   {
-   "week": 21,
-   "session": "Sedation: dexmedetomidine and benzodiazepines",
-   "topic": "Sedation and delirium",
-   "title": "MIDEX and PRODEX: dexmedetomidine versus midazolam or propofol",
-   "citation": "Jakob SM, et al. JAMA. 2012.",
-   "finding": "Dexmedetomidine was noninferior for time at target sedation and shortened ventilation compared with midazolam.",
-   "path": "/files/articles/w21-jakob-jama-2012.pdf"
-  },
-  {
-   "week": 22,
    "session": "Delirium: assessment scales and early mobility",
    "topic": "Sedation and delirium",
    "title": "CAM-ICU validation",
    "citation": "Ely EW, et al. JAMA. 2001.",
    "finding": "The Confusion Assessment Method for the ICU was valid and reliable in ventilated patients.",
-   "path": "/files/articles/w22-ely-jama-2001.pdf"
+   "path": "/files/articles/w22-ely-jama-2001.pdf",
+   "order": 22,
+   "year": 2001
   },
   {
-   "week": 22,
-   "session": "Delirium: assessment scales and early mobility",
-   "topic": "Sedation and delirium",
-   "title": "Delirium as a predictor of mortality",
-   "citation": "Ely EW, et al. JAMA. 2004.",
-   "finding": "Delirium independently predicted 6-month mortality and longer hospital stay in ventilated patients.",
-   "path": "/files/articles/w22-ely-jama-2004.pdf"
-  },
-  {
-   "week": 22,
-   "session": "Delirium: assessment scales and early mobility",
-   "topic": "Sedation and delirium",
-   "title": "Early physical and occupational therapy",
-   "citation": "Schweickert WD, et al. Lancet. 2009.",
-   "finding": "PT and OT during daily sedation interruption improved return to independent function and shortened delirium.",
-   "path": "/files/articles/w22-schweickert-lancet-2009.pdf"
-  },
-  {
-   "week": 22,
    "session": "Delirium: assessment scales and early mobility",
    "topic": "Sedation and delirium",
    "title": "RASS validation",
    "citation": "Sessler CN, et al. Am J Respir Crit Care Med. 2002.",
    "finding": "The Richmond Agitation-Sedation Scale was valid and reliable in adult ICU patients.",
    "path": "/files/articles/w22-sessler-ajrccm-2002.pdf",
-   "doi": "10.1164/rccm.2107138"
+   "doi": "10.1164/rccm.2107138",
+   "order": 22,
+   "year": 2002
   },
   {
-   "week": 23,
-   "session": "Delirium: antipsychotics",
+   "session": "Delirium: assessment scales and early mobility",
    "topic": "Sedation and delirium",
-   "title": "Editorial: preventing delirium in the ICU",
-   "citation": "Delaney A, et al. JAMA. 2018.",
-   "finding": "Accompanying editorial to REDUCE on why prophylactic haloperidol failed and what nonpharmacologic prevention offers.",
-   "path": "/files/articles/w23-informational-vandenboogaard-editorial-jama-2018.pdf"
+   "title": "Delirium as a predictor of mortality",
+   "citation": "Ely EW, et al. JAMA. 2004.",
+   "finding": "Delirium independently predicted 6-month mortality and longer hospital stay in ventilated patients.",
+   "path": "/files/articles/w22-ely-jama-2004.pdf",
+   "order": 22,
+   "year": 2004
   },
   {
-   "week": 23,
+   "session": "Delirium: assessment scales and early mobility",
+   "topic": "Sedation and delirium",
+   "title": "Early physical and occupational therapy",
+   "citation": "Schweickert WD, et al. Lancet. 2009.",
+   "finding": "PT and OT during daily sedation interruption improved return to independent function and shortened delirium.",
+   "path": "/files/articles/w22-schweickert-lancet-2009.pdf",
+   "order": 22,
+   "year": 2009
+  },
+  {
    "session": "Delirium: antipsychotics",
    "topic": "Sedation and delirium",
    "title": "Hope-ICU: haloperidol for delirium",
    "citation": "Page VJ, et al. Lancet Respir Med. 2013.",
    "finding": "Intravenous haloperidol did not change days free of delirium and coma.",
-   "path": "/files/articles/w23-page-lancet-resp-med-2013.pdf"
+   "path": "/files/articles/w23-page-lancet-resp-med-2013.pdf",
+   "order": 23,
+   "year": 2013
   },
   {
-   "week": 23,
+   "session": "Delirium: antipsychotics",
+   "topic": "Sedation and delirium",
+   "title": "Editorial: preventing delirium in the ICU",
+   "citation": "Delaney A, et al. JAMA. 2018.",
+   "finding": "Accompanying editorial to REDUCE on why prophylactic haloperidol failed and what nonpharmacologic prevention offers.",
+   "path": "/files/articles/w23-informational-vandenboogaard-editorial-jama-2018.pdf",
+   "order": 23,
+   "year": 2018
+  },
+  {
    "session": "Delirium: antipsychotics",
    "topic": "Sedation and delirium",
    "title": "MIND-USA: haloperidol and ziprasidone for delirium",
    "citation": "Girard TD, et al. N Engl J Med. 2018.",
    "finding": "Neither antipsychotic changed days alive without delirium or coma.",
    "path": "/files/articles/w23-girard-nejm-2018.pdf",
-   "doi": "10.1056/NEJMoa1808217"
+   "doi": "10.1056/NEJMoa1808217",
+   "order": 23,
+   "year": 2018
   },
   {
-   "week": 23,
    "session": "Delirium: antipsychotics",
    "topic": "Sedation and delirium",
    "title": "REDUCE: prophylactic haloperidol",
    "citation": "van den Boogaard M, et al. JAMA. 2018.",
    "finding": "Prophylactic haloperidol in high-risk patients did not improve 28-day survival.",
    "path": "/files/articles/w23-vandenboogaard-jama-2018.pdf",
-   "doi": "10.1001/jama.2018.0160"
+   "doi": "10.1001/jama.2018.0160",
+   "order": 23,
+   "year": 2018
   },
   {
-   "week": 24,
    "session": "Fluids: albumin",
    "topic": "Fluids",
-   "title": "ALBIOS: albumin replacement in severe sepsis",
-   "citation": "Caironi P, et al. N Engl J Med. 2014.",
-   "finding": "Albumin to a target of 30 g/L did not improve survival; a post hoc signal favored it in septic shock.",
-   "path": "/files/articles/w24-caironi-albios-nejm-2014.pdf",
-   "doi": "10.1056/NEJMoa1305727"
+   "title": "SAFE: albumin versus saline",
+   "citation": "Finfer S, et al. N Engl J Med. 2004.",
+   "finding": "4% albumin and saline produced the same 28-day mortality. A later analysis found harm with albumin in traumatic brain injury.",
+   "path": "/files/articles/w24-finfer-safe-nejm-2004.pdf",
+   "order": 24,
+   "year": 2004
   },
   {
-   "week": 24,
    "session": "Fluids: albumin",
    "topic": "Fluids",
    "title": "Furosemide with or without albumin in acute lung injury",
    "citation": "Martin GS, et al. Crit Care Med. 2005.",
    "finding": "Albumin plus furosemide improved oxygenation and hemodynamics in hypoproteinemic patients with ALI.",
    "path": "/files/articles/w24-martin-ccm-2005.pdf",
-   "doi": "10.1097/01.CCM.0000171539.47006.02"
+   "doi": "10.1097/01.CCM.0000171539.47006.02",
+   "order": 24,
+   "year": 2005
   },
   {
-   "week": 24,
    "session": "Fluids: albumin",
    "topic": "Fluids",
-   "title": "SAFE: albumin versus saline",
-   "citation": "Finfer S, et al. N Engl J Med. 2004.",
-   "finding": "4% albumin and saline produced the same 28-day mortality. A later analysis found harm with albumin in traumatic brain injury.",
-   "path": "/files/articles/w24-finfer-safe-nejm-2004.pdf"
+   "title": "ALBIOS: albumin replacement in severe sepsis",
+   "citation": "Caironi P, et al. N Engl J Med. 2014.",
+   "finding": "Albumin to a target of 30 g/L did not improve survival; a post hoc signal favored it in septic shock.",
+   "path": "/files/articles/w24-caironi-albios-nejm-2014.pdf",
+   "doi": "10.1056/NEJMoa1305727",
+   "order": 24,
+   "year": 2014
   },
   {
-   "week": 25,
    "session": "Fluids: colloids, CVP, and balanced crystalloids",
    "topic": "Fluids",
    "title": "CRISTAL: colloids versus crystalloids in hypovolemic shock",
    "citation": "Annane D, et al. JAMA. 2013.",
    "finding": "No 28-day mortality difference; 90-day mortality favored colloids as a secondary outcome. Open label.",
    "path": "/files/articles/w25-annane-cristal-jama-2013.pdf",
-   "doi": "10.1001/jama.2013.280502"
+   "doi": "10.1001/jama.2013.280502",
+   "order": 25,
+   "year": 2013
   },
   {
-   "week": 25,
    "session": "Fluids: colloids, CVP, and balanced crystalloids",
    "topic": "Fluids",
    "title": "Does CVP predict fluid responsiveness?",
    "citation": "Marik PE, Cavallazzi R. Crit Care Med. 2013.",
    "finding": "Updated meta-analysis: central venous pressure does not predict fluid responsiveness.",
    "path": "/files/articles/w25-marik-ccm-2013.pdf",
-   "doi": "10.1097/CCM.0b013e31828a25fd"
+   "doi": "10.1097/CCM.0b013e31828a25fd",
+   "order": 25,
+   "year": 2013
   },
   {
-   "week": 25,
    "session": "Fluids: colloids, CVP, and balanced crystalloids",
    "topic": "Fluids",
    "title": "SALT-ED: balanced crystalloids in noncritically ill adults",
    "citation": "Self WH, et al. N Engl J Med. 2018.",
    "finding": "Balanced crystalloids in the emergency department reduced major adverse kidney events at 30 days.",
    "path": "/files/articles/w25-self-nejm-2018.pdf",
-   "doi": "10.1056/NEJMoa1711586"
+   "doi": "10.1056/NEJMoa1711586",
+   "order": 25,
+   "year": 2018
   },
   {
-   "week": 25,
    "session": "Fluids: colloids, CVP, and balanced crystalloids",
    "topic": "Fluids",
    "title": "SMART: balanced crystalloids in critically ill adults",
    "citation": "Semler MW, et al. N Engl J Med. 2018.",
    "finding": "Balanced crystalloids reduced major adverse kidney events at 30 days compared with saline.",
    "path": "/files/articles/w25-semler-nejm-2018.pdf",
-   "doi": "10.1056/NEJMoa1711584"
+   "doi": "10.1056/NEJMoa1711584",
+   "order": 25,
+   "year": 2018
   },
   {
-   "week": 26,
    "session": "Fluids: balanced crystalloids and chloride",
    "topic": "Fluids",
    "title": "Chloride-liberal versus chloride-restrictive fluids",
    "citation": "Yunos NM, et al. JAMA. 2012.",
    "finding": "Before-and-after study: restricting chloride-rich fluids was associated with less AKI and renal replacement therapy.",
-   "path": "/files/articles/w26-yunos-jama-2012.pdf"
+   "path": "/files/articles/w26-yunos-jama-2012.pdf",
+   "order": 26,
+   "year": 2012
   },
   {
-   "week": 26,
    "session": "Fluids: balanced crystalloids and chloride",
    "topic": "Fluids",
    "title": "Chloride-restrictive fluids and AKI: extended analysis",
    "citation": "Yunos NM, et al. Intensive Care Med. 2015.",
    "finding": "The reduction in AKI with a chloride-restrictive strategy persisted over a longer follow-up period.",
    "path": "/files/articles/w26-yunos-icm-2015.pdf",
-   "doi": "10.1007/s00134-014-3593-0"
+   "doi": "10.1007/s00134-014-3593-0",
+   "order": 26,
+   "year": 2015
   },
   {
-   "week": 26,
-   "session": "Fluids: balanced crystalloids and chloride",
-   "topic": "Fluids",
-   "title": "PLUS: balanced multielectrolyte solution versus saline",
-   "citation": "Finfer S, et al. N Engl J Med. 2022.",
-   "finding": "Plasma-Lyte 148 and saline produced the same 90-day mortality.",
-   "path": "/files/articles/w26-finfer-nejm-2022.pdf",
-   "doi": "10.1056/NEJMoa2114464"
-  },
-  {
-   "week": 26,
    "session": "Fluids: balanced crystalloids and chloride",
    "topic": "Fluids",
    "title": "SPLIT: buffered crystalloid versus saline",
    "citation": "Young P, et al. JAMA. 2015.",
    "finding": "Plasma-Lyte 148 did not reduce acute kidney injury compared with saline.",
    "path": "/files/articles/w26-young-split-jama-2015.pdf",
-   "doi": "10.1001/jama.2015.12334"
+   "doi": "10.1001/jama.2015.12334",
+   "order": 26,
+   "year": 2015
   },
   {
-   "week": 27,
+   "order": 26,
+   "session": "Fluids: balanced crystalloids and chloride",
+   "topic": "Fluids",
+   "title": "BaSICS: balanced solution versus saline",
+   "citation": "Zampieri et al.. JAMA. 2021.",
+   "finding": "Plasma-Lyte versus saline, and slow versus fast infusion, made no difference to 90-day mortality.",
+   "doi": "10.1001/jama.2021.11684",
+   "year": 2021
+  },
+  {
+   "session": "Fluids: balanced crystalloids and chloride",
+   "topic": "Fluids",
+   "title": "PLUS: balanced multielectrolyte solution versus saline",
+   "citation": "Finfer S, et al. N Engl J Med. 2022.",
+   "finding": "Plasma-Lyte 148 and saline produced the same 90-day mortality.",
+   "path": "/files/articles/w26-finfer-nejm-2022.pdf",
+   "doi": "10.1056/NEJMoa2114464",
+   "order": 26,
+   "year": 2022
+  },
+  {
+   "session": "Fluids: hydroxyethyl starch, insulin, and contrast",
+   "topic": "Fluids",
+   "title": "VISEP: intensive insulin and pentastarch in severe sepsis",
+   "citation": "Brunkhorst FM, et al. N Engl J Med. 2008.",
+   "finding": "Intensive insulin caused hypoglycemia without benefit, and pentastarch increased acute kidney injury and renal replacement.",
+   "path": "/files/articles/w27-brunkhorst-nejm-2008.pdf",
+   "order": 27,
+   "year": 2008
+  },
+  {
    "session": "Fluids: hydroxyethyl starch, insulin, and contrast",
    "topic": "Fluids",
    "title": "6S: hydroxyethyl starch in severe sepsis",
    "citation": "Perner A, et al. N Engl J Med. 2012.",
    "finding": "HES 130/0.42 increased 90-day mortality and renal replacement therapy compared with Ringer's acetate.",
    "path": "/files/articles/w27-perner-nejm-2012.pdf",
-   "doi": "10.1056/NEJMoa1204242"
+   "doi": "10.1056/NEJMoa1204242",
+   "order": 27,
+   "year": 2012
   },
   {
-   "week": 27,
    "session": "Fluids: hydroxyethyl starch, insulin, and contrast",
    "topic": "Fluids",
    "title": "CHEST: hydroxyethyl starch versus saline",
    "citation": "Myburgh JA, et al. N Engl J Med. 2012.",
    "finding": "HES 130/0.4 did not change 90-day mortality but increased renal replacement therapy.",
    "path": "/files/articles/w27-myburgh-chest-nejm-2012.pdf",
-   "doi": "10.1056/NEJMoa1209759"
+   "doi": "10.1056/NEJMoa1209759",
+   "order": 27,
+   "year": 2012
   },
   {
-   "week": 27,
    "session": "Fluids: hydroxyethyl starch, insulin, and contrast",
    "topic": "Fluids",
    "title": "PRESERVE: bicarbonate and acetylcysteine before angiography",
    "citation": "Weisbord SD, et al. N Engl J Med. 2018.",
    "finding": "Neither sodium bicarbonate nor acetylcysteine prevented death, dialysis, or persistent kidney impairment after angiography.",
    "path": "/files/articles/w27-weisbord-nejm-2017.pdf",
-   "doi": "10.1056/NEJMoa1710933"
+   "doi": "10.1056/NEJMoa1710933",
+   "order": 27,
+   "year": 2018
   },
   {
-   "week": 27,
-   "session": "Fluids: hydroxyethyl starch, insulin, and contrast",
-   "topic": "Fluids",
-   "title": "VISEP: intensive insulin and pentastarch in severe sepsis",
-   "citation": "Brunkhorst FM, et al. N Engl J Med. 2008.",
-   "finding": "Intensive insulin caused hypoglycemia without benefit, and pentastarch increased acute kidney injury and renal replacement.",
-   "path": "/files/articles/w27-brunkhorst-nejm-2008.pdf"
+   "session": "Renal: timing of renal replacement therapy",
+   "topic": "Renal",
+   "title": "PICARD: diuretics in acute renal failure",
+   "citation": "Mehta RL, et al. JAMA. 2002.",
+   "finding": "Diuretic use in acute renal failure was associated with higher mortality and nonrecovery of renal function.",
+   "path": "/files/articles/w28-mehta-picard-jama-2002.pdf",
+   "order": 28,
+   "year": 2002
   },
   {
-   "week": 28,
    "session": "Renal: timing of renal replacement therapy",
    "topic": "Renal",
    "title": "AKIKI: early versus delayed renal replacement therapy",
    "citation": "Gaudry S, et al. N Engl J Med. 2016.",
    "finding": "No mortality difference, and half of the delayed group never required dialysis.",
    "path": "/files/articles/w28-gaudry-akiki-nejm-2016.pdf",
-   "doi": "10.1056/NEJMoa1603017"
+   "doi": "10.1056/NEJMoa1603017",
+   "order": 28,
+   "year": 2016
   },
   {
-   "week": 28,
    "session": "Renal: timing of renal replacement therapy",
    "topic": "Renal",
    "title": "ELAIN: early versus delayed renal replacement therapy",
    "citation": "Zarbock A, et al. JAMA. 2016.",
    "finding": "Single-center trial in which early initiation at KDIGO stage 2 reduced 90-day mortality. Not reproduced in AKIKI or STARRT-AKI.",
    "path": "/files/articles/w28-zarbock-elain-jama-2016.pdf",
-   "doi": "10.1001/jama.2016.5828"
+   "doi": "10.1001/jama.2016.5828",
+   "order": 28,
+   "year": 2016
   },
   {
-   "week": 28,
-   "session": "Renal: timing of renal replacement therapy",
-   "topic": "Renal",
-   "title": "PICARD: diuretics in acute renal failure",
-   "citation": "Mehta RL, et al. JAMA. 2002.",
-   "finding": "Diuretic use in acute renal failure was associated with higher mortality and nonrecovery of renal function.",
-   "path": "/files/articles/w28-mehta-picard-jama-2002.pdf"
-  },
-  {
-   "week": 28,
    "session": "Renal: timing of renal replacement therapy",
    "topic": "Renal",
    "title": "STARRT-AKI: timing of renal replacement therapy",
    "citation": "Bagshaw SM, et al. N Engl J Med. 2020.",
    "finding": "Accelerated initiation did not reduce 90-day mortality and increased dialysis dependence among survivors.",
    "path": "/files/articles/w28-baghsaw-starrt-aki-nejm-2020.pdf",
-   "doi": "10.1056/NEJMoa2000741"
+   "doi": "10.1056/NEJMoa2000741",
+   "order": 28,
+   "year": 2020
   },
   {
-   "week": 29,
-   "session": "Infection: central line infections",
-   "topic": "Infection",
-   "title": "3SITES: central venous catheter insertion site",
-   "citation": "Parienti JJ, et al. N Engl J Med. 2015.",
-   "finding": "Subclavian had the fewest bloodstream infections and thromboses but the most pneumothoraces.",
-   "path": "/files/articles/w29-parienti-3sites-nejm-2015.pdf",
-   "doi": "10.1056/NEJMoa1500964"
+   "order": 28,
+   "session": "Renal: timing of renal replacement therapy",
+   "topic": "Renal",
+   "title": "AKIKI-2: a more delayed strategy for RRT",
+   "citation": "Gaudry et al.. Lancet. 2021.",
+   "finding": "Delaying RRT beyond the AKIKI delayed criteria did not add RRT-free days and was associated with higher 60-day mortality.",
+   "doi": "10.1016/S0140-6736(21)00350-0",
+   "year": 2021
   },
   {
-   "week": 29,
-   "session": "Infection: central line infections",
-   "topic": "Infection",
-   "title": "Chlorhexidine sponges and dressing change frequency",
-   "citation": "Timsit JF, et al. JAMA. 2009.",
-   "finding": "Chlorhexidine-impregnated sponges reduced catheter-related infections; changing dressings every 7 days was noninferior to every 3.",
-   "path": "/files/articles/w29-timsit-jama-2009.pdf"
+   "order": 28,
+   "session": "Renal: timing of renal replacement therapy",
+   "topic": "Renal",
+   "title": "PROTECTION: intravenous amino acids after cardiac surgery",
+   "citation": "Landoni et al.. N Engl J Med. 2024.",
+   "finding": "Amino acid infusion reduced acute kidney injury after cardiac surgery with cardiopulmonary bypass (26.9% versus 31.7%).",
+   "doi": "10.1056/NEJMoa2403769",
+   "year": 2024,
+   "path": "/files/articles/add-protection.pdf"
   },
   {
-   "week": 29,
+   "order": 28,
+   "session": "Renal: timing of renal replacement therapy",
+   "topic": "Renal",
+   "title": "BICARICU-2: sodium bicarbonate in severe acidemia with AKI",
+   "citation": "Jung et al.. JAMA. 2025.",
+   "finding": "No reduction in 90-day mortality, but less renal replacement therapy in the bicarbonate group.",
+   "doi": "10.1001/jama.2025.20231",
+   "year": 2025
+  },
+  {
    "session": "Infection: central line infections",
    "topic": "Infection",
    "title": "Keystone ICU: an intervention to decrease catheter-related bloodstream infections",
    "citation": "Pronovost P, et al. N Engl J Med. 2006.",
    "finding": "A five-item checklist across Michigan ICUs cut catheter-related bloodstream infections by two thirds.",
-   "path": "/files/articles/w29-pronovost-nejm-2006.pdf"
+   "path": "/files/articles/w29-pronovost-nejm-2006.pdf",
+   "order": 29,
+   "year": 2006
   },
   {
-   "week": 29,
+   "session": "Infection: central line infections",
+   "topic": "Infection",
+   "title": "Chlorhexidine sponges and dressing change frequency",
+   "citation": "Timsit JF, et al. JAMA. 2009.",
+   "finding": "Chlorhexidine-impregnated sponges reduced catheter-related infections; changing dressings every 7 days was noninferior to every 3.",
+   "path": "/files/articles/w29-timsit-jama-2009.pdf",
+   "order": 29,
+   "year": 2009
+  },
+  {
    "session": "Infection: central line infections",
    "topic": "Infection",
    "title": "Matching Michigan: CLABSI program in England",
    "citation": "Bion J, et al. BMJ Qual Saf. 2013.",
    "finding": "Central line infections fell during the program, but the decline had begun before the intervention, complicating attribution.",
    "path": "/files/articles/w29-bion-matching-michigan-bmj-qs-2013.pdf",
-   "doi": "10.1136/bmjqs-2012-001325"
+   "doi": "10.1136/bmjqs-2012-001325",
+   "order": 29,
+   "year": 2013
   },
   {
-   "week": 30,
+   "session": "Infection: central line infections",
+   "topic": "Infection",
+   "title": "3SITES: central venous catheter insertion site",
+   "citation": "Parienti JJ, et al. N Engl J Med. 2015.",
+   "finding": "Subclavian had the fewest bloodstream infections and thromboses but the most pneumothoraces.",
+   "path": "/files/articles/w29-parienti-3sites-nejm-2015.pdf",
+   "doi": "10.1056/NEJMoa1500964",
+   "order": 29,
+   "year": 2015
+  },
+  {
    "session": "Infection: decolonization and C. difficile",
    "topic": "Infection",
    "title": "Daily chlorhexidine bathing",
    "citation": "Climo MW, et al. N Engl J Med. 2013.",
    "finding": "Daily chlorhexidine bathing reduced MDRO acquisition and hospital-acquired bloodstream infections.",
    "path": "/files/articles/w30-climo-nejm-2013.pdf",
-   "doi": "10.1056/NEJMoa1113849"
+   "doi": "10.1056/NEJMoa1113849",
+   "order": 30,
+   "year": 2013
   },
   {
-   "week": 30,
    "session": "Infection: decolonization and C. difficile",
    "topic": "Infection",
    "title": "Duodenal infusion of donor feces for recurrent C. difficile",
    "citation": "van Nood E, et al. N Engl J Med. 2013.",
    "finding": "Fecal microbiota transplantation resolved recurrent C. difficile in 81% versus 31% with vancomycin; stopped early.",
    "path": "/files/articles/w30-van-nood-nejm-2013.pdf",
-   "doi": "10.1056/NEJMoa1205037"
+   "doi": "10.1056/NEJMoa1205037",
+   "order": 30,
+   "year": 2013
   },
   {
-   "week": 30,
-   "session": "Infection: decolonization and C. difficile",
-   "topic": "Infection",
-   "title": "R-GNOSIS: decontamination strategies in ventilated patients",
-   "citation": "Wittekamp BH, et al. JAMA. 2018.",
-   "finding": "In low-resistance ICUs, chlorhexidine mouthwash, SOD, and SDD did not reduce bloodstream infections with resistant organisms.",
-   "path": "/files/articles/w30-wittekamp-jama-2018.pdf",
-   "doi": "10.1001/jama.2018.13765"
-  },
-  {
-   "week": 30,
    "session": "Infection: decolonization and C. difficile",
    "topic": "Infection",
    "title": "REDUCE MRSA: targeted versus universal decolonization",
    "citation": "Huang SS, et al. N Engl J Med. 2013.",
    "finding": "Universal decolonization with chlorhexidine and mupirocin beat screening and isolation for MRSA clinical isolates and all-cause bloodstream infection.",
    "path": "/files/articles/w30-huang-nejm-2013.pdf",
-   "doi": "10.1056/NEJMoa1207290"
+   "doi": "10.1056/NEJMoa1207290",
+   "order": 30,
+   "year": 2013
   },
   {
-   "week": 31,
+   "session": "Infection: decolonization and C. difficile",
+   "topic": "Infection",
+   "title": "R-GNOSIS: decontamination strategies in ventilated patients",
+   "citation": "Wittekamp BH, et al. JAMA. 2018.",
+   "finding": "In low-resistance ICUs, chlorhexidine mouthwash, SOD, and SDD did not reduce bloodstream infections with resistant organisms.",
+   "path": "/files/articles/w30-wittekamp-jama-2018.pdf",
+   "doi": "10.1001/jama.2018.13765",
+   "order": 30,
+   "year": 2018
+  },
+  {
+   "order": 30,
+   "session": "Infection: decolonization and C. difficile",
+   "topic": "Infection",
+   "title": "SuDDICU: selective decontamination in ventilated patients",
+   "citation": "SuDDICU Investigators. JAMA. 2022.",
+   "finding": "Selective digestive decontamination did not significantly reduce hospital mortality (27.0% versus 29.1%) and did not increase resistance.",
+   "doi": "10.1001/jama.2022.17927",
+   "year": 2022
+  },
+  {
    "session": "Infection: antibiotic duration and procalcitonin",
    "topic": "Infection",
    "title": "8 versus 15 days of antibiotics for VAP",
    "citation": "Chastre J, et al. JAMA. 2003.",
    "finding": "Eight days was as effective as 15, with more recurrences when the pathogen was a nonfermenting gram-negative bacillus.",
-   "path": "/files/articles/w31-chastre-jama-2003.pdf"
+   "path": "/files/articles/w31-chastre-jama-2003.pdf",
+   "order": 31,
+   "year": 2003
   },
   {
-   "week": 31,
    "session": "Infection: antibiotic duration and procalcitonin",
    "topic": "Infection",
    "title": "PRORATA: procalcitonin to reduce antibiotic exposure",
    "citation": "Bouadma L, et al. Lancet. 2010.",
    "finding": "Procalcitonin guidance cut antibiotic days with noninferior mortality.",
-   "path": "/files/articles/w31-bouadma-lancet-2010.pdf"
+   "path": "/files/articles/w31-bouadma-lancet-2010.pdf",
+   "order": 31,
+   "year": 2010
   },
   {
-   "week": 31,
    "session": "Infection: antibiotic duration and procalcitonin",
    "topic": "Infection",
    "title": "ProACT: procalcitonin-guided antibiotics for lower respiratory tract infection",
    "citation": "Huang DT, et al. N Engl J Med. 2018.",
    "finding": "In US emergency departments, procalcitonin guidance did not reduce antibiotic use.",
    "path": "/files/articles/w31-huang-nejm-2018.pdf",
-   "doi": "10.1056/NEJMoa1802670"
+   "doi": "10.1056/NEJMoa1802670",
+   "order": 31,
+   "year": 2018
   },
   {
-   "week": 32,
-   "session": "Infection: antimicrobial strategy and fever",
+   "order": 31,
+   "session": "Infection: antibiotic duration and procalcitonin",
    "topic": "Infection",
-   "title": "Continuous versus intermittent beta-lactam infusion",
-   "citation": "Roberts JA, et al. Am J Respir Crit Care Med. 2016.",
-   "finding": "Individual patient data meta-analysis: continuous infusion was associated with lower hospital mortality in severe sepsis.",
-   "path": "/files/articles/w32-roberts-ajrccm-2016.pdf",
-   "doi": "10.1164/rccm.201601-0024OC"
+   "title": "ADAPT-Sepsis: biomarker-guided antibiotic duration",
+   "citation": "Dark et al.. JAMA. 2025.",
+   "finding": "Daily procalcitonin guidance shortened antibiotic courses with noninferior 28-day mortality. CRP guidance did not.",
+   "doi": "10.1001/jama.2024.26458",
+   "year": 2025,
+   "path": "/files/articles/add-adapt-sepsis.pdf"
   },
   {
-   "week": 32,
-   "session": "Infection: antimicrobial strategy and fever",
+   "order": 31,
+   "session": "Infection: antibiotic duration and procalcitonin",
    "topic": "Infection",
-   "title": "HEAT: acetaminophen for fever in suspected infection",
-   "citation": "Young P, et al. N Engl J Med. 2015.",
-   "finding": "Early acetaminophen for fever did not change ICU-free days.",
-   "path": "/files/articles/w32-young-nejm-2015.pdf",
-   "doi": "10.1056/NEJMoa1508375"
+   "title": "BALANCE: 7 versus 14 days for bloodstream infection",
+   "citation": "BALANCE Investigators. N Engl J Med. 2025.",
+   "finding": "Seven days of antibiotics was noninferior to 14 for 90-day mortality in hospitalized patients with bacteremia.",
+   "doi": "10.1056/NEJMoa2404991",
+   "year": 2025
   },
   {
-   "week": 32,
    "session": "Infection: antimicrobial strategy and fever",
    "topic": "Infection",
    "title": "Inappropriate initial antimicrobial therapy in septic shock",
    "citation": "Kumar A, et al. Chest. 2009.",
    "finding": "Initial antimicrobial therapy that did not cover the pathogen was associated with a fivefold reduction in survival.",
    "path": "/files/articles/w32-kumar-chest-2009.pdf",
-   "doi": "10.1378/chest.09-0087"
+   "doi": "10.1378/chest.09-0087",
+   "order": 32,
+   "year": 2009
   },
   {
-   "week": 32,
+   "session": "Infection: antimicrobial strategy and fever",
+   "topic": "Infection",
+   "title": "HEAT: acetaminophen for fever in suspected infection",
+   "citation": "Young P, et al. N Engl J Med. 2015.",
+   "finding": "Early acetaminophen for fever did not change ICU-free days.",
+   "path": "/files/articles/w32-young-nejm-2015.pdf",
+   "doi": "10.1056/NEJMoa1508375",
+   "order": 32,
+   "year": 2015
+  },
+  {
    "session": "Infection: antimicrobial strategy and fever",
    "topic": "Infection",
    "title": "STOP-IT: short-course antibiotics for intraabdominal infection",
    "citation": "Sawyer RG, et al. N Engl J Med. 2015.",
    "finding": "About 4 days of antibiotics after source control was equivalent to a longer course.",
    "path": "/files/articles/w32-sawyer-nejm-2015.pdf",
-   "doi": "10.1056/NEJMoa1411162"
+   "doi": "10.1056/NEJMoa1411162",
+   "order": 32,
+   "year": 2015
   },
   {
-   "week": 33,
+   "session": "Infection: antimicrobial strategy and fever",
+   "topic": "Infection",
+   "title": "Continuous versus intermittent beta-lactam infusion",
+   "citation": "Roberts JA, et al. Am J Respir Crit Care Med. 2016.",
+   "finding": "Individual patient data meta-analysis: continuous infusion was associated with lower hospital mortality in severe sepsis.",
+   "path": "/files/articles/w32-roberts-ajrccm-2016.pdf",
+   "doi": "10.1164/rccm.201601-0024OC",
+   "order": 32,
+   "year": 2016
+  },
+  {
+   "order": 32,
+   "session": "Infection: antimicrobial strategy and fever",
+   "topic": "Infection",
+   "title": "BLING III: continuous versus intermittent beta-lactam infusion",
+   "citation": "Dulhunty et al.. JAMA. 2024.",
+   "finding": "90-day mortality 24.9% with continuous infusion versus 26.8% intermittent, not significant. The accompanying meta-analysis favors continuous infusion.",
+   "doi": "10.1001/jama.2024.9779",
+   "year": 2024
+  },
+  {
    "session": "Targeted temperature management",
    "topic": "Cardiac arrest and neuro",
    "title": "HACA: mild hypothermia after cardiac arrest",
    "citation": "Hypothermia after Cardiac Arrest Study Group. N Engl J Med. 2002.",
    "finding": "Cooling to 32 to 34 degrees after out-of-hospital VF arrest improved favorable neurologic outcome and mortality.",
-   "path": "/files/articles/w33-holzer-haca-nejm-2002.pdf"
+   "path": "/files/articles/w33-holzer-haca-nejm-2002.pdf",
+   "order": 33,
+   "year": 2002
   },
   {
-   "week": 33,
-   "session": "Targeted temperature management",
-   "topic": "Cardiac arrest and neuro",
-   "title": "HYPO-ECMO: moderate hypothermia on VA ECMO",
-   "citation": "Levy B, et al. JAMA. 2022.",
-   "finding": "Hypothermia to 33 to 34 degrees in cardiogenic shock on VA ECMO did not significantly reduce 30-day mortality.",
-   "path": "/files/articles/w33-levy-jama-2022.pdf",
-   "doi": "10.1001/jama.2021.24776"
-  },
-  {
-   "week": 33,
-   "session": "Targeted temperature management",
-   "topic": "Cardiac arrest and neuro",
-   "title": "POLAR: prophylactic hypothermia in severe TBI",
-   "citation": "Cooper DJ, et al. JAMA. 2018.",
-   "finding": "Early sustained hypothermia did not improve neurologic outcome at 6 months.",
-   "path": "/files/articles/w33-cooper-jama-2018.pdf",
-   "doi": "10.1001/jama.2018.17075"
-  },
-  {
-   "week": 33,
-   "session": "Targeted temperature management",
-   "topic": "Cardiac arrest and neuro",
-   "title": "TTH48: targeted temperature management for 48 versus 24 hours",
-   "citation": "Kirkegaard H, et al. JAMA. 2017.",
-   "finding": "Extending TTM at 33 degrees to 48 hours did not improve 6-month neurologic outcome.",
-   "path": "/files/articles/w33-kirkegaard-jama-2017.pdf",
-   "doi": "10.1001/jama.2017.8978"
-  },
-  {
-   "week": 33,
    "session": "Targeted temperature management",
    "topic": "Cardiac arrest and neuro",
    "title": "TTM: 33 versus 36 degrees after cardiac arrest",
    "citation": "Nielsen N, et al. N Engl J Med. 2013.",
    "finding": "No difference in mortality or neurologic outcome between 33 and 36 degrees.",
    "path": "/files/articles/w33-nielsen-nejm-2013.pdf",
-   "doi": "10.1056/NEJMoa1310519"
+   "doi": "10.1056/NEJMoa1310519",
+   "order": 33,
+   "year": 2013
   },
   {
-   "week": 34,
+   "session": "Targeted temperature management",
+   "topic": "Cardiac arrest and neuro",
+   "title": "TTH48: targeted temperature management for 48 versus 24 hours",
+   "citation": "Kirkegaard H, et al. JAMA. 2017.",
+   "finding": "Extending TTM at 33 degrees to 48 hours did not improve 6-month neurologic outcome.",
+   "path": "/files/articles/w33-kirkegaard-jama-2017.pdf",
+   "doi": "10.1001/jama.2017.8978",
+   "order": 33,
+   "year": 2017
+  },
+  {
+   "session": "Targeted temperature management",
+   "topic": "Cardiac arrest and neuro",
+   "title": "POLAR: prophylactic hypothermia in severe TBI",
+   "citation": "Cooper DJ, et al. JAMA. 2018.",
+   "finding": "Early sustained hypothermia did not improve neurologic outcome at 6 months.",
+   "path": "/files/articles/w33-cooper-jama-2018.pdf",
+   "doi": "10.1001/jama.2018.17075",
+   "order": 33,
+   "year": 2018
+  },
+  {
+   "order": 33,
+   "session": "Targeted temperature management",
+   "topic": "Cardiac arrest and neuro",
+   "title": "TTM2: hypothermia versus normothermia",
+   "citation": "Dankiewicz et al.. N Engl J Med. 2021.",
+   "finding": "Hypothermia at 33 degrees versus normothermia with early fever treatment: identical 6-month mortality (50% versus 48%). The paper that reset practice after HACA and TTM.",
+   "doi": "10.1056/NEJMoa2100591",
+   "year": 2021,
+   "path": "/files/articles/add-ttm2.pdf"
+  },
+  {
+   "order": 33,
+   "session": "Targeted temperature management",
+   "topic": "Cardiac arrest and neuro",
+   "title": "BOX: blood pressure targets after cardiac arrest",
+   "citation": "Kjaergaard et al.. N Engl J Med. 2022.",
+   "finding": "MAP 77 versus 63 mm Hg made no difference to death or severe disability.",
+   "doi": "10.1056/NEJMoa2208687",
+   "year": 2022
+  },
+  {
+   "order": 33,
+   "session": "Targeted temperature management",
+   "topic": "Cardiac arrest and neuro",
+   "title": "BOX: oxygen targets after cardiac arrest",
+   "citation": "Schmidt et al.. N Engl J Med. 2022.",
+   "finding": "Restrictive versus liberal PaO2 targets made no difference to death or severe disability.",
+   "doi": "10.1056/NEJMoa2208686",
+   "year": 2022
+  },
+  {
+   "session": "Targeted temperature management",
+   "topic": "Cardiac arrest and neuro",
+   "title": "HYPO-ECMO: moderate hypothermia on VA ECMO",
+   "citation": "Levy B, et al. JAMA. 2022.",
+   "finding": "Hypothermia to 33 to 34 degrees in cardiogenic shock on VA ECMO did not significantly reduce 30-day mortality.",
+   "path": "/files/articles/w33-levy-jama-2022.pdf",
+   "doi": "10.1001/jama.2021.24776",
+   "order": 33,
+   "year": 2022
+  },
+  {
+   "order": 33,
+   "session": "Targeted temperature management",
+   "topic": "Cardiac arrest and neuro",
+   "title": "TAME: mild hypercapnia after cardiac arrest",
+   "citation": "Eastwood et al.. N Engl J Med. 2023.",
+   "finding": "Targeting PaCO2 50 to 55 did not improve neurologic outcome at 6 months.",
+   "doi": "10.1056/NEJMoa2214552",
+   "year": 2023,
+   "path": "/files/articles/add-tame.pdf"
+  },
+  {
    "session": "Airway management",
    "topic": "Airway",
-   "title": "BEAM: bougie versus stylet in difficult airways",
-   "citation": "Driver BE, et al. JAMA. 2018.",
-   "finding": "Bougie first improved first-attempt success in emergency intubations with difficult airway features.",
-   "path": "/files/articles/w34-driver-jama-2018.pdf",
-   "doi": "10.1001/jama.2018.6496"
+   "title": "Prehospital advanced airway management in cardiac arrest",
+   "citation": "Hasegawa K, et al. JAMA. 2013.",
+   "finding": "In a Japanese registry, prehospital advanced airways were associated with worse neurologic outcome than bag-mask ventilation.",
+   "path": "/files/articles/w34-hagesawa-jama-2013.pdf",
+   "order": 34,
+   "year": 2013
   },
   {
-   "week": 34,
-   "session": "Airway management",
-   "topic": "Airway",
-   "title": "CAAM: bag-mask ventilation versus intubation during CPR",
-   "citation": "Jabre P, et al. JAMA. 2018.",
-   "finding": "Noninferiority of bag-mask ventilation for 28-day favorable neurologic outcome was inconclusive.",
-   "path": "/files/articles/w34-jabre-jama-2018.pdf",
-   "doi": "10.1001/jama.2018.0156"
-  },
-  {
-   "week": 34,
    "session": "Airway management",
    "topic": "Airway",
    "title": "MACMAN: video versus direct laryngoscopy in the ICU",
    "citation": "Lascarrou JB, et al. JAMA. 2017.",
    "finding": "Video laryngoscopy did not improve first-pass success and was associated with more severe life-threatening complications.",
    "path": "/files/articles/w34-lascarrou-jama-2017.pdf",
-   "doi": "10.1001/jama.2016.20603"
+   "doi": "10.1001/jama.2016.20603",
+   "order": 34,
+   "year": 2017
   },
   {
-   "week": 34,
+   "session": "Airway management",
+   "topic": "Airway",
+   "title": "BEAM: bougie versus stylet in difficult airways",
+   "citation": "Driver BE, et al. JAMA. 2018.",
+   "finding": "Bougie first improved first-attempt success in emergency intubations with difficult airway features.",
+   "path": "/files/articles/w34-driver-jama-2018.pdf",
+   "doi": "10.1001/jama.2018.6496",
+   "order": 34,
+   "year": 2018
+  },
+  {
+   "session": "Airway management",
+   "topic": "Airway",
+   "title": "CAAM: bag-mask ventilation versus intubation during CPR",
+   "citation": "Jabre P, et al. JAMA. 2018.",
+   "finding": "Noninferiority of bag-mask ventilation for 28-day favorable neurologic outcome was inconclusive.",
+   "path": "/files/articles/w34-jabre-jama-2018.pdf",
+   "doi": "10.1001/jama.2018.0156",
+   "order": 34,
+   "year": 2018
+  },
+  {
    "session": "Airway management",
    "topic": "Airway",
    "title": "PreVent: bag-mask ventilation during intubation",
    "citation": "Casey JD, et al. N Engl J Med. 2019.",
    "finding": "Bag-mask ventilation between induction and laryngoscopy halved severe hypoxemia without increasing aspiration.",
    "path": "/files/articles/w34-casey-nejm-2019.pdf",
-   "doi": "10.1056/NEJMoa1812405"
+   "doi": "10.1056/NEJMoa1812405",
+   "order": 34,
+   "year": 2019
   },
   {
-   "week": 34,
+   "order": 34,
    "session": "Airway management",
    "topic": "Airway",
-   "title": "Prehospital advanced airway management in cardiac arrest",
-   "citation": "Hasegawa K, et al. JAMA. 2013.",
-   "finding": "In a Japanese registry, prehospital advanced airways were associated with worse neurologic outcome than bag-mask ventilation.",
-   "path": "/files/articles/w34-hagesawa-jama-2013.pdf"
+   "title": "BOUGIE: bougie versus stylet in all-comers",
+   "citation": "Driver et al.. JAMA. 2021.",
+   "finding": "In unselected critically ill adults, bougie first did not improve first-attempt success. Tempers the BEAM result.",
+   "doi": "10.1001/jama.2021.22002",
+   "year": 2021
   },
   {
-   "week": 35,
-   "session": "Drugs and ECPR in cardiac arrest",
-   "topic": "Cardiac arrest and neuro",
-   "title": "Adrenaline in out-of-hospital cardiac arrest: meta-analysis",
-   "citation": "Lin S, et al. Resuscitation. 2014.",
-   "finding": "Epinephrine improved return of spontaneous circulation but not survival to discharge or neurologic outcome.",
-   "path": "/files/articles/w35-lin-resuscitation-2014.pdf",
-   "doi": "10.1016/j.resuscitation.2014.03.008"
+   "order": 34,
+   "session": "Airway management",
+   "topic": "Airway",
+   "title": "PREPARE II: fluid bolus before intubation",
+   "citation": "Russell et al.. JAMA. 2022.",
+   "finding": "A 500 mL bolus before induction did not prevent cardiovascular collapse.",
+   "doi": "10.1001/jama.2022.9792",
+   "year": 2022
   },
   {
-   "week": 35,
-   "session": "Drugs and ECPR in cardiac arrest",
-   "topic": "Cardiac arrest and neuro",
-   "title": "Early epinephrine in shockable in-hospital arrest",
-   "citation": "Andersen LW, et al. BMJ. 2016.",
-   "finding": "Epinephrine within 2 minutes of the first defibrillation was associated with lower survival to discharge.",
-   "path": "/files/articles/w35-andersen-bmj-2016.pdf",
-   "doi": "10.1136/bmj.i1577"
+   "order": 34,
+   "session": "Airway management",
+   "topic": "Airway",
+   "title": "DEVICE: video versus direct laryngoscopy in critically ill adults",
+   "citation": "Prekker et al.. N Engl J Med. 2023.",
+   "finding": "First-attempt success 85% with video versus 71% with direct laryngoscopy. Stopped early for efficacy. The answer to MACMAN.",
+   "doi": "10.1056/NEJMoa2301601",
+   "year": 2023
   },
   {
-   "week": 35,
-   "session": "Drugs and ECPR in cardiac arrest",
-   "topic": "Cardiac arrest and neuro",
-   "title": "INCEPTION: early extracorporeal CPR",
-   "citation": "Suverein MM, et al. N Engl J Med. 2023.",
-   "finding": "ECPR for refractory out-of-hospital arrest did not improve 30-day survival with favorable neurologic outcome.",
-   "path": "/files/articles/w35-suverein-nejm-2023.pdf",
-   "doi": "10.1056/NEJMoa2204511"
+   "order": 34,
+   "session": "Airway management",
+   "topic": "Airway",
+   "title": "PREOXI: noninvasive ventilation for preoxygenation",
+   "citation": "Gibbs et al.. N Engl J Med. 2024.",
+   "finding": "NIV preoxygenation halved hypoxemia during emergency intubation (9% versus 18%) compared with an oxygen mask.",
+   "doi": "10.1056/NEJMoa2313680",
+   "year": 2024
   },
   {
-   "week": 35,
-   "session": "Drugs and ECPR in cardiac arrest",
-   "topic": "Cardiac arrest and neuro",
-   "title": "PARAMEDIC2: epinephrine in out-of-hospital cardiac arrest",
-   "citation": "Perkins GD, et al. N Engl J Med. 2018.",
-   "finding": "Epinephrine improved 30-day survival (3.2% versus 2.4%) without improving favorable neurologic outcome.",
-   "path": "/files/articles/w35-perkins-nejm-2018.pdf",
-   "doi": "10.1056/NEJMoa1806842"
+   "order": 34,
+   "session": "Airway management",
+   "topic": "Airway",
+   "title": "RSI trial: ketamine versus etomidate for intubation",
+   "citation": "Casey et al.. N Engl J Med. 2026.",
+   "finding": "28-day in-hospital mortality 29.6% with ketamine versus 30.9% with etomidate. No difference.",
+   "doi": "10.1056/NEJMoa2511420",
+   "year": 2026
   },
   {
-   "week": 35,
    "session": "Drugs and ECPR in cardiac arrest",
    "topic": "Cardiac arrest and neuro",
    "title": "Vasopressin, steroids, and epinephrine in in-hospital arrest",
    "citation": "Mentzelopoulos SD, et al. JAMA. 2013.",
    "finding": "The VSE combination improved survival with favorable neurologic status compared with epinephrine alone.",
    "path": "/files/articles/w35-mentzelopoulos-jama-2013.pdf",
-   "doi": "10.1001/jama.2013.7832"
+   "doi": "10.1001/jama.2013.7832",
+   "order": 35,
+   "year": 2013
+  },
+  {
+   "session": "Drugs and ECPR in cardiac arrest",
+   "topic": "Cardiac arrest and neuro",
+   "title": "Adrenaline in out-of-hospital cardiac arrest: meta-analysis",
+   "citation": "Lin S, et al. Resuscitation. 2014.",
+   "finding": "Epinephrine improved return of spontaneous circulation but not survival to discharge or neurologic outcome.",
+   "path": "/files/articles/w35-lin-resuscitation-2014.pdf",
+   "doi": "10.1016/j.resuscitation.2014.03.008",
+   "order": 35,
+   "year": 2014
+  },
+  {
+   "session": "Drugs and ECPR in cardiac arrest",
+   "topic": "Cardiac arrest and neuro",
+   "title": "Early epinephrine in shockable in-hospital arrest",
+   "citation": "Andersen LW, et al. BMJ. 2016.",
+   "finding": "Epinephrine within 2 minutes of the first defibrillation was associated with lower survival to discharge.",
+   "path": "/files/articles/w35-andersen-bmj-2016.pdf",
+   "doi": "10.1136/bmj.i1577",
+   "order": 35,
+   "year": 2016
+  },
+  {
+   "session": "Drugs and ECPR in cardiac arrest",
+   "topic": "Cardiac arrest and neuro",
+   "title": "PARAMEDIC2: epinephrine in out-of-hospital cardiac arrest",
+   "citation": "Perkins GD, et al. N Engl J Med. 2018.",
+   "finding": "Epinephrine improved 30-day survival (3.2% versus 2.4%) without improving favorable neurologic outcome.",
+   "path": "/files/articles/w35-perkins-nejm-2018.pdf",
+   "doi": "10.1056/NEJMoa1806842",
+   "order": 35,
+   "year": 2018
+  },
+  {
+   "order": 35,
+   "session": "Drugs and ECPR in cardiac arrest",
+   "topic": "Cardiac arrest and neuro",
+   "title": "ARREST: early ECMO for refractory VF",
+   "citation": "Yannopoulos et al.. Lancet. 2020.",
+   "finding": "Single-center trial stopped early: survival to discharge 43% with early ECMO-facilitated resuscitation versus 7% with standard ACLS.",
+   "doi": "10.1016/S0140-6736(20)32338-2",
+   "year": 2020
+  },
+  {
+   "order": 35,
+   "session": "Drugs and ECPR in cardiac arrest",
+   "topic": "Cardiac arrest and neuro",
+   "title": "DOSE VF: defibrillation strategies for refractory VF",
+   "citation": "Cheskes et al.. N Engl J Med. 2022.",
+   "finding": "Double sequential external defibrillation and vector change both improved survival to discharge compared with standard defibrillation.",
+   "doi": "10.1056/NEJMoa2207304",
+   "year": 2022
+  },
+  {
+   "order": 35,
+   "session": "Drugs and ECPR in cardiac arrest",
+   "topic": "Cardiac arrest and neuro",
+   "title": "Prague OHCA: invasive strategy for refractory arrest",
+   "citation": "Belohlavek et al.. JAMA. 2022.",
+   "finding": "Intra-arrest transport with ECPR and immediate invasive assessment: 180-day survival with good neurologic outcome 31.5% versus 22%, not significant.",
+   "doi": "10.1001/jama.2022.1025",
+   "year": 2022
+  },
+  {
+   "session": "Drugs and ECPR in cardiac arrest",
+   "topic": "Cardiac arrest and neuro",
+   "title": "INCEPTION: early extracorporeal CPR",
+   "citation": "Suverein MM, et al. N Engl J Med. 2023.",
+   "finding": "ECPR for refractory out-of-hospital arrest did not improve 30-day survival with favorable neurologic outcome.",
+   "path": "/files/articles/w35-suverein-nejm-2023.pdf",
+   "doi": "10.1056/NEJMoa2204511",
+   "order": 35,
+   "year": 2023
+  },
+  {
+   "order": 35,
+   "session": "Drugs and ECPR in cardiac arrest",
+   "topic": "Cardiac arrest and neuro",
+   "title": "PARAMEDIC-3: intraosseous versus intravenous drug route",
+   "citation": "Couper et al.. N Engl J Med. 2025.",
+   "finding": "IO-first versus IV-first vascular access: no difference in 30-day survival.",
+   "doi": "10.1056/NEJMoa2407780",
+   "year": 2025,
+   "path": "/files/articles/add-paramedic-3.pdf"
+  },
+  {
+   "order": 36,
+   "session": "Cardiogenic shock",
+   "topic": "Mechanical circulatory support",
+   "title": "IABP-SHOCK II: balloon pump in infarct-related shock",
+   "citation": "Thiele et al.. N Engl J Med. 2012.",
+   "finding": "Intra-aortic balloon counterpulsation did not reduce 30-day mortality. The trial that removed IABP from the guidelines.",
+   "doi": "10.1056/NEJMoa1208410",
+   "year": 2012
+  },
+  {
+   "order": 36,
+   "session": "Cardiogenic shock",
+   "topic": "Mechanical circulatory support",
+   "title": "LEVO-CTS: levosimendan in cardiac surgery with low EF",
+   "citation": "Mehta et al.. N Engl J Med. 2017.",
+   "finding": "Prophylactic levosimendan did not reduce the composite of death, dialysis, MI, or mechanical support at 30 days.",
+   "doi": "10.1056/NEJMoa1616218",
+   "year": 2017
+  },
+  {
+   "order": 36,
+   "session": "Cardiogenic shock",
+   "topic": "Mechanical circulatory support",
+   "title": "CAPITAL DOREMI: milrinone versus dobutamine",
+   "citation": "Mathew et al.. N Engl J Med. 2021.",
+   "finding": "No difference in a composite of death, arrest, transplant, MCS, MI, stroke, or dialysis. Choose by physiology and side effects.",
+   "doi": "10.1056/NEJMoa2026845",
+   "year": 2021
+  },
+  {
+   "order": 36,
+   "session": "Cardiogenic shock",
+   "topic": "Mechanical circulatory support",
+   "title": "ECLS-SHOCK: VA ECMO in infarct-related shock",
+   "citation": "Thiele et al.. N Engl J Med. 2023.",
+   "finding": "Routine early VA ECMO did not reduce 30-day mortality (47.8% versus 49.0%) and increased bleeding and limb ischemia.",
+   "doi": "10.1056/NEJMoa2307227",
+   "year": 2023
+  },
+  {
+   "order": 36,
+   "session": "Cardiogenic shock",
+   "topic": "Mechanical circulatory support",
+   "title": "ECMO-CS: immediate versus deferred VA ECMO",
+   "citation": "Ostadal et al.. Circulation. 2023.",
+   "finding": "Immediate VA ECMO in rapidly deteriorating or severe cardiogenic shock was no better than an early conservative strategy with bailout ECMO.",
+   "doi": "10.1161/CIRCULATIONAHA.122.062949",
+   "year": 2023
+  },
+  {
+   "order": 36,
+   "session": "Cardiogenic shock",
+   "topic": "Mechanical circulatory support",
+   "title": "DanGer Shock: microaxial flow pump in STEMI shock",
+   "citation": "Møller et al.. N Engl J Med. 2024.",
+   "finding": "Impella CP reduced 180-day mortality (45.8% versus 58.5%) in STEMI with cardiogenic shock, at the cost of more bleeding, limb ischemia, and renal replacement.",
+   "doi": "10.1056/NEJMoa2312572",
+   "year": 2024
+  },
+  {
+   "order": 37,
+   "session": "Nutrition and glucose",
+   "topic": "Nutrition",
+   "title": "EFFORT Protein: higher protein dosing",
+   "citation": "Heyland et al.. Lancet. 2023.",
+   "finding": "Protein at 2.2 g/kg/day versus 1.2 did not improve time to discharge alive and may have harmed patients with AKI and high organ failure scores.",
+   "doi": "10.1016/S0140-6736(22)02469-2",
+   "year": 2023
+  },
+  {
+   "order": 37,
+   "session": "Nutrition and glucose",
+   "topic": "Nutrition",
+   "title": "NUTRIREA-3: low versus standard calorie and protein feeding in shock",
+   "citation": "Reignier et al.. Lancet Respir Med. 2023.",
+   "finding": "Low calorie and protein targets in the first week shortened time to readiness for ICU discharge, with no mortality difference.",
+   "doi": "10.1016/S2213-2600(23)00092-9",
+   "year": 2023
+  },
+  {
+   "order": 37,
+   "session": "Nutrition and glucose",
+   "topic": "Nutrition",
+   "title": "TGC-Fast: tight glucose control without early parenteral nutrition",
+   "citation": "Gunst et al.. N Engl J Med. 2023.",
+   "finding": "Tight control (80 to 110) versus liberal (under 215) with early PN withheld: no difference in ICU length of stay or mortality, and less severe hypoglycemia than earlier trials.",
+   "doi": "10.1056/NEJMoa2304855",
+   "year": 2023,
+   "path": "/files/articles/add-tgc-fast.pdf"
   }
  ]
 }
