@@ -99,6 +99,63 @@ window.Hub = (function () {
     }
   };
 
+  // Turn each top-level h2 section of rendered Markdown into a collapsible block.
+  // Content files stay plain Markdown. Sections start closed, a #anchor opens its section.
+  function collapsible(container) {
+    if (!container) return;
+    var h2s = Array.prototype.filter.call(container.children, function (n) { return n.tagName === 'H2'; });
+    if (h2s.length < 2) return;
+    var used = {};
+    var sections = h2s.map(function (h) {
+      var base = (h.textContent || 'section').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'section';
+      var id = base, n = 2;
+      while (used[id] || document.getElementById(id)) id = base + '-' + n++;
+      used[id] = true;
+      var d = document.createElement('details');
+      d.className = 'section';
+      d.id = id;
+      h.parentNode.insertBefore(d, h);
+      var sum = document.createElement('summary');
+      sum.appendChild(h);
+      d.appendChild(sum);
+      var body = document.createElement('div');
+      body.className = 'section-body';
+      while (d.nextSibling && !(d.nextSibling.nodeType === 1 && d.nextSibling.tagName === 'H2')) body.appendChild(d.nextSibling);
+      d.appendChild(body);
+      return d;
+    });
+
+    var bar = document.createElement('div');
+    bar.className = 'section-controls';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'secondary';
+    bar.appendChild(btn);
+    sections[0].parentNode.insertBefore(bar, sections[0]);
+
+    function allOpen() { return sections.every(function (d) { return d.open; }); }
+    function sync() { btn.textContent = allOpen() ? 'Collapse all' : 'Expand all'; }
+    btn.addEventListener('click', function () {
+      var open = !allOpen();
+      sections.forEach(function (d) { d.open = open; });
+      sync();
+    });
+    sections.forEach(function (d) { d.addEventListener('toggle', sync); });
+
+    function openHash() {
+      var id = decodeURIComponent((location.hash || '').slice(1));
+      if (!id) return;
+      var t = document.getElementById(id);
+      if (!t) return;
+      var d = t.tagName === 'DETAILS' ? t : t.closest('details.section');
+      if (d) { d.open = true; t.scrollIntoView(); }
+    }
+    window.addEventListener('hashchange', openHash);
+    window.addEventListener('beforeprint', function () { sections.forEach(function (d) { d.open = true; }); sync(); });
+    openHash();
+    sync();
+  }
+
   async function getJSON(url) {
     var r = await fetch(url, { cache: 'no-cache' });
     if (!r.ok) throw new Error('Could not load ' + url + ' (' + r.status + ')');
@@ -123,5 +180,5 @@ window.Hub = (function () {
 
   document.addEventListener('DOMContentLoaded', markCurrentNav);
 
-  return { md: md, inline: inline, escapeHtml: escapeHtml, storage: storage, getJSON: getJSON, getText: getText, qs: qs, el: el };
+  return { md: md, collapsible: collapsible, inline: inline, escapeHtml: escapeHtml, storage: storage, getJSON: getJSON, getText: getText, qs: qs, el: el };
 })();

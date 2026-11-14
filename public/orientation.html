@@ -49,6 +49,7 @@
   try {
     var text = await Hub.getText('/content/orientation.md');
     body.innerHTML = Hub.md(text, 1);
+    Hub.collapsible(body);
   } catch (e) {
     body.innerHTML = '<p class="notice flag">Could not load orientation content.</p>';
   }

@@ -243,3 +243,30 @@ textarea[readonly] { background: var(--bg); color: var(--ink-soft); }
 ul.papers { list-style: none; padding: 0; margin: 0; }
 ul.papers li { padding: 10px 0; border-top: 1px solid var(--line); }
 ul.papers li:first-child { border-top: 0; }
+
+/* Collapsible sections on long Markdown pages (Orientation, grading) */
+.section-controls { display: flex; justify-content: flex-end; margin: .5rem 0 .75rem; }
+.section-controls button { padding: .35rem .8rem; font-size: .9rem; }
+details.section { margin: 0 0 .6rem; }
+details.section > summary { list-style: none; display: flex; align-items: center; gap: .7rem; padding: .7rem 1.1rem; }
+details.section > summary::-webkit-details-marker { display: none; }
+details.section > summary::before {
+  content: ""; flex: none; width: .5rem; height: .5rem;
+  border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent);
+  transform: rotate(-45deg); transition: transform .15s ease;
+}
+details.section[open] > summary::before { transform: rotate(45deg); }
+details.section > summary h2 { margin: 0; font-size: 1.15rem; }
+details.section > summary:hover h2 { text-decoration: underline; text-underline-offset: .2em; }
+details.section > .section-body { padding: 0 1.1rem .25rem; }
+details.section > .section-body > :first-child { margin-top: .25rem; }
+@media (max-width: 40rem) {
+  details.section > summary { padding: .65rem .8rem; }
+  details.section > .section-body { padding: 0 .8rem .25rem; }
+  details.section > summary h2 { font-size: 1.05rem; }
+}
+@media print {
+  .section-controls { display: none; }
+  details.section > summary::before { display: none; }
+  details.section > .section-body { padding: 0; }
+}
