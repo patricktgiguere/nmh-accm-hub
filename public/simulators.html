@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Simulators · ACCM Curriculum Hub</title>
+<script src="/assets/js/theme.js"></script>
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">ACCM Curriculum Hub <small>Anesthesia Critical Care Medicine Fellowship, Northwestern Memorial Hospital</small></a>
+    <nav class="primary" aria-label="Main">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/orientation.html">Orientation</a></li>
+        <li><a href="/cases.html">Case Library</a></li>
+        <li><a href="https://cko93.github.io/NUFSM.CCM_US/" target="_blank" rel="noopener">POCUS</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <h1>Simulators</h1>
+  <p class="lead">Free simulators to practice procedural skills on your own time. Each one opens in a new tab.</p>
+  <div id="sim-body" class="grid">
+    <p class="muted">Loading…</p>
+  </div>
+</main>
+
+
+<footer class="site">
+  <p>Anesthesia Critical Care Medicine Fellowship, Northwestern Memorial Hospital. For enrolled fellows and faculty only.</p>
+</footer>
+
+<script src="/assets/js/app.js"></script>
+<script>
+(async function () {
+  var box = document.getElementById('sim-body');
+  try {
+    var data = await Hub.getJSON('/content/simulators.json');
+    var sims = (data.simulators || []).filter(function (s) { return /^https:\/\//.test(s.url || ''); });
+    if (!sims.length) { box.innerHTML = '<p class="muted">No simulators listed yet.</p>'; return; }
+    box.innerHTML = sims.map(function (s) {
+      return '<a class="card link" href="' + Hub.escapeHtml(s.url) + '" target="_blank" rel="noopener">' +
+        '<h2>' + Hub.escapeHtml(s.title) + '</h2>' +
+        (s.skill ? '<p><span class="pill neutral">' + Hub.escapeHtml(s.skill) + '</span></p>' : '') +
+        '<p>' + Hub.escapeHtml(s.description || '') + ' Opens in a new tab.</p>' +
+        '</a>';
+    }).join('');
+  } catch (e) {
+    box.innerHTML = '<p class="notice flag">Could not load the simulator list.</p>';
+  }
+})();
+</script>
+</body>
+</html>

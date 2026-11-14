@@ -17,6 +17,7 @@ public/                  everything the browser can see (after login)
   cases.html             Case Library list (reads content/cases/index.json)
   case.html              Renders one case (reads content/cases/<id>.json)
   resources.html         Resources index (reads content/resources/manifest.json)
+  simulators.html        Simulators list (reads content/simulators.json)
   contact.html           General contact form
   robots.txt, _headers   Noindex and security headers
   assets/                CSS and JavaScript. You should not need to edit these.
@@ -26,6 +27,7 @@ public/                  everything the browser can see (after login)
     cases/<id>.json      One file per case
     cases/_TEMPLATE.json Copy this to start a new case
     resources/manifest.json  The list the Resources page shows
+    simulators.json      The list the Simulators page shows. Add an entry to add a simulator.
   files/                 Put PDFs and documents here
 src/
   index.js               Worker entry: routes requests

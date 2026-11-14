@@ -1,0 +1,11 @@
+{
+  "_howto": "One entry per simulator, in the order they should appear. 'url' must be a full https:// link. Each one opens in a new tab.",
+  "simulators": [
+    {
+      "title": "BronchSim",
+      "url": "https://bronchsimulator.com",
+      "skill": "Bronchoscopy",
+      "description": "Free virtual bronchoscopy trainer that runs in your browser, built on a 3D airway from a real CT. Explore freely, quiz yourself on each bronchus, or try timed navigation and foreign body challenges. Nothing to install."
+    }
+  ]
+}
