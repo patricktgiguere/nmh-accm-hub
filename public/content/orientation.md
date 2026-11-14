@@ -155,6 +155,8 @@ Forward the slides from every lecture and journal club you present to Vi promptl
 
 **myTIPreport.** Your weekly evaluation. For each ICU week, a request goes automatically to your team attending, dated that Friday, based on the ACCM call schedule. The attending rates you in seven areas on a 1 to 5 milestone-aligned scale and names one thing to keep doing and one thing to work on next. The graduation target is Level 4, ready for independent practice, and scores of 2 to 3 early in the year are on track. If your schedule changes, request the evaluation yourself in the app. If you want feedback on something specific, such as a procedure, how you ran rounds, or your teaching, ask your attending during the week.
 
+**How you are graded.** See [how you are graded on our rotations](/grading.html) for what meeting and exceeding expectations look like in each milestone subcompetency.
+
 **Semi-annual review.** You will meet with Dr. Gupta twice during the year to review your evaluations, procedure log, attendance, duty hours, QI project, and your own view of where you stand. Come prepared to say what is going well, what is not, and what you want from the rest of the year.
 
 **Clinical Competency Committee.** As required by the ACGME, core faculty meet semi-annually to assess each fellow against the Anesthesiology Critical Care Medicine Milestones, drawing on evaluations, direct observation, and faculty input. Milestones describe a trajectory, not a grade. The committee's purpose is to identify where additional support or experience would help you reach independent practice.
