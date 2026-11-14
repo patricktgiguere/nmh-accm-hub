@@ -86,7 +86,7 @@ In June or July:
 }
 ```
 
-3. Commit. Entries tagged `orientation` also appear on the Orientation page.
+3. Commit.
 
 To replace a file, upload the new one with the same name and commit. To link to an intranet page instead of hosting a file, set `path` to the full `https://` address.
 
