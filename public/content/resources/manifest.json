@@ -11,6 +11,18 @@
         "guidelines"
       ],
       "updated": "2026-10-26"
+    },
+    {
+      "title": "BronchSim: virtual bronchoscopy simulator",
+      "path": "https://bronchsimulator.com",
+      "description": "Free browser-based bronchoscopy trainer built on a 3D airway from a real CT. Practice navigating to the lobar and segmental bronchi, with explore, quiz, and timed challenge modes. Nothing to install.",
+      "type": "link",
+      "tags": [
+        "airway",
+        "bronchoscopy",
+        "simulation"
+      ],
+      "updated": "2026-11-14"
     }
   ]
 }
