@@ -30,5 +30,5 @@ Description to come.
 
 - For each ICU week, a request goes automatically to your team attending, dated that Friday, based on the ACCM call schedule.
 - The attending rates you in seven areas on a 1 to 5 milestone-aligned scale, plus one thing to keep doing and one thing to work on next.
-- The graduation target is Level 4, ready for independent practice. Scores of 2 to 3 early in the year are on track, and EM fellows have a second year to reach Level 4.
+- The graduation target is Level 4, ready for independent practice. Scores of 2 to 3 early in the year are on track.
 - If your schedule changes, request the evaluation yourself in myTIPreport.

@@ -153,7 +153,7 @@ Forward the slides from every lecture and journal club you present to Vi promptl
 
 **Attending evaluations.** Attendings evaluate you in New Innovations at the end of each rotation. Sign each evaluation electronically to document that you have reviewed it. Your evaluations of faculty and of the program are anonymous and need no signature.
 
-**MyTIPreport.** A phone application for requesting evaluations. On the CTICU, at the end of every week you work with an attending, send them a MyTIPreport request. Use the free-text field to ask for feedback on something specific: a procedure, how you ran rounds, your teaching. A pointed question produces far more useful feedback than a blank request.
+**myTIPreport.** Your weekly evaluation. For each ICU week, a request goes automatically to your team attending, dated that Friday, based on the ACCM call schedule. The attending rates you in seven areas on a 1 to 5 milestone-aligned scale and names one thing to keep doing and one thing to work on next. The graduation target is Level 4, ready for independent practice, and scores of 2 to 3 early in the year are on track. If your schedule changes, request the evaluation yourself in the app. If you want feedback on something specific, such as a procedure, how you ran rounds, or your teaching, ask your attending during the week.
 
 **Semi-annual review.** You will meet with Dr. Gupta twice during the year to review your evaluations, procedure log, attendance, duty hours, QI project, and your own view of where you stand. Come prepared to say what is going well, what is not, and what you want from the rest of the year.
 
@@ -206,7 +206,7 @@ Fatigue, illness, and personal circumstances that affect your work are to be com
 **Confirm that you can log in to**
 
 - New Innovations (duty hours, vacation, evaluations, procedure log, policies manual).
-- MyTIPreport.
+- myTIPreport.
 - Teams, for the 6:00 AM sign-out and the Wednesday consortium.
 
 ## How to use this site
