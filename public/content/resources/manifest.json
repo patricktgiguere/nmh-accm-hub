@@ -23,6 +23,17 @@
         "simulation"
       ],
       "updated": "2026-11-14"
+    },
+    {
+      "title": "MV-Ed Ventilator Simulator (VentCoach)",
+      "path": "https://simulator.themvedproject.com/",
+      "description": "Interactive ventilator simulator from The MV-Ed Project with VC, PC, PSV, and PRVC modes, live waveforms, ABGs, and alarms. Work through guided case-based lessons from basic settings to hypoxemia and extubation readiness, or run it freely.",
+      "type": "link",
+      "tags": [
+        "mechanical ventilation",
+        "simulation"
+      ],
+      "updated": "2026-11-14"
     }
   ]
 }

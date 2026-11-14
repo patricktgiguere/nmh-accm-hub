@@ -6,6 +6,12 @@
       "url": "https://bronchsimulator.com",
       "skill": "Bronchoscopy",
       "description": "Free virtual bronchoscopy trainer that runs in your browser, built on a 3D airway from a real CT. Explore freely, quiz yourself on each bronchus, or try timed navigation and foreign body challenges. Nothing to install."
+    },
+    {
+      "title": "MV-Ed Ventilator Simulator (VentCoach)",
+      "url": "https://simulator.themvedproject.com/",
+      "skill": "Mechanical ventilation",
+      "description": "Interactive ventilator simulator from The MV-Ed Project with VC, PC, PSV, and PRVC modes, live waveforms, ABGs, and alarms. Work through guided case-based lessons from basic settings to hypoxemia and extubation readiness, or run it freely."
     }
   ]
 }
